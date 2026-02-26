@@ -21,17 +21,18 @@ jobs:
         uses: tj-actions/changed-files@v44
         with:
           files: 'skills/**/SKILL.md'
-          json: true
 
       - name: Validate SKILL.md files
         if: steps.changed.outputs.any_changed == 'true'
         run: |
+          set -euo pipefail
           ERRORS=0
 
+          CHANGED_FILES="${{ steps.changed.outputs.all_changed_files }}"
+
           while IFS= read -r file; do
-            if [ -z "$file" ]; then
-              continue
-            fi
+            [ -z "$file" ] && continue
+
             echo "Validating: $file"
 
             # Check file exists and is not empty
@@ -87,7 +88,7 @@ jobs:
 
             # Check skill ID matches directory name
             SKILL_ID=$(echo "$FRONTMATTER" | grep "^id:" | sed 's/id:\s*//')
-            DIR_NAME=$(dirname "$file" | xargs basename)
+            DIR_NAME=$(basename "$(dirname "$file")")
             if [ -n "$SKILL_ID" ] && [ "$SKILL_ID" != "$DIR_NAME" ]; then
               echo "::warning file=$file::Skill id '$SKILL_ID' does not match directory name '$DIR_NAME'"
             fi
@@ -120,9 +121,7 @@ jobs:
             fi
 
             echo "  -> Validation passed for $file"
-          done < <(node -e "const files = JSON.parse(process.env.CHANGED_FILES || '[]'); for (const f of files) console.log(f);" )
-        env:
-          CHANGED_FILES: ${{ steps.changed.outputs.all_changed_files }}
+          done <<< "$CHANGED_FILES"
 
           if [ "$ERRORS" -gt 0 ]; then
             echo "::error::$ERRORS validation error(s) found"

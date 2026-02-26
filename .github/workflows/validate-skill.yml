@@ -120,7 +120,7 @@ jobs:
             fi
 
             echo "  -> Validation passed for $file"
-          done <<< "$CHANGED_FILES"
+          done
 
           if [ "$ERRORS" -gt 0 ]; then
             echo "::error::$ERRORS validation error(s) found"

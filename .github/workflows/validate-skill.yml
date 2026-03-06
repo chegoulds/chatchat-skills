@@ -21,13 +21,17 @@ jobs:
         uses: tj-actions/changed-files@v44
         with:
           files: 'skills/**/SKILL.md'
+          separator: '\n'
 
       - name: Validate SKILL.md files
         if: steps.changed.outputs.any_changed == 'true'
         run: |
+          set -euo pipefail
           ERRORS=0
 
-          for file in ${{ steps.changed.outputs.all_changed_files }}; do
+          echo "${{ steps.changed.outputs.all_changed_files }}" | while IFS= read -r file; do
+            [ -z "$file" ] && continue
+
             echo "Validating: $file"
 
             # Check file exists and is not empty
@@ -83,7 +87,7 @@ jobs:
 
             # Check skill ID matches directory name
             SKILL_ID=$(echo "$FRONTMATTER" | grep "^id:" | sed 's/id:\s*//')
-            DIR_NAME=$(dirname "$file" | xargs basename)
+            DIR_NAME=$(basename "$(dirname "$file")")
             if [ -n "$SKILL_ID" ] && [ "$SKILL_ID" != "$DIR_NAME" ]; then
               echo "::warning file=$file::Skill id '$SKILL_ID' does not match directory name '$DIR_NAME'"
             fi
@@ -139,8 +143,9 @@ jobs:
 
   label:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
     permissions:
+      issues: write
       pull-requests: write
     steps:
       - uses: actions/github-script@v7

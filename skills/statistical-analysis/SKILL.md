@@ -1,8 +1,12 @@
 ---
-category: Business
 id: statistical-analysis
-name: Statistical Analysis
-description: Step-by-step guidance for statistical.
+name: "Statistical Analysis"
+description: "Step-by-step guidance for statistical."
+category: Business
+requires: []
+examples:
+  - "Help me with statistical analysis."
+  - "Use statistical-analysis for this task."
 ---
 
 # Statistical Analysis

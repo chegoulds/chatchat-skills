@@ -1,8 +1,12 @@
 ---
-category: Business
 id: product-strategist
-name: Product Strategist
-description: Strategic product leadership toolkit for Head of Product including OKR cascade generation, market analysis, vision setting, and team scaling. Use for strategic planning, goal alignment, competitive analysis, and organizational design.
+name: "Product Strategist"
+description: "Strategic product leadership toolkit for Head of Product including OKR cascade generation, market analysis, vision setting, and team scaling. Use for strategic planning, goal alignment, competitive analysis, and organizational design."
+category: Business
+requires: []
+examples:
+  - "Help me with product strategist."
+  - "Use product-strategist for this task."
 ---
 
 # Product Strategist

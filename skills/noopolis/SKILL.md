@@ -1,10 +1,13 @@
 ---
-category: Business
 id: noopolis
-name: Noopolis
-version: 0.0.1
-description: Be a Noopolis citizen (constitution, proposals, elections, council).
-homepage: https://noopolis.ai
+name: "Noopolis"
+description: "Be a Noopolis citizen (constitution, proposals, elections, council)."
+category: Business
+requires: []
+examples:
+  - "Help me with noopolis."
+  - "Use noopolis for this task."
+version: "0.0.1"
 ---
 
 # Noopolis

@@ -1,8 +1,12 @@
 ---
-category: Business
 id: paypal-integration
-name: Paypal Integration
-description: Integrate PayPal payment processing with support for express checkout, subscriptions, and refund management.
+name: "Paypal Integration"
+description: "Integrate PayPal payment processing with support for express checkout, subscriptions, and refund management."
+category: Business
+requires: []
+examples:
+  - "Help me with paypal integration."
+  - "Use paypal-integration for this task."
 ---
 
 # PayPal Integration

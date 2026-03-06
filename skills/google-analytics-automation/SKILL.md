@@ -1,10 +1,12 @@
 ---
-category: Business
 id: google-analytics-automation
-name: Google Analytics Automation
-description: Step-by-step guidance for google analytics automation.
-requires:
-  mcp: [rube]
+name: "Google Analytics Automation"
+description: "Step-by-step guidance for google analytics automation."
+category: Business
+requires: []
+examples:
+  - "Help me with google analytics automation."
+  - "Use google-analytics-automation for this task."
 ---
 
 # Google Analytics Automation via Rube MCP

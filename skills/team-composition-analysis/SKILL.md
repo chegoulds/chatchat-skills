@@ -1,9 +1,13 @@
 ---
-category: Business
 id: team-composition-analysis
-name: Team Composition Analysis
-description: Step-by-step guidance for team composition.
-version: 1.0.0
+name: "Team Composition Analysis"
+description: "Step-by-step guidance for team composition."
+category: Business
+requires: []
+examples:
+  - "Help me with team composition analysis."
+  - "Use team-composition-analysis for this task."
+version: "1.0.0"
 ---
 
 # Team Composition Analysis

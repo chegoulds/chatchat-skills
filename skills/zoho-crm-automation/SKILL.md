@@ -1,10 +1,12 @@
 ---
-category: Business
 id: zoho-crm-automation
-name: Zoho CRM Automation
+name: "Zoho CRM Automation"
 description: "Automate Zoho CRM tasks via Rube MCP (Composio): create/update records, search contacts, manage leads, and convert leads. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with zoho crm automation."
+  - "Use zoho-crm-automation for this task."
 ---
 
 # Zoho CRM Automation via Rube MCP

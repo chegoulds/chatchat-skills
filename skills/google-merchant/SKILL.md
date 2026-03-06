@@ -1,20 +1,12 @@
 ---
-category: Business
 id: google-merchant
-name: Google Merchant
-description: "Google Merchant Center API integration with managed OAuth. Manage products, inventories, data sources, promotions, and reports for Google Shopping. Use this skill when users want to manage their Merchant Center product catalog, check product status, configure data sources, or analyze shopping performance. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Requires network access and valid Maton API key."
-  Google Merchant Center API integration with managed OAuth. Manage products, inventories, data sources, promotions, and reports for Google Shopping.
-  Use this skill when users want to manage their Merchant Center product catalog, check product status, configure data sources, or analyze shopping performance.
-  For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway).
-  Requires network access and valid Maton API key.
-metadata:
-  author: maton
-  version: "1.0"
-  clawdbot:
-    emoji: 🧠
-    requires:
-      env:
-        - MATON_API_KEY
+name: "Google Merchant"
+description: "Google Merchant Center API integration with managed OAuth. Manage products, inventories, data sources, promotions, and reports for Google Shopping. Use this skill when users want to manage their Merchant Center product catalog, check product status, configure data sources, or analyze shopping performance. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Requires network access and valid Maton API key. Google Merchant Center API integration with managed OAuth. Manage products, inventories, data sources, promotions, and reports for Google Shopping. Use this skill when users want to manage their Merchant Center product catalog, check product status, configure data sources, or analyze shopping performance. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Requires network access and valid Maton API key."
+category: Business
+requires: []
+examples:
+  - "Help me with google merchant."
+  - "Use google-merchant for this task."
 ---
 
 # Google Merchant Center

@@ -1,17 +1,12 @@
 ---
-category: Business
 id: proxy-status
-name: Proxy Status
-description: Complete WhatsApp automation via Evolution API v2.3 - instances, messages (text/media/polls/lists/buttons/status), groups, labels, chatbots (Typebot/OpenAI/Dify/Flowise/N8N/EvoAI), webhooks, proxy, S3 storage, and Chatwoot integration.
-metadata:
-  openclaw:
-    requires:
-      bins: []
-    env:
-      EVO_API_URL: "Evolution API base URL (e.g., http://localhost:8080 or https://api.yourdomain.com)"
-      EVO_GLOBAL_KEY: "Global API key for admin operations (instance management)"
-      EVO_INSTANCE: "Default instance name"
-      EVO_API_KEY: "Instance-specific API key for messaging operations"
+name: "Proxy Status"
+description: "Complete WhatsApp automation via Evolution API v2.3 - instances, messages (text/media/polls/lists/buttons/status), groups, labels, chatbots (Typebot/OpenAI/Dify/Flowise/N8N/EvoAI), webhooks, proxy, S3 storage, and Chatwoot integration."
+category: Business
+requires: []
+examples:
+  - "Help me with proxy status."
+  - "Use proxy-status for this task."
 ---
 
 # Proxy Status

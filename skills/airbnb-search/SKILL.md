@@ -1,12 +1,12 @@
 ---
-category: Business
 id: airbnb-search
-name: Airbnb Search
-description: Search Airbnb listings with prices, ratings, and direct links. No API key required.
-license: MIT
-metadata:
-  author: Olafs-World
-  version: "0.1.3"
+name: "Airbnb Search"
+description: "Search Airbnb listings with prices, ratings, and direct links. No API key required."
+category: Business
+requires: []
+examples:
+  - "Help me with airbnb search."
+  - "Use airbnb-search for this task."
 ---
 
 # Airbnb Search

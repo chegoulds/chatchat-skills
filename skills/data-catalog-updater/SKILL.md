@@ -1,15 +1,14 @@
 ---
-category: Business
 id: data-catalog-updater
-name: Data Catalog Updater
-description: "Data Catalog Updater - Auto-activating skill for Data Pipelines. Triggers on: data catalog updater, data catalog updater Part of the Data Pipelines skill category."
-  Data Catalog Updater - Auto-activating skill for Data Pipelines.
-  Triggers on: data catalog updater, data catalog updater
-  Part of the Data Pipelines skill category.
-allowed-tools: Read, Write, Edit, Bash, Grep
-version: 1.0.0
-license: MIT
-author: Jeremy Longshore <jeremy@intentsolutions.io>
+name: "Data Catalog Updater"
+description: "Data Catalog Updater - Auto-activating skill for Data Pipelines. Triggers on: data catalog updater, data catalog updater Part of the Data Pipelines skill category. Data Catalog Updater - Auto-activating skill for Data Pipelines. Triggers on: data catalog updater, data catalog updater Part of the Data Pipelines skill category."
+category: Business
+requires: []
+examples:
+  - "Help me with data catalog updater."
+  - "Use data-catalog-updater for this task."
+author: "Jeremy Longshore <jeremy@intentsolutions.io>"
+version: "1.0.0"
 ---
 
 # Data Catalog Updater

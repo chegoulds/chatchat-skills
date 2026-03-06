@@ -1,10 +1,12 @@
 ---
-category: Business
 id: clawpify
-name: Clawpify
-description: Query and manage Shopify stores via GraphQL Admin API. Use for products, orders, customers, inventory, discounts, and all Shopify data operations.
-dependencies:
-  - Tool: shopify_graphql (from MCP server or custom function)
+name: "Clawpify"
+description: "Query and manage Shopify stores via GraphQL Admin API. Use for products, orders, customers, inventory, discounts, and all Shopify data operations."
+category: Business
+requires: []
+examples:
+  - "Help me with clawpify."
+  - "Use clawpify for this task."
 ---
 
 # Shopify GraphQL Admin API

@@ -1,10 +1,12 @@
 ---
-category: Business
 id: intercom-automation
-name: Intercom Automation
+name: "Intercom Automation"
 description: "Automate Intercom tasks via Rube MCP (Composio): conversations, contacts, companies, segments, admins. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with intercom automation."
+  - "Use intercom-automation for this task."
 ---
 
 # Intercom Automation via Rube MCP

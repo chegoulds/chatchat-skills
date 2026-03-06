@@ -1,10 +1,12 @@
 ---
-category: Business
 id: helpdesk-automation
-name: Helpdesk Automation
-description: Step-by-step guidance for helpdesk automation.
-requires:
-  mcp: [rube]
+name: "Helpdesk Automation"
+description: "Step-by-step guidance for helpdesk automation."
+category: Business
+requires: []
+examples:
+  - "Help me with helpdesk automation."
+  - "Use helpdesk-automation for this task."
 ---
 
 # Freshdesk Automation via Rube MCP

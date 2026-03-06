@@ -1,8 +1,12 @@
 ---
-category: Business
 id: analyzing-financial-statements
-name: Analyzing Financial Statements
-description: This skill calculates key financial ratios and metrics from financial statement data for investment analysis.
+name: "Analyzing Financial Statements"
+description: "This skill calculates key financial ratios and metrics from financial statement data for investment analysis."
+category: Business
+requires: []
+examples:
+  - "Help me with analyzing financial statements."
+  - "Use analyzing-financial-statements for this task."
 ---
 
 # Financial Ratio Calculator Skill

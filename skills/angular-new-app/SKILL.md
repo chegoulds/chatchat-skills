@@ -1,13 +1,12 @@
 ---
-category: Business
 id: angular-new-app
-name: Angular New App
-description: Creates a new Angular app using the Angular CLI. This skill should be used whenver a user wants to create a new Angular application and contains important guidelines for how to effectively create a modern Angular application.
-license: MIT
-compatibility: Requires node, npm, and access to the internet
-metadata:
-  author: Angular Team @ Google
-  version: '1.0'
+name: "Angular New App"
+description: "Creates a new Angular app using the Angular CLI. This skill should be used whenver a user wants to create a new Angular application and contains important guidelines for how to effectively create a modern Angular application."
+category: Business
+requires: []
+examples:
+  - "Help me with angular new app."
+  - "Use angular-new-app for this task."
 ---
 
 # Angular New App

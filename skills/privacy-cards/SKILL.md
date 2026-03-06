@@ -1,8 +1,12 @@
 ---
-category: Business
 id: privacy-cards
-name: Privacy Cards
-description: Create and manage Privacy.com virtual cards. Use for generating single-use cards, merchant-locked cards, listing cards, setting spending limits, pausing/closing cards, and viewing transactions via the Privacy.com API.
+name: "Privacy Cards"
+description: "Create and manage Privacy.com virtual cards. Use for generating single-use cards, merchant-locked cards, listing cards, setting spending limits, pausing/closing cards, and viewing transactions via the Privacy.com API."
+category: Business
+requires: []
+examples:
+  - "Help me with privacy cards."
+  - "Use privacy-cards for this task."
 ---
 
 # Privacy Cards

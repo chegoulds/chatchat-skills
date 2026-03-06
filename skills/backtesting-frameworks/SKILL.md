@@ -1,8 +1,12 @@
 ---
-category: Business
 id: backtesting-frameworks
-name: Backtesting Frameworks
-description: Build robust backtesting systems for trading strategies with proper handling of look-ahead bias, survivorship bias, and transaction costs.
+name: "Backtesting Frameworks"
+description: "Build robust backtesting systems for trading strategies with proper handling of look-ahead bias, survivorship bias, and transaction costs."
+category: Business
+requires: []
+examples:
+  - "Help me with backtesting frameworks."
+  - "Use backtesting-frameworks for this task."
 ---
 
 # Backtesting Frameworks

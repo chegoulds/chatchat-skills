@@ -1,9 +1,12 @@
 ---
-category: Business
 id: plan-writing
-name: Plan Writing
-description: Structured task planning with clear breakdowns, dependencies, and verification criteria.
-allowed-tools: Read, Glob, Grep
+name: "Plan Writing"
+description: "Structured task planning with clear breakdowns, dependencies, and verification criteria."
+category: Business
+requires: []
+examples:
+  - "Help me with plan writing."
+  - "Use plan-writing for this task."
 ---
 
 # Plan Writing

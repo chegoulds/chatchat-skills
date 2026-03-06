@@ -1,10 +1,12 @@
 ---
-category: Business
 id: create-plan
-name: Create Plan
-description: Step-by-step guidance for create plan.
-metadata:
-  short-description: Create a plan
+name: "Create Plan"
+description: "Step-by-step guidance for create plan."
+category: Business
+requires: []
+examples:
+  - "Help me with create plan."
+  - "Use create-plan for this task."
 ---
 
 # Create Plan

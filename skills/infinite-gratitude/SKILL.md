@@ -1,10 +1,12 @@
 ---
-category: Business
 id: infinite-gratitude
-name: Infinite Gratitude
-description: Multi-agent research skill for parallel research execution (10 agents, battle-tested with real case studies).
-risk: safe
-source: https://github.com/sstklen/infinite-gratitude
+name: "Infinite Gratitude"
+description: "Multi-agent research skill for parallel research execution (10 agents, battle-tested with real case studies)."
+category: Business
+requires: []
+examples:
+  - "Help me with infinite gratitude."
+  - "Use infinite-gratitude for this task."
 ---
 
 # Infinite Gratitude

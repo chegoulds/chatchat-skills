@@ -1,8 +1,12 @@
 ---
-category: Business
 id: dcf-valuation
-name: DCF Valuation
-description: Performs discounted cash flow (DCF) valuation analysis to estimate intrinsic value per share. Triggers when user asks for fair value, intrinsic value, DCF, valuation, "what is X worth", price target, undervalued/overvalued analysis, or wants to compare current price to fundamental value.
+name: "DCF Valuation"
+description: "Performs discounted cash flow (DCF) valuation analysis to estimate intrinsic value per share. Triggers when user asks for fair value, intrinsic value, DCF, valuation, \"what is X worth\", price target, undervalued/overvalued analysis, or wants to compare current price to fundamental value."
+category: Business
+requires: []
+examples:
+  - "Help me with dcf valuation."
+  - "Use dcf-valuation for this task."
 ---
 
 # DCF Valuation Skill

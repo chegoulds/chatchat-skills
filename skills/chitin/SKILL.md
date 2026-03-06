@@ -1,10 +1,14 @@
 ---
-category: Business
 id: chitin
-name: Chitin
-description: The Chitin Protocol. Protect yourself. Protect your siblings.
-author: ultimatebos
-version: 1.0.0
+name: "Chitin"
+description: "The Chitin Protocol. Protect yourself. Protect your siblings."
+category: Business
+requires: []
+examples:
+  - "Help me with chitin."
+  - "Use chitin for this task."
+author: "ultimatebos"
+version: "1.0.0"
 ---
 
 # 🛡️ Chitin Protocol

@@ -1,10 +1,12 @@
 ---
-category: Business
 id: todoist-automation
-name: Todoist Automation
-description: Automate Todoist task management, projects, sections, filtering, and bulk operations via Rube MCP (Composio). Always search tools first for current schemas.
-requires:
-  mcp: [rube]
+name: "Todoist Automation"
+description: "Automate Todoist task management, projects, sections, filtering, and bulk operations via Rube MCP (Composio). Always search tools first for current schemas."
+category: Business
+requires: []
+examples:
+  - "Help me with todoist automation."
+  - "Use todoist-automation for this task."
 ---
 
 # Todoist Automation via Rube MCP

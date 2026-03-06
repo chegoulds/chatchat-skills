@@ -1,8 +1,12 @@
 ---
-category: Business
 id: brainstorming
-name: Brainstorming
-description: Guidance and answers for brainstorming.
+name: "Brainstorming"
+description: "Guidance and answers for brainstorming."
+category: Business
+requires: []
+examples:
+  - "Help me with brainstorming."
+  - "Use brainstorming for this task."
 ---
 
 # Brainstorming Ideas Into Designs

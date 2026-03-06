@@ -1,8 +1,12 @@
 ---
-category: Business
 id: game-changing-features
-name: Game Changing Features
-description: Find 10x product opportunities and high-leverage improvements.
+name: "Game Changing Features"
+description: "Find 10x product opportunities and high-leverage improvements."
+category: Business
+requires: []
+examples:
+  - "Help me with game changing features."
+  - "Use game-changing-features for this task."
 ---
 
 # 10x Mode

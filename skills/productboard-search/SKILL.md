@@ -1,11 +1,12 @@
 ---
-category: Business
 id: productboard-search
-name: Productboard Search
-description: Search and explore ProductBoard features, products, and feedback.
-user-invocable: true
-homepage: https://github.com/robertoamoreno/openclaw-productboard
-metadata: {"openclaw":{"emoji":"🔍"}}
+name: "Productboard Search"
+description: "Search and explore ProductBoard features, products, and feedback."
+category: Business
+requires: []
+examples:
+  - "Help me with productboard search."
+  - "Use productboard-search for this task."
 ---
 
 # ProductBoard Search Skill

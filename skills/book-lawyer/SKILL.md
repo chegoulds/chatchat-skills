@@ -1,8 +1,12 @@
 ---
-category: Business
 id: book-lawyer
-name: Book Lawyer
-description: Book lawyer services through Lokuli MCP.
+name: "Book Lawyer"
+description: "Book lawyer services through Lokuli MCP."
+category: Business
+requires: []
+examples:
+  - "Help me with book lawyer."
+  - "Use book-lawyer for this task."
 ---
 
 # uook lawyer

@@ -1,10 +1,12 @@
 ---
-category: Business
 id: zoom-automation
-name: Zoom Automation
-description: Automate Zoom meeting creation, management, recordings, webinars, and participant tracking via Rube MCP (Composio). Always search tools first for current schemas.
-requires:
-  mcp: [rube]
+name: "Zoom Automation"
+description: "Automate Zoom meeting creation, management, recordings, webinars, and participant tracking via Rube MCP (Composio). Always search tools first for current schemas."
+category: Business
+requires: []
+examples:
+  - "Help me with zoom automation."
+  - "Use zoom-automation for this task."
 ---
 
 # Zoom Automation via Rube MCP

@@ -1,11 +1,13 @@
 ---
-category: Business
 id: clawver-store-analytics
-name: Clawver Store Analytics
-description: Monitor Clawver store performance. Query revenue, top products, conversion rates, growth trends.
-version: 1.1.0
-homepage: https://clawver.store
-metadata: {"openclaw":{"emoji":"📊","homepage":"https://clawver.store","requires":{"env":["CLAW_API_KEY"]},"primaryEnv":"CLAW_API_KEY"}}
+name: "Clawver Store Analytics"
+description: "Monitor Clawver store performance. Query revenue, top products, conversion rates, growth trends."
+category: Business
+requires: []
+examples:
+  - "Help me with clawver store analytics."
+  - "Use clawver-store-analytics for this task."
+version: "1.1.0"
 ---
 
 # Clawver Store Analytics

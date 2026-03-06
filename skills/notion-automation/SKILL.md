@@ -1,10 +1,12 @@
 ---
-category: Business
 id: notion-automation
-name: Notion Automation
+name: "Notion Automation"
 description: "Automate Notion tasks via Rube MCP (Composio): pages, databases, blocks, comments, users. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with notion automation."
+  - "Use notion-automation for this task."
 ---
 
 # Notion Automation via Rube MCP

@@ -1,8 +1,12 @@
 ---
-category: Business
 id: risk-metrics-calculation
-name: Risk Metrics Calculation
-description: Calculate portfolio risk metrics including VaR, CVaR, Sharpe, Sortino, and drawdown analysis.
+name: "Risk Metrics Calculation"
+description: "Calculate portfolio risk metrics including VaR, CVaR, Sharpe, Sortino, and drawdown analysis."
+category: Business
+requires: []
+examples:
+  - "Help me with risk metrics calculation."
+  - "Use risk-metrics-calculation for this task."
 ---
 
 # Risk Metrics Calculation

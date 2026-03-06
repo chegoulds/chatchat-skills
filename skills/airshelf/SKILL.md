@@ -1,10 +1,12 @@
 ---
-category: Business
 id: airshelf
-name: Airshelf
-displayName: AirShelf Agentic Commerce Platform
-description: Search, compare, and buy products from verified merchants. Returns structured product data with Decision Packs (pros, cons, best_for, allergens, verified pricing) instead of raw web scraping. No CAPTCHAs, no auth required. ~980 products across 10 merchants.
-metadata: {"clawdbot":{"emoji":"🛒","requires":{"bins":["curl"]}}}
+name: "Airshelf"
+description: "Search, compare, and buy products from verified merchants. Returns structured product data with Decision Packs (pros, cons, best_for, allergens, verified pricing) instead of raw web scraping. No CAPTCHAs, no auth required. ~980 products across 10 merchants."
+category: Business
+requires: []
+examples:
+  - "Help me with airshelf."
+  - "Use airshelf for this task."
 ---
 
 # AirShelf — Verified Product Search & Checkout for AI Agents

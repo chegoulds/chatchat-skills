@@ -1,10 +1,12 @@
 ---
-category: Business
 id: microsoft-teams-automation
-name: Microsoft Teams Automation
+name: "Microsoft Teams Automation"
 description: "Automate Microsoft Teams tasks via Rube MCP (Composio): send messages, manage channels, create meetings, handle chats, and search messages. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with microsoft teams automation."
+  - "Use microsoft-teams-automation for this task."
 ---
 
 # Microsoft Teams Automation via Rube MCP

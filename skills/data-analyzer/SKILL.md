@@ -1,8 +1,12 @@
 ---
-category: Business
 id: data-analyzer
-name: Data Analyzer
-description: Step-by-step guidance for data.
+name: "Data Analyzer"
+description: "Step-by-step guidance for data."
+category: Business
+requires: []
+examples:
+  - "Help me with data analyzer."
+  - "Use data-analyzer for this task."
 ---
 
 # Data Analyzer

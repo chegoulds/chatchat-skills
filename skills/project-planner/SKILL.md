@@ -1,15 +1,12 @@
 ---
-category: Business
 id: project-planner
-name: Project Planner
-description: Breaks down complex projects into actionable tasks with timelines, dependencies, and milestones.
-  Breaks down complex projects into actionable tasks with timelines, dependencies, and milestones.
-  Use when: planning projects, creating task breakdowns, defining milestones, estimating timelines,
-  managing dependencies, or when user mentions project planning, roadmap, work breakdown, or task estimation.
-license: MIT
-metadata:
-  author: awesome-llm-apps
-  version: "1.0.0"
+name: "Project Planner"
+description: "Breaks down complex projects into actionable tasks with timelines, dependencies, and milestones. Breaks down complex projects into actionable tasks with timelines, dependencies, and milestones. Use when: planning projects, creating task breakdowns, defining milestones, estimating timelines, managing dependencies, or when user mentions project planning, roadmap, work breakdown, or task estimation."
+category: Business
+requires: []
+examples:
+  - "Help me with project planner."
+  - "Use project-planner for this task."
 ---
 
 # Project Planner

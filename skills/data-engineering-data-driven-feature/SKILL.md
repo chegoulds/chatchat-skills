@@ -1,8 +1,12 @@
 ---
-category: Business
 id: data-engineering-data-driven-feature
-name: Data Engineering Data Driven Feature
-description: World-class data science skill for statistical modeling, experimentation, causal inference, and advanced analytics. Expertise in Python (NumPy, Pandas, Scikit-learn), R, SQL, statistical methods, A/B testing, time series, and business intelligence. Includes experiment design, feature engineering, model evaluation, and stakeholder communication.
+name: "Data Engineering Data Driven Feature"
+description: "World-class data science skill for statistical modeling, experimentation, causal inference, and advanced analytics. Expertise in Python (NumPy, Pandas, Scikit-learn), R, SQL, statistical methods, A/B testing, time series, and business intelligence. Includes experiment design, feature engineering, model evaluation, and stakeholder communication."
+category: Business
+requires: []
+examples:
+  - "Help me with data engineering data driven feature."
+  - "Use data-engineering-data-driven-feature for this task."
 ---
 
 # Senior Data Scientist

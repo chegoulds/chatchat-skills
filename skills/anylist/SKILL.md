@@ -1,14 +1,12 @@
 ---
-category: Business
 id: anylist
-name: Anylist
-description: Manage grocery and shopping lists via AnyList.
-homepage: https://www.anylist.com
-metadata:
-  clawdbot:
-    emoji: "🛒"
-    requires:
-      bins: ["anylist"]
+name: "Anylist"
+description: "Manage grocery and shopping lists via AnyList."
+category: Business
+requires: []
+examples:
+  - "Help me with anylist."
+  - "Use anylist for this task."
 ---
 
 # AnyList CLI

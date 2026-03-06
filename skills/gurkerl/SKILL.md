@@ -1,10 +1,13 @@
 ---
-category: Business
 id: gurkerl
-name: Gurkerl
-version: 0.1.6
-description: Austrian online grocery shopping via gurkerl.at.
-tools: [bash]
+name: "Gurkerl"
+description: "Austrian online grocery shopping via gurkerl.at."
+category: Business
+requires: []
+examples:
+  - "Help me with gurkerl."
+  - "Use gurkerl for this task."
+version: "0.1.6"
 ---
 
 # 🥒 gurkerlcli - Austrian Grocery Shopping

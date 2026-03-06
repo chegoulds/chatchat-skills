@@ -1,8 +1,12 @@
 ---
-category: Business
 id: mayar-payment
-name: Mayar Payment
-description: Provide guidance on mayar payment based on the user's goals and tools.
+name: "Mayar Payment"
+description: "Provide guidance on mayar payment based on the user's goals and tools."
+category: Business
+requires: []
+examples:
+  - "Help me with mayar payment."
+  - "Use mayar-payment for this task."
 ---
 
 # Mayar Payment Integration

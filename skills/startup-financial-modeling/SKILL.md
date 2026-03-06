@@ -1,9 +1,13 @@
 ---
-category: Business
 id: startup-financial-modeling
-name: Startup Financial Modeling
-description: Step-by-step guidance for startup financial modeling.
-version: 1.0.0
+name: "Startup Financial Modeling"
+description: "Step-by-step guidance for startup financial modeling."
+category: Business
+requires: []
+examples:
+  - "Help me with startup financial modeling."
+  - "Use startup-financial-modeling for this task."
+version: "1.0.0"
 ---
 
 # Startup Financial Modeling

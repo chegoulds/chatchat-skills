@@ -1,10 +1,12 @@
 ---
-category: Business
 id: stripe-automation
-name: Stripe Automation
+name: "Stripe Automation"
 description: "Automate Stripe tasks via Rube MCP (Composio): customers, charges, subscriptions, invoices, products, refunds. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with stripe automation."
+  - "Use stripe-automation for this task."
 ---
 
 # Stripe Automation via Rube MCP

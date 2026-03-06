@@ -1,8 +1,12 @@
 ---
-category: Business
 id: create-an-asset
-name: Create An Asset
-description: Guidance and answers for create an asset.
+name: "Create An Asset"
+description: "Guidance and answers for create an asset."
+category: Business
+requires: []
+examples:
+  - "Help me with create an asset."
+  - "Use create-an-asset for this task."
 ---
 
 # Create An Asset

@@ -1,8 +1,12 @@
 ---
-category: Business
 id: powerbi-modeling
-name: Power BI Modeling
-description: Step-by-step guidance for power bi modeling.
+name: "Power BI Modeling"
+description: "Step-by-step guidance for power bi modeling."
+category: Business
+requires: []
+examples:
+  - "Help me with power bi modeling."
+  - "Use powerbi-modeling for this task."
 ---
 
 # Power BI Semantic Modeling

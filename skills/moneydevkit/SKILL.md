@@ -1,22 +1,12 @@
 ---
-category: Business
 id: moneydevkit
-name: Moneydevkit
-description: Accept payments on any website using moneydevkit.
-metadata:
-  openclaw:
-    requires:
-      env:
-        - MDK_ACCESS_TOKEN
-        - MDK_MNEMONIC
-      bins:
-        - npx
-    optional:
-      bins:
-        - mcporter
-    endpoints:
-      - https://mcp.moneydevkit.com
-      - https://docs.moneydevkit.com
+name: "Moneydevkit"
+description: "Accept payments on any website using moneydevkit."
+category: Business
+requires: []
+examples:
+  - "Help me with moneydevkit."
+  - "Use moneydevkit for this task."
 ---
 
 # moneydevkit

@@ -1,10 +1,12 @@
 ---
-category: Business
 id: rfi-notification-workflow
-name: RFI Notification Workflow
-description: Complete RFI (Request for Information) management system. Create, track, route, and analyze RFIs with automatic notifications and response deadline tracking.
-homepage: "https://datadrivenconstruction.io"
-metadata: {"openclaw": {"emoji": "📋", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
+name: "RFI Notification Workflow"
+description: "Complete RFI (Request for Information) management system. Create, track, route, and analyze RFIs with automatic notifications and response deadline tracking."
+category: Business
+requires: []
+examples:
+  - "Help me with rfi notification workflow."
+  - "Use rfi-notification-workflow for this task."
 ---
 
 # RFI Notification Workflow

@@ -1,10 +1,12 @@
 ---
-category: Business
 id: salesforce-automation
-name: Salesforce Automation
+name: "Salesforce Automation"
 description: "Automate Salesforce tasks via Rube MCP (Composio): leads, contacts, accounts, opportunities, SOQL queries. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with salesforce automation."
+  - "Use salesforce-automation for this task."
 ---
 
 # Salesforce Automation via Rube MCP

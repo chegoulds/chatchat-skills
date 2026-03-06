@@ -1,10 +1,12 @@
 ---
-category: Business
 id: jira-automation
-name: Jira Automation
+name: "Jira Automation"
 description: "Automate Jira tasks via Rube MCP (Composio): issues, projects, sprints, boards, comments, users. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with jira automation."
+  - "Use jira-automation for this task."
 ---
 
 # Jira Automation via Rube MCP

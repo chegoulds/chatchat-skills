@@ -1,8 +1,12 @@
 ---
-category: Business
 id: pyhealth
-name: PyHealth
-description: Step-by-step guidance for pyhealth.
+name: "PyHealth"
+description: "Step-by-step guidance for pyhealth."
+category: Business
+requires: []
+examples:
+  - "Help me with pyhealth."
+  - "Use pyhealth for this task."
 ---
 
 # Pyhealth

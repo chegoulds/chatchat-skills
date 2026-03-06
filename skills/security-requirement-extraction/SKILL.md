@@ -1,8 +1,12 @@
 ---
-category: Business
 id: security-requirement-extraction
-name: Security Requirement Extraction
-description: Derive security requirements from threat models and business context.
+name: "Security Requirement Extraction"
+description: "Derive security requirements from threat models and business context."
+category: Business
+requires: []
+examples:
+  - "Help me with security requirement extraction."
+  - "Use security-requirement-extraction for this task."
 ---
 
 # Security Requirement Extraction

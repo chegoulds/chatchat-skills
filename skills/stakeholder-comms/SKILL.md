@@ -1,8 +1,12 @@
 ---
-category: Business
 id: stakeholder-comms
-name: Stakeholder Comms
-description: Draft stakeholder updates tailored to audience — executives, engineering, customers, or cross-functional partners.
+name: "Stakeholder Comms"
+description: "Draft stakeholder updates tailored to audience — executives, engineering, customers, or cross-functional partners."
+category: Business
+requires: []
+examples:
+  - "Help me with stakeholder comms."
+  - "Use stakeholder-comms for this task."
 ---
 
 # Stakeholder Communications Skill

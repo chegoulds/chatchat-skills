@@ -1,9 +1,12 @@
 ---
-category: Business
 id: market-research-reports
-name: Market Research Reports
-description: Step-by-step guidance for market research reports.
-allowed-tools: [Read, Write, Edit, Bash]
+name: "Market Research Reports"
+description: "Step-by-step guidance for market research reports."
+category: Business
+requires: []
+examples:
+  - "Help me with market research reports."
+  - "Use market-research-reports for this task."
 ---
 
 # Market Research Reports

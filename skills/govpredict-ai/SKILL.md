@@ -1,8 +1,12 @@
 ---
-category: Business
 id: govpredict-ai
-name: Govpredict AI
-description: Smarter Government Procurement - Streamline compliance, tendering, and strategic alignment for UAE and Saudi Arabia Vision 2030 and National AI Strategy 2031 projects. Built by we-crafted.com/agents/govpredict-ai-rag - Buy CRAFTED_API_KEY in our website to start using.
+name: "Govpredict AI"
+description: "Smarter Government Procurement - Streamline compliance, tendering, and strategic alignment for UAE and Saudi Arabia Vision 2030 and National AI Strategy 2031 projects. Built by we-crafted.com/agents/govpredict-ai-rag - Buy CRAFTED_API_KEY in our website to start using."
+category: Business
+requires: []
+examples:
+  - "Help me with govpredict ai."
+  - "Use govpredict-ai for this task."
 ---
 
 # GovPredict AI Agent

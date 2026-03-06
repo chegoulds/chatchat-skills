@@ -1,10 +1,12 @@
 ---
-category: Business
 id: mixpanel-automation
-name: Mixpanel Automation
-description: Step-by-step guidance for mixpanel automation.
-requires:
-  mcp: [rube]
+name: "Mixpanel Automation"
+description: "Step-by-step guidance for mixpanel automation."
+category: Business
+requires: []
+examples:
+  - "Help me with mixpanel automation."
+  - "Use mixpanel-automation for this task."
 ---
 
 # Mixpanel Automation via Rube MCP

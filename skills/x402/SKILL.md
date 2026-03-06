@@ -1,25 +1,12 @@
 ---
-category: Business
 id: x402
-name: X402
-description: Autonomous crypto business development patterns — multi-chain token discovery, 100-point scoring with wallet forensics, x402 micropayments, ERC-8004 on-chain identity, LLM cascade routing, and pipeline automation for CEX/DEX listing acquisition.
-  Autonomous crypto business development patterns — multi-chain token discovery,
-  100-point scoring with wallet forensics, x402 micropayments, ERC-8004 on-chain
-  identity, LLM cascade routing, and pipeline automation for CEX/DEX listing
-  acquisition. Use when building AI agents for crypto BD, token evaluation,
-  exchange listing outreach, or autonomous commerce with payment protocols.
-risk: safe
-source: community
-tags:
-  - crypto
-  - business-development
-  - token-scanning
-  - x402
-  - erc-8004
-  - autonomous-agent
-  - solana
-  - ethereum
-  - wallet-forensics
+name: "X402"
+description: "Autonomous crypto business development patterns — multi-chain token discovery, 100-point scoring with wallet forensics, x402 micropayments, ERC-8004 on-chain identity, LLM cascade routing, and pipeline automation for CEX/DEX listing acquisition. Autonomous crypto business development patterns — multi-chain token discovery, 100-point scoring with wallet forensics, x402 micropayments, ERC-8004 on-chain identity, LLM cascade routing, and pipeline automation for CEX/DEX listing acquisition. Use when building AI agents for crypto BD, token evaluation, exchange listing outreach, or autonomous commerce with payment protocols."
+category: Business
+requires: []
+examples:
+  - "Help me with x402."
+  - "Use x402 for this task."
 ---
 
 # Crypto BD Agent — Autonomous Business Development for Exchanges

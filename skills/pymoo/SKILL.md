@@ -1,8 +1,12 @@
 ---
-category: Business
 id: pymoo
-name: Pymoo
-description: Multi-objective optimization framework. NSGA-II, NSGA-III, MOEA/D, Pareto fronts, constraint handling, benchmarks (ZDT, DTLZ), for engineering design and optimization problems.
+name: "Pymoo"
+description: "Multi-objective optimization framework. NSGA-II, NSGA-III, MOEA/D, Pareto fronts, constraint handling, benchmarks (ZDT, DTLZ), for engineering design and optimization problems."
+category: Business
+requires: []
+examples:
+  - "Help me with pymoo."
+  - "Use pymoo for this task."
 ---
 
 # Pymoo

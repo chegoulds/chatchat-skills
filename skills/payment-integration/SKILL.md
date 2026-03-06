@@ -1,8 +1,12 @@
 ---
-category: Business
 id: payment-integration
-name: Payment Integration
-description: Implement Stripe payment processing for robust, PCI-compliant payment flows including checkout, subscriptions, and webhooks.
+name: "Payment Integration"
+description: "Implement Stripe payment processing for robust, PCI-compliant payment flows including checkout, subscriptions, and webhooks."
+category: Business
+requires: []
+examples:
+  - "Help me with payment integration."
+  - "Use payment-integration for this task."
 ---
 
 # Stripe Integration

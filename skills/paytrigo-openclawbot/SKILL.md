@@ -1,9 +1,12 @@
 ---
-category: Business
 id: paytrigo-openclawbot
-name: Paytrigo Openclawbot
-description: Create PayTrigo Base/USDC payment flows for OpenClawBot.
-metadata: {"openclaw":{}}
+name: "Paytrigo Openclawbot"
+description: "Create PayTrigo Base/USDC payment flows for OpenClawBot."
+category: Business
+requires: []
+examples:
+  - "Help me with paytrigo openclawbot."
+  - "Use paytrigo-openclawbot for this task."
 ---
 
 # PayTrigo (OpenClawBot, Base/USDC)

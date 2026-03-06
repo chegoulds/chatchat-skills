@@ -1,11 +1,12 @@
 ---
 id: braintree-automation
-name: Braintree Automation
+name: "Braintree Automation"
 description: "Braintree Automation: manage payment processing via Stripe-compatible tools for customers, subscriptions, payment methods, and transactions."
 category: Business
-source: composio
-tags: [mcp, automation, ai]
-url: https://github.com/ComposioHQ/awesome-claude-skills/tree/master/braintree-automation
+requires: []
+examples:
+  - "Help me with braintree automation."
+  - "Use braintree-automation for this task."
 ---
 
 # Braintree Automation

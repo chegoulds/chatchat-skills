@@ -1,10 +1,12 @@
 ---
-category: Business
 id: shopify-automation
-name: Shopify Automation
+name: "Shopify Automation"
 description: "Automate Shopify tasks via Rube MCP (Composio): products, orders, customers, inventory, collections. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with shopify automation."
+  - "Use shopify-automation for this task."
 ---
 
 # Shopify Automation via Rube MCP

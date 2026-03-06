@@ -1,8 +1,12 @@
 ---
-category: Business
 id: billing
-name: Billing
-description: Build automated billing systems for recurring payments, invoicing, subscription lifecycle, and dunning management.
+name: "Billing"
+description: "Build automated billing systems for recurring payments, invoicing, subscription lifecycle, and dunning management."
+category: Business
+requires: []
+examples:
+  - "Help me with billing."
+  - "Use billing for this task."
 ---
 
 # Billing

@@ -1,9 +1,12 @@
 ---
-category: Business
 id: aussie-mortgage-calc
-name: Aussie Mortgage Calc
-description: Australian mortgage calculator — LVR, stamp duty, LMI, repayments, and First Home Buyer concessions by state.
-homepage: https://oneyco.com.au
+name: "Aussie Mortgage Calc"
+description: "Australian mortgage calculator — LVR, stamp duty, LMI, repayments, and First Home Buyer concessions by state."
+category: Business
+requires: []
+examples:
+  - "Help me with aussie mortgage calc."
+  - "Use aussie-mortgage-calc for this task."
 ---
 
 # Australian Mortgage Calculator

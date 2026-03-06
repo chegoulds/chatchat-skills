@@ -1,8 +1,12 @@
 ---
-category: Business
 id: threat-mitigation-mapping
-name: Threat Mitigation Mapping
-description: Map identified threats to appropriate security controls and mitigations.
+name: "Threat Mitigation Mapping"
+description: "Map identified threats to appropriate security controls and mitigations."
+category: Business
+requires: []
+examples:
+  - "Help me with threat mitigation mapping."
+  - "Use threat-mitigation-mapping for this task."
 ---
 
 # Threat Mitigation Mapping

@@ -1,116 +1,109 @@
 ---
-category: Business
 id: adaptyv
-name: Adaptyv
-description: Guidance and answers for adaptyv.
+name: "Adaptyv"
+description: "Plan Adaptyv protein experiment workflows, choose assay strategy, and structure submission-ready requirements. Use when users need experiment planning, sequence readiness checks, or result interpretation frameworks for protein validation."
+category: Business
+requires: []
+examples:
+  - "Help me choose the right Adaptyv assay for this protein objective."
+  - "Turn these protein notes into a submission-ready experiment plan."
 ---
 
 # Adaptyv
 
-Adaptyv is a cloud laboratory platform that provides automated protein testing and validation services. Submit protein sequences via API or web interface and receive experimental results in approximately 21 days.
+Use this skill as a guidance-only framework for planning protein validation work with Adaptyv-style lab workflows.
 
-## Quick Start
+## Use this skill when
 
-### Authentication Setup
+- The user needs help designing protein validation experiments.
+- The user needs an assay selection recommendation with trade-offs.
+- The user wants sequence readiness checks before lab submission.
+- The user needs a structured interpretation framework for returned results.
 
-Adaptyv requires API authentication. Set up your credentials:
+## Do not use this skill when
 
-1. Contact support@adaptyvbio.com to request API access (platform is in alpha/beta)
-2. Receive your API access token
-3. Set environment variable:
+- The request is unrelated to protein testing or experiment planning.
+- The user expects direct API execution or real lab submission from this skill.
 
-```bash
-export ADAPTYV_API_KEY="your_api_key_here"
-```
+## Guardrails
 
-Or create a `.env` file:
-
-```
-ADAPTYV_API_KEY=your_api_key_here
-```
-
-### Installation
-
-Install the required package using uv:
-
-```bash
-uv pip install requests python-dotenv
-```
-
-### Basic Usage
-
-Submit protein sequences for testing:
-
-```python
-import os
-import requests
-from dotenv import load_dotenv
-
-load_dotenv()
-
-api_key = os.getenv("ADAPTYV_API_KEY")
-base_url = "https://kq5jp7qj7wdqklhsxmovkzn4l40obksv.lambda-url.eu-central-1.on.aws"
-
-headers = {
-    "Authorization": f"Bearer {api_key}",
-    "Content-Type": "application/json"
-}
-
-# Submit experiment
-response = requests.post(
-    f"{base_url}/experiments",
-    headers=headers,
-    json={
-        "sequences": ">protein1\nMKVLWALLGLLGAA...",
-        "experiment_type": "binding",
-        "webhook_url": "https://your-webhook.com/callback"
-    }
-)
-
-experiment_id = response.json()["experiment_id"]
-```
+- Treat this as guidance-only; do not claim to execute API calls.
+- Do not fabricate experiment IDs, results, or backend actions.
+- If execution is requested, provide a step-by-step plan the user can run in their own environment.
 
 ## Available Experiment Types
 
-Adaptyv supports multiple assay types:
+Use these options to map user goals to experiment design:
 
 - **Binding assays** - Test protein-target interactions using biolayer interferometry
 - **Expression testing** - Measure protein expression levels
 - **Thermostability** - Characterize protein thermal stability
 - **Enzyme activity** - Assess enzymatic function
 
-See `reference/experiments.md` for detailed information on each experiment type and workflows.
-
 ## Protein Sequence Optimization
 
-Before submitting sequences, optimize them for better expression and stability:
+Before planning submission, check sequence readiness for expression and stability risk.
 
-**Common issues to address:**
+Common issues to assess:
 - Unpaired cysteines that create unwanted disulfides
 - Excessive hydrophobic regions causing aggregation
 - Poor solubility predictions
 
-**Recommended tools:**
+Recommended analysis families:
 - NetSolP / SoluProt - Initial solubility filtering
 - SolubleMPNN - Sequence redesign for improved solubility
 - ESM - Sequence likelihood scoring
 - ipTM - Interface stability assessment
 - pSAE - Hydrophobic exposure quantification
 
-See `reference/protein_optimization.md` for detailed optimization workflows and tool usage.
+## Workflow
 
-## API Reference
+1. **Define objective**
+   - Clarify target behavior: binding, expression, stability, or activity.
+   - Capture constraints: turnaround, budget sensitivity, required confidence.
 
-For complete API documentation including all endpoints, request/response formats, and authentication details, see `reference/api_reference.md`.
+2. **Select assay strategy**
+   - Propose one primary assay and one fallback.
+   - Explain trade-offs: signal quality, interpretability, likely failure modes.
 
-## Examples
+3. **Run sequence readiness review**
+   - Flag high-risk motifs and solubility concerns.
+   - Provide mitigation suggestions before submission.
 
-For concrete code examples covering common use cases (experiment submission, status tracking, result retrieval, batch processing), see `reference/examples.md`.
+4. **Prepare submission packet checklist**
+   - Sequence format and metadata completeness
+   - Experiment type and success criteria
+   - Control conditions and acceptance thresholds
 
-## Important Notes
+5. **Plan interpretation**
+   - Define what counts as pass, fail, or inconclusive.
+   - List follow-up actions for each outcome.
 
-- Platform is currently in alpha/beta phase with features subject to change
-- Not all platform features are available via API yet
-- Results typically delivered in ~21 days
-- Contact support@adaptyvbio.com for access requests or questions
-- Suitable for high-throughput AI-driven protein design workflows
+## Output format
+
+```markdown
+## Experiment Objective
+- Primary goal:
+- Key constraint:
+
+## Assay Recommendation
+- Primary assay:
+- Why this assay:
+- Backup assay:
+- Trade-offs:
+
+## Sequence Readiness Review
+- Risks:
+- Mitigations:
+
+## Submission Checklist
+- [ ] Sequence and metadata complete
+- [ ] Assay and controls defined
+- [ ] Success criteria defined
+
+## Interpretation Plan
+- Pass criteria:
+- Fail criteria:
+- Inconclusive criteria:
+- Next actions by scenario:
+```

@@ -1,8 +1,12 @@
 ---
-category: Business
 id: upgrade-stripe
-name: Upgrade Stripe
-description: Guide for upgrading Stripe API versions and SDKs.
+name: "Upgrade Stripe"
+description: "Guide for upgrading Stripe API versions and SDKs."
+category: Business
+requires: []
+examples:
+  - "Help me with upgrade stripe."
+  - "Use upgrade-stripe for this task."
 ---
 
 # Upgrading Stripe Versions

@@ -1,18 +1,12 @@
 ---
-category: Business
 id: cto-advisor
-name: Cto Advisor
-description: Technical leadership guidance for engineering teams, architecture decisions, and technology strategy. Includes tech debt analyzer, team scaling calculator, engineering metrics frameworks, technology evaluation tools, and ADR templates.
-license: MIT
-metadata:
-  version: 1.0.0
-  author: Alireza Rezvani
-  category: c-level
-  domain: cto-leadership
-  updated: 2025-10-20
-  python-tools: tech_debt_analyzer.py, team_scaling_calculator.py
-  frameworks: DORA-metrics, architecture-decision-records, engineering-metrics
-  tech-stack: engineering-management, team-organization
+name: "Cto Advisor"
+description: "Technical leadership guidance for engineering teams, architecture decisions, and technology strategy. Includes tech debt analyzer, team scaling calculator, engineering metrics frameworks, technology evaluation tools, and ADR templates."
+category: Business
+requires: []
+examples:
+  - "Help me with cto advisor."
+  - "Use cto-advisor for this task."
 ---
 
 # CTO Advisor

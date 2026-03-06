@@ -1,8 +1,12 @@
 ---
-category: Business
 id: workflow-orchestration-patterns
-name: Workflow Orchestration Patterns
-description: Learn workflow orchestration patterns for reliable distributed systems.
+name: "Workflow Orchestration Patterns"
+description: "Learn workflow orchestration patterns for reliable distributed systems."
+category: Business
+requires: []
+examples:
+  - "Help me with workflow orchestration patterns."
+  - "Use workflow-orchestration-patterns for this task."
 ---
 
 # Workflow Orchestration Patterns

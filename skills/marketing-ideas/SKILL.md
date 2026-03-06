@@ -1,8 +1,12 @@
 ---
-category: Business
 id: marketing-ideas
-name: Marketing Ideas
-description: When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also.
+name: "Marketing Ideas"
+description: "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also."
+category: Business
+requires: []
+examples:
+  - "Help me with marketing ideas."
+  - "Use marketing-ideas for this task."
 ---
 
 # Marketing Ideas

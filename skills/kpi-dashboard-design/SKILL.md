@@ -1,8 +1,12 @@
 ---
-category: Business
 id: kpi-dashboard-design
-name: KPI Dashboard Design
-description: Step-by-step guidance for KPI dashboard design.
+name: "KPI Dashboard Design"
+description: "Step-by-step guidance for KPI dashboard design."
+category: Business
+requires: []
+examples:
+  - "Help me with kpi dashboard design."
+  - "Use kpi-dashboard-design for this task."
 ---
 
 # KPI Dashboard Design

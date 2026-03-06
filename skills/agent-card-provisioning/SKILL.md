@@ -1,126 +1,96 @@
 ---
-category: Business
 id: agent-card-provisioning
-name: Agent Card Provisioning
-description: Provision virtual payment cards for AI agents on-demand. Create single-use or limited cards with spending controls, merchant restrictions, and automatic expiration. Cards are issued instantly when policy allows.
+name: "Agent Card Provisioning"
+description: "Provision virtual payment cards for AI agents on-demand. Create single-use or limited cards with spending controls, merchant restrictions, and automatic expiration. Cards are issued instantly when policy allows."
+category: Business
+requires: []
+examples:
+  - "Design a policy for agent card provisioning for office purchases under $200."
+  - "Create a safe approval workflow for high-value autonomous card spend."
 ---
 
 # Agent Card Provisioning
 
-Provision virtual payment cards for AI agents with built-in spending controls.
+Use this skill as a guidance-only framework for designing controlled card provisioning workflows for autonomous agents.
 
-## How It Works
+## Use this skill when
 
-1. **Agent requests card** via payment intent
-2. **Policy evaluates** the request (amount, merchant, limits)
-3. **Card issued** if within policy OR **approval required** if over threshold
-4. **Agent uses card** for the specific purchase
-5. **Transaction tracked** and matched to intent
+- You need policy design for autonomous card spending.
+- You need approval thresholds and escalation paths for payment requests.
+- You need audit-ready controls for card lifecycle and transaction tracking.
 
-## Creating a Card (Intent-Based)
+## Do not use this skill when
 
-Cards are provisioned through payment intents, not created directly:
+- The request expects direct card issuance or API execution from this skill.
+- The task is unrelated to payment controls or autonomous spending governance.
 
+## Guardrails
+
+- Treat this as planning guidance only; do not claim to perform real card operations.
+- Do not output or request sensitive payment data (full PAN, CVV, or secrets).
+- If implementation is requested, provide a checklist for the user to run in their own approved system.
+
+## Policy Design Workflow
+
+1. **Define spend scope**
+   - Approved use cases (for example: office supplies, software subscriptions).
+   - Excluded categories and merchants.
+   - Geographic and currency constraints.
+
+2. **Set risk controls**
+   - Per-transaction cap.
+   - Daily and monthly cumulative limits.
+   - Velocity controls (frequency limits).
+   - Automatic expiration rules.
+
+3. **Define approval logic**
+   - Auto-approve zone (low-risk amounts and known categories).
+   - Manual-approval zone (high-value, unusual merchants, policy exceptions).
+   - Rejection rules with clear reasons.
+
+4. **Design audit model**
+   - One request per purchase intent.
+   - Consistent naming convention for reconciliation.
+   - Required fields: requester, purpose, amount, category, approver outcome.
+   - Retention and review cadence for logs.
+
+5. **Plan incident handling**
+   - Suspicious pattern detection triggers.
+   - Temporary freeze and revoke criteria.
+   - Escalation owner and response SLAs.
+
+## Recommended Controls Checklist
+
+- [ ] Allowed and blocked spend categories documented
+- [ ] Per-transaction and cumulative caps defined
+- [ ] Manual approval thresholds and owners defined
+- [ ] Time-based expiry and deactivation rules documented
+- [ ] Audit fields and logging requirements standardized
+- [ ] Exception handling and incident playbook defined
+
+## Output format
+
+```markdown
+## Provisioning Policy Summary
+- Use cases:
+- Exclusions:
+- Risk profile:
+
+## Limits and Controls
+- Per-transaction cap:
+- Daily/monthly caps:
+- Velocity limits:
+- Expiry policy:
+
+## Approval Workflow
+- Auto-approve conditions:
+- Manual review triggers:
+- Rejection conditions:
+- Escalation owner:
+
+## Audit and Monitoring
+- Required log fields:
+- Review cadence:
+- Incident triggers:
+- Response actions:
 ```
-proxy.intents.create
-├── merchant: "Amazon"
-├── amount: 49.99
-├── description: "Office supplies"
-└── category: "office_supplies" (optional)
-```
-
-If approved (auto or manual), a card is issued:
-
-```
-Response:
-├── id: "int_abc123"
-├── status: "pending" or "card_issued"
-├── cardId: "card_xyz789"
-└── message: "Card issued successfully"
-```
-
-## Getting Card Details
-
-### Masked (for display)
-```
-proxy.cards.get { cardId: "card_xyz789" }
-→ { last4: "4242", brand: "Visa", status: "active" }
-```
-
-### Full Details (for payment)
-```
-proxy.cards.get_sensitive { cardId: "card_xyz789" }
-→ {
-    pan: "4532015112830366",
-    cvv: "847",
-    expiryMonth: "03",
-    expiryYear: "2027",
-    billingAddress: {
-      line1: "123 Main St",
-      city: "New York",
-      state: "NY",
-      postalCode: "10001",
-      country: "US"
-    }
-  }
-```
-
-## Card Controls (via Policy)
-
-Policies define what cards can be used for:
-
-| Control | Description |
-|---------|-------------|
-| **Spending limit** | Max per transaction |
-| **Daily/monthly limits** | Cumulative caps |
-| **Merchant categories** | Allowed/blocked MCCs |
-| **Auto-approve threshold** | Below = instant, above = human approval |
-| **Expiration** | Card validity period |
-
-## Card Lifecycle
-
-```
-Intent Created
-      │
-      ▼
-┌─────────────┐
-│   Policy    │
-│  Evaluation │
-└──────┬──────┘
-       │
-  ┌────┴────┐
-  ▼         ▼
-Auto     Needs
-Approve  Approval
-  │         │
-  ▼         ▼
-Card     [Human]
-Issued      │
-  │         │
-  ◀─────────┘
-  │
-  ▼
-Card Used
-  │
-  ▼
-Transaction
- Matched
-  │
-  ▼
-Card
-Expired
-```
-
-## Best Practices
-
-1. **One intent per purchase** - Creates audit trail
-2. **Descriptive intent names** - Helps reconciliation
-3. **Set reasonable policies** - Balance autonomy vs control
-4. **Monitor transactions** - Use `proxy.transactions.list_for_card`
-
-## Security
-
-- Cards are single-purpose (one intent = one card)
-- Unused cards auto-expire
-- Full PAN only via `get_sensitive` (requires auth)
-- All transactions logged and reconciled

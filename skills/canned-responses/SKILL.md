@@ -1,10 +1,12 @@
 ---
-category: Business
 id: canned-responses
-name: Canned Responses
+name: "Canned Responses"
 description: "Automate HelpDesk tasks via Rube MCP (Composio): list tickets, manage views, use canned responses, and configure custom fields. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with canned responses."
+  - "Use canned-responses for this task."
 ---
 
 # HelpDesk Automation via Rube MCP

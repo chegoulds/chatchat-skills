@@ -1,12 +1,12 @@
 ---
-category: Business
 id: flowglad-usage-tracking
-name: Flowglad Usage Tracking
-description: Implement usage-based billing with Flowglad including recording usage events, checking balances, and displaying usage information. Use this skill when adding metered billing, tracking API calls, or implementing consumption-based pricing.
-license: MIT
-metadata:
-  author: flowglad
-  version: "1.0.0"
+name: "Flowglad Usage Tracking"
+description: "Implement usage-based billing with Flowglad including recording usage events, checking balances, and displaying usage information. Use this skill when adding metered billing, tracking API calls, or implementing consumption-based pricing."
+category: Business
+requires: []
+examples:
+  - "Help me with flowglad usage tracking."
+  - "Use flowglad-usage-tracking for this task."
 ---
 
 # Flowglad Usage Tracking

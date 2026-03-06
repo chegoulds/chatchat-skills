@@ -1,10 +1,12 @@
 ---
-category: Business
 id: weather
-name: Weather
-description: Get current weather and forecasts via wttr.in or Open-Meteo.
-homepage: https://wttr.in/:help
-metadata: { "openclaw": { "emoji": "🌤️", "requires": { "bins": ["curl"] } } }
+name: "Weather"
+description: "Get current weather and forecasts via wttr.in or Open-Meteo."
+category: Business
+requires: []
+examples:
+  - "Help me with weather."
+  - "Use weather for this task."
 ---
 
 # Weather Skill

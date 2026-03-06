@@ -1,9 +1,12 @@
 ---
-category: Business
 id: product-requirements
-name: Product Requirements
-description: Generate high-quality Product Requirements Documents (PRDs) for software systems and AI-powered features. Includes executive summaries, user stories, technical specifications, and risk analysis.
-license: MIT
+name: "Product Requirements"
+description: "Generate high-quality Product Requirements Documents (PRDs) for software systems and AI-powered features. Includes executive summaries, user stories, technical specifications, and risk analysis."
+category: Business
+requires: []
+examples:
+  - "Help me with product requirements."
+  - "Use product-requirements for this task."
 ---
 
 # Product Requirements Document (PRD)

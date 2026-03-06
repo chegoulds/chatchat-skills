@@ -1,8 +1,12 @@
 ---
-category: Business
 id: data-privacy-compliance
-name: Data Privacy Compliance
-description: Data privacy and regulatory compliance specialist for GDPR, CCPA, HIPAA, and international data protection laws.
+name: "Data Privacy Compliance"
+description: "Data privacy and regulatory compliance specialist for GDPR, CCPA, HIPAA, and international data protection laws."
+category: Business
+requires: []
+examples:
+  - "Help me with data privacy compliance."
+  - "Use data-privacy-compliance for this task."
 ---
 
 # Data Privacy Compliance

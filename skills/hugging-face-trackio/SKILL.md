@@ -1,8 +1,12 @@
 ---
-category: Business
 id: hugging-face-trackio
-name: Hugging Face Trackio
-description: Step-by-step guidance for hugging face trackio.
+name: "Hugging Face Trackio"
+description: "Step-by-step guidance for hugging face trackio."
+category: Business
+requires: []
+examples:
+  - "Help me with hugging face trackio."
+  - "Use hugging-face-trackio for this task."
 ---
 
 # Trackio - Experiment Tracking for ML Training

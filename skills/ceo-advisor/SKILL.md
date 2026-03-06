@@ -1,17 +1,12 @@
 ---
-category: Business
 id: ceo-advisor
-name: Ceo Advisor
-description: Executive leadership guidance for strategic decision-making, organizational development, and stakeholder management. Includes strategy analyzer, financial scenario modeling, board governance frameworks, and investor relations playbooks.
-license: MIT
-metadata:
-  version: 1.0.0
-  author: Alireza Rezvani
-  category: c-level
-  domain: ceo-leadership
-  updated: 2025-10-20
-  python-tools: strategy_analyzer.py, financial_scenario_analyzer.py
-  frameworks: executive-decision-framework, board-governance, investor-relations
+name: "Ceo Advisor"
+description: "Executive leadership guidance for strategic decision-making, organizational development, and stakeholder management. Includes strategy analyzer, financial scenario modeling, board governance frameworks, and investor relations playbooks."
+category: Business
+requires: []
+examples:
+  - "Help me with ceo advisor."
+  - "Use ceo-advisor for this task."
 ---
 
 # CEO Advisor

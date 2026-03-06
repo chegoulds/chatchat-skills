@@ -1,15 +1,14 @@
 ---
-category: Business
 id: gumroad-admin
-name: Gumroad Admin
-version: 1.0.0
-description: Gumroad Admin CLI. Check sales, products, and manage discounts.
-author: abakermi
-metadata:
-  openclaw:
-    emoji: "💸"
-    requires:
-      env: ["GUMROAD_ACCESS_TOKEN"]
+name: "Gumroad Admin"
+description: "Gumroad Admin CLI. Check sales, products, and manage discounts."
+category: Business
+requires: []
+examples:
+  - "Help me with gumroad admin."
+  - "Use gumroad-admin for this task."
+author: "abakermi"
+version: "1.0.0"
 ---
 
 # Gumroad Admin

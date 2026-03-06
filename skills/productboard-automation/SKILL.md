@@ -1,11 +1,12 @@
 ---
 id: productboard-automation
-name: Productboard Automation
-description: Guidance and answers for productboard automation.
+name: "Productboard Automation"
+description: "Guidance and answers for productboard automation."
 category: Business
-source: composio
-tags: [mcp, automation, ai, claude]
-url: https://github.com/ComposioHQ/awesome-claude-skills/tree/master/productboard-automation
+requires: []
+examples:
+  - "Help me with productboard automation."
+  - "Use productboard-automation for this task."
 ---
 
 # Productboard Automation

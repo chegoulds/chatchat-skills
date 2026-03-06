@@ -1,13 +1,12 @@
 ---
-category: Business
 id: x402-client
-
-name: X402 Client
-
-description: End-to-end Celo development playbook (Feb 2026). Prefer viem for all client/transaction code (native fee currency support via CIP-64). Use thirdweb for wallet connection and React dApps. Foundry for smart contract development. Covers fee abstraction (pay gas in USDC/USDT/USDm), MiniPay Mini Apps, stablecoin integration, and AI agent infrastructure (ERC-8004 trust + x402 payments).
-
-user-invocable: true 
-
+name: "X402 Client"
+description: "End-to-end Celo development playbook (Feb 2026). Prefer viem for all client/transaction code (native fee currency support via CIP-64). Use thirdweb for wallet connection and React dApps. Foundry for smart contract development. Covers fee abstraction (pay gas in USDC/USDT/USDm), MiniPay Mini Apps, stablecoin integration, and AI agent infrastructure (ERC-8004 trust + x402 payments)."
+category: Business
+requires: []
+examples:
+  - "Help me with x402 client."
+  - "Use x402-client for this task."
 ---
 
 # Celo Development Skill (viem-first)  

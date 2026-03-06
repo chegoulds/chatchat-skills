@@ -1,17 +1,14 @@
 ---
-category: Business
 id: apollo-prod-checklist
-name: Apollo Prod Checklist
-description: Execute Apollo.io production deployment checklist.
-  Execute Apollo.io production deployment checklist.
-  Use when preparing to deploy Apollo integrations to production,
-  doing pre-launch verification, or auditing production readiness.
-  Trigger with phrases like "apollo production checklist", "deploy apollo",
-  "apollo go-live", "apollo production ready", "apollo launch checklist".
-allowed-tools: Read, Grep, Bash(curl:*)
-version: 1.0.0
-license: MIT
-author: Jeremy Longshore <jeremy@intentsolutions.io>
+name: "Apollo Prod Checklist"
+description: "Execute Apollo.io production deployment checklist. Execute Apollo.io production deployment checklist. Use when preparing to deploy Apollo integrations to production, doing pre-launch verification, or auditing production readiness. Trigger with phrases like \"apollo production checklist\", \"deploy apollo\", \"apollo go-live\", \"apollo production ready\", \"apollo launch checklist\"."
+category: Business
+requires: []
+examples:
+  - "Help me with apollo prod checklist."
+  - "Use apollo-prod-checklist for this task."
+author: "Jeremy Longshore <jeremy@intentsolutions.io>"
+version: "1.0.0"
 ---
 
 # Apollo Production Checklist

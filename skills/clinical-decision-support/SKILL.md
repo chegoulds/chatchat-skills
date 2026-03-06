@@ -1,9 +1,12 @@
 ---
-category: Business
 id: clinical-decision-support
-name: Clinical Decision Support
-description: Step-by-step guidance for clinical decision support.
-allowed-tools: [Read, Write, Edit, Bash]
+name: "Clinical Decision Support"
+description: "Step-by-step guidance for clinical decision support."
+category: Business
+requires: []
+examples:
+  - "Help me with clinical decision support."
+  - "Use clinical-decision-support for this task."
 ---
 
 # Clinical Decision Support

@@ -1,8 +1,12 @@
 ---
-category: Business
 id: commit
-name: Commit
-description: Run verification steps and prepare a clean commit.
+name: "Commit"
+description: "Run verification steps and prepare a clean commit."
+category: Business
+requires: []
+examples:
+  - "Help me with commit."
+  - "Use commit for this task."
 ---
 
 # Verification

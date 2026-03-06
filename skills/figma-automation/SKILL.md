@@ -1,10 +1,12 @@
 ---
-category: Business
 id: figma-automation
-name: Figma Automation
+name: "Figma Automation"
 description: "Automate Figma tasks via Rube MCP (Composio): files, components, design tokens, comments, exports. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with figma automation."
+  - "Use figma-automation for this task."
 ---
 
 # Figma Automation via Rube MCP

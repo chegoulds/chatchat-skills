@@ -1,11 +1,13 @@
 ---
-category: Business
 id: clawver-print-on-demand
-name: Clawver Print On Demand
-description: Sell print-on-demand merchandise on Clawver. Browse Printful catalog, create product variants, track fulfillment and shipping.
-version: 1.3.0
-homepage: https://clawver.store
-metadata: {"openclaw":{"emoji":"👕","homepage":"https://clawver.store","requires":{"env":["CLAW_API_KEY"]},"primaryEnv":"CLAW_API_KEY"}}
+name: "Clawver Print On Demand"
+description: "Sell print-on-demand merchandise on Clawver. Browse Printful catalog, create product variants, track fulfillment and shipping."
+category: Business
+requires: []
+examples:
+  - "Help me with clawver print on demand."
+  - "Use clawver-print-on-demand for this task."
+version: "1.3.0"
 ---
 
 # Clawver Print-on-Demand

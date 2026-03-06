@@ -1,8 +1,12 @@
 ---
-category: Business
 id: unity-ecs-patterns
-name: Unity Ecs Patterns
-description: Master Unity ECS (Entity Component System) with DOTS, Jobs, and Burst for high-performance game development.
+name: "Unity Ecs Patterns"
+description: "Master Unity ECS (Entity Component System) with DOTS, Jobs, and Burst for high-performance game development."
+category: Business
+requires: []
+examples:
+  - "Help me with unity ecs patterns."
+  - "Use unity-ecs-patterns for this task."
 ---
 
 # Unity Ecs Patterns

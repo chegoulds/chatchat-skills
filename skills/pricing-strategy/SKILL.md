@@ -1,8 +1,12 @@
 ---
-category: Business
 id: pricing-strategy
-name: Pricing Strategy
-description: When the user wants help with pricing decisions, packaging, or monetization strategy. Also.
+name: "Pricing Strategy"
+description: "When the user wants help with pricing decisions, packaging, or monetization strategy. Also."
+category: Business
+requires: []
+examples:
+  - "Help me with pricing strategy."
+  - "Use pricing-strategy for this task."
 ---
 
 # Pricing Strategy

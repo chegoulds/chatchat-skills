@@ -1,9 +1,12 @@
 ---
-category: Business
 id: feishu-perm
-name: Feishu Perm
-description: Feishu permission management for documents and files. Activate when user mentions sharing, permissions, collaborators.
-  Feishu permission management for documents and files. Activate when user mentions sharing, permissions, collaborators.
+name: "Feishu Perm"
+description: "Feishu permission management for documents and files. Activate when user mentions sharing, permissions, collaborators. Feishu permission management for documents and files. Activate when user mentions sharing, permissions, collaborators."
+category: Business
+requires: []
+examples:
+  - "Help me with feishu perm."
+  - "Use feishu-perm for this task."
 ---
 
 # Feishu Permission Tool

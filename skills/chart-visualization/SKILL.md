@@ -1,10 +1,12 @@
 ---
-category: Business
 id: chart-visualization
-name: Chart Visualization
-description: This skill should be used when the user wants to visualize data. It intelligently selects the most suitable chart type from 26 available options, extracts parameters based on detailed specifications, and generates a chart image using a JavaScript script.
-dependency:
-  nodejs: ">=18.0.0"
+name: "Chart Visualization"
+description: "This skill should be used when the user wants to visualize data. It intelligently selects the most suitable chart type from 26 available options, extracts parameters based on detailed specifications, and generates a chart image using a JavaScript script."
+category: Business
+requires: []
+examples:
+  - "Help me with chart visualization."
+  - "Use chart-visualization for this task."
 ---
 
 # Chart Visualization Skill

@@ -1,9 +1,12 @@
 ---
-category: Business
 id: lawyer
-name: Lawyer
-description: Draft contracts, review legal documents, and navigate compliance with practical legal patterns.
-metadata: {"clawdbot":{"emoji":"⚖️","os":["linux","darwin","win32"]}}
+name: "Lawyer"
+description: "Draft contracts, review legal documents, and navigate compliance with practical legal patterns."
+category: Business
+requires: []
+examples:
+  - "Help me with lawyer."
+  - "Use lawyer for this task."
 ---
 
 # Legal Assistance Rules

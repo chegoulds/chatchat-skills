@@ -1,11 +1,12 @@
 ---
 id: zoho-bigin-automation
-name: Zoho Bigin Automation
+name: "Zoho Bigin Automation"
 description: "Automate Zoho Bigin tasks via Rube MCP (Composio): pipelines, contacts, companies, products, and small business CRM. Always search tools first for current schemas."
 category: Business
-source: composio
-tags: [api, cli, mcp, automation, ai]
-url: https://github.com/ComposioHQ/awesome-claude-skills/tree/master/zoho_bigin-automation
+requires: []
+examples:
+  - "Help me with zoho bigin automation."
+  - "Use zoho-bigin-automation for this task."
 ---
 
 # Zoho Bigin Automation via Rube MCP

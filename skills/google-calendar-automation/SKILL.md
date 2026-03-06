@@ -1,10 +1,12 @@
 ---
-category: Business
 id: google-calendar-automation
-name: Google Calendar Automation
-description: Automate Google Calendar events, scheduling, availability checks, and attendee management via Rube MCP (Composio). Create events, find free slots, manage attendees, and list calendars programmatically.
-requires:
-  mcp: [rube]
+name: "Google Calendar Automation"
+description: "Automate Google Calendar events, scheduling, availability checks, and attendee management via Rube MCP (Composio). Create events, find free slots, manage attendees, and list calendars programmatically."
+category: Business
+requires: []
+examples:
+  - "Help me with google calendar automation."
+  - "Use google-calendar-automation for this task."
 ---
 
 # Google Calendar Automation via Rube MCP

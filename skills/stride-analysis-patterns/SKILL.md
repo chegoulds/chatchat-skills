@@ -1,8 +1,12 @@
 ---
-category: Business
 id: stride-analysis-patterns
-name: Stride Analysis Patterns
-description: Apply STRIDE methodology to systematically identify threats.
+name: "Stride Analysis Patterns"
+description: "Apply STRIDE methodology to systematically identify threats."
+category: Business
+requires: []
+examples:
+  - "Help me with stride analysis patterns."
+  - "Use stride-analysis-patterns for this task."
 ---
 
 # Stride Analysis Patterns

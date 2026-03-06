@@ -1,11 +1,12 @@
 ---
 id: xero-automation
-name: Xero Automation
+name: "Xero Automation"
 description: "Xero Automation: manage invoices, contacts, payments, bank transactions, and accounts in Xero for cloud-based bookkeeping."
 category: Business
-source: composio
-tags: [mcp, automation, ai]
-url: https://github.com/ComposioHQ/awesome-claude-skills/tree/master/xero-automation
+requires: []
+examples:
+  - "Help me with xero automation."
+  - "Use xero-automation for this task."
 ---
 
 # Xero Automation

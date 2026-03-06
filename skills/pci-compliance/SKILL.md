@@ -1,8 +1,12 @@
 ---
-category: Business
 id: pci-compliance
-name: Pci Compliance
-description: Implement PCI DSS compliance requirements for secure handling of payment card data and payment systems.
+name: "Pci Compliance"
+description: "Implement PCI DSS compliance requirements for secure handling of payment card data and payment systems."
+category: Business
+requires: []
+examples:
+  - "Help me with pci compliance."
+  - "Use pci-compliance for this task."
 ---
 
 # PCI Compliance

@@ -1,10 +1,13 @@
 ---
-category: Business
 id: listonic
-name: Listonic
-version: 1.0.0
+name: "Listonic"
 description: "Access Listonic shopping lists: list lists/items, add/check/delete items, and manage lists."
-metadata: {"clawdbot":{"emoji":"🛒","requires":{"bins":["python3"]}}}
+category: Business
+requires: []
+examples:
+  - "Help me with listonic."
+  - "Use listonic for this task."
+version: "1.0.0"
 ---
 
 # Listonic

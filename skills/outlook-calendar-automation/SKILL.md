@@ -1,10 +1,12 @@
 ---
-category: Business
 id: outlook-calendar-automation
-name: Outlook Calendar Automation
+name: "Outlook Calendar Automation"
 description: "Automate Outlook Calendar tasks via Rube MCP (Composio): create events, manage attendees, find meeting times, and handle invitations. Always search tools first for current schemas."
-requires:
-  mcp: [rube]
+category: Business
+requires: []
+examples:
+  - "Help me with outlook calendar automation."
+  - "Use outlook-calendar-automation for this task."
 ---
 
 # Outlook Automation via Rube MCP

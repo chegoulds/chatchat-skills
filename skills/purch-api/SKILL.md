@@ -1,14 +1,12 @@
 ---
-category: Business
 id: purch-api
-name: Purch API
-description: "AI-powered shopping API for product search and crypto checkout. Use this skill when: - Searching for products from Amazon and Shopify - Building shopping assistants or product recommendation features - Creating purchase orders with crypto (USDC on Solana or Base) - Integrating e-commerce checkout into applications - Signing and submitting blockchain transactions for purchases."
-  AI-powered shopping API for product search and crypto checkout. Use this skill when:
-  - Searching for products from Amazon and Shopify
-  - Building shopping assistants or product recommendation features
-  - Creating purchase orders with crypto (USDC on Solana or Base)
-  - Integrating e-commerce checkout into applications
-  - Signing and submitting blockchain transactions for purchases
+name: "Purch API"
+description: "AI-powered shopping API for product search and crypto checkout. Use this skill when: - Searching for products from Amazon and Shopify - Building shopping assistants or product recommendation features - Creating purchase orders with crypto (USDC on Solana or Base) - Integrating e-commerce checkout into applications - Signing and submitting blockchain transactions for purchases. AI-powered shopping API for product search and crypto checkout. Use this skill when:"
+category: Business
+requires: []
+examples:
+  - "Help me with purch api."
+  - "Use purch-api for this task."
 ---
 
 # Purch Public API

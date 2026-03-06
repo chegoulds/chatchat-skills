@@ -1,8 +1,12 @@
 ---
-category: Business
 id: generate-frontend-forms
-name: Generate Frontend Forms
-description: Guide for creating forms using Sentry's new form system.
+name: "Generate Frontend Forms"
+description: "Guide for creating forms using Sentry's new form system."
+category: Business
+requires: []
+examples:
+  - "Help me with generate frontend forms."
+  - "Use generate-frontend-forms for this task."
 ---
 
 # Generate Frontend Forms

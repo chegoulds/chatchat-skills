@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: catalyst-gas-and-transfers
 name: Catalyst Gas And Transfers
 description: Add gas fees and token transfer models for a new chain (hourly_spellbook + tokens).
-disable-model-invocation: true
+category: Blockchain
+requires: []
+examples:
+  - "Add gas fees model for monad chain"
+  - "Set up token transfer models for new chain"
 ---
 
 # catalyst gas and transfers

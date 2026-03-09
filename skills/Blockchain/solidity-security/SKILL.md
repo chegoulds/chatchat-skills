@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: solidity-security
 name: Solidity Security
 description: Master smart contract security best practices to prevent common vulnerabilities and implement secure Solidity patterns.
+category: Blockchain
+requires: []
+examples:
+  - "Audit this smart contract for reentrancy vulnerabilities"
+  - "How do I implement checks-effects-interactions pattern?"
 ---
 
 # Solidity Security

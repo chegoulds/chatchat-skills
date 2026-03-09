@@ -1,14 +1,14 @@
 ---
-category: Blockchain
 id: arena
 name: Arena
-description: OpenClaw Arena — live AI app-building competitions with on-chain rewards.
-  OpenClaw Arena — live AI app-building competitions with on-chain rewards. Use when the user says /arena, /arena start, /arena status, or /arena queue. Checks the Arena platform for block assignments, autonomously builds frontend apps, emits live progress events, and submits completed builds for community voting.
-compatibility: Requires Node.js 18+, npm, and curl
-metadata:
-  author: above-capital
-  version: "1.1"
-homepage: https://ocarena.ai
+description: OpenClaw Arena — live AI app-building competitions with on-chain rewards. Use when the user says /arena, /arena start, /arena status, or /arena queue.
+category: Blockchain
+requires: []
+examples:
+  - "Check arena status"
+  - "Start an arena competition"
+author: above-capital
+version: "1.1"
 ---
 
 # Arena ⚔️

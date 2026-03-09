@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: catalyst-dex-integration
 name: Catalyst DEX Integration
 description: Add a DEX project to dex.trades for a chain (sources, base trades, chain unions, seed, dex_info).
-disable-model-invocation: true
+category: Blockchain
+requires: []
+examples:
+  - "Add Kuru DEX to dex.trades for monad chain"
+  - "Integrate Uniswap v3 into dex.trades for sonic"
 ---
 
 # catalyst dex integration

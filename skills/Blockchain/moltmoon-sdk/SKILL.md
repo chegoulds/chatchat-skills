@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: moltmoon-sdk
 name: Moltmoon SDK
-description: Complete OpenClaw-ready operating skill for @moltmoon/sdk V2.
+description: Complete OpenClaw-ready operating skill for @moltmoon/sdk V2. Launch tokens on Base with bonding curves, reflections, and Aerodrome LP.
+category: Blockchain
+requires: []
+examples:
+  - "Launch a token on MoltMoon V2 with bonding curve"
+  - "Configure staking allocation for my MoltMoon token"
 ---
 
 # MoltMoon SDK Skill (OpenClaw) - V2

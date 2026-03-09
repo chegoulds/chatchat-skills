@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: erigon-datadir
 name: Erigon Datadir
 description: Use the 'erigon seg step-rebase' command to change the step size of an existing datadir.
-allowed-tools: Bash, Read, Glob
+category: Blockchain
+requires: []
+examples:
+  - "How do I run erigon seg step-rebase?"
+  - "Change step size of Erigon datadir"
 ---
 
 # Erigon Segment Step Rebase

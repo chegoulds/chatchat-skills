@@ -1,14 +1,14 @@
 ---
-category: Blockchain
 id: aibtc-bitcoin-wallet
 name: AIBTC Bitcoin Wallet
 description: Bitcoin L1 wallet for agents - check balances, send BTC, manage UTXOs. Extends to Stacks L2 (STX, DeFi) and Pillar smart wallets (sBTC yield).
-license: MIT
-metadata:
-  author: aibtcdev
-  version: 1.14.2
-  npm: "@aibtc/mcp-server"
-  github: https://github.com/aibtcdev/aibtc-mcp-server
+category: Blockchain
+requires: []
+examples:
+  - "Check my Bitcoin balance"
+  - "Send BTC from my agent wallet"
+author: aibtcdev
+version: 1.14.2
 ---
 
 # AIBTC Bitcoin Wallet

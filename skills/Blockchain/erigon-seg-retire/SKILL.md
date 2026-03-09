@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: erigon-seg-retire
 name: Erigon Seg Retire
 description: Run the Erigon segment retire command to build, merge, and clean snapshot files. Use this for snapshot publication readiness preparation.
-allowed-tools: Bash, Read
+category: Blockchain
+requires: []
+examples:
+  - "How do I run erigon seg retire?"
+  - "Prepare Erigon snapshots for publication"
 ---
 
 # Erigon Segment Retire Command

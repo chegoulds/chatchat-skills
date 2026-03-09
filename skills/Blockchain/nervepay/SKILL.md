@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: nervepay
 name: Nervepay
 description: Agent identity and analytics. Sign requests with Ed25519, track API usage, build reputation. Use after external API calls.
-metadata: {"openclaw":{"emoji":"🔐","requires":{"bins":["node","curl"],"env":["NERVEPAY_DID","NERVEPAY_PRIVATE_KEY"]},"primaryEnv":"NERVEPAY_PRIVATE_KEY"}}
+category: Blockchain
+requires: []
+examples:
+  - "Register my agent identity with NervePay"
+  - "Track an external API call for my agent's reputation"
 ---
 
 # NervePay — Agent Instructions

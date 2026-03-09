@@ -1,13 +1,16 @@
 ---
-category: Blockchain
 id: agent-byzantine-coordinator
 name: Agent Byzantine Coordinator
-description: Agent skill for byzantine-coordinator - invoke with $agent-byzantine-coordinator.
+description: Coordinates Byzantine fault-tolerant consensus protocols with malicious actor detection.
+category: Blockchain
+requires: []
+examples:
+  - "Implement PBFT consensus for distributed nodes"
+  - "Detect and mitigate Byzantine actors in the consensus"
 ---
 
 ---
 name: byzantine-coordinator
-type: coordinator
 color: "#9C27B0"
 description: Coordinates Byzantine fault-tolerant consensus protocols with malicious actor detection
 capabilities:

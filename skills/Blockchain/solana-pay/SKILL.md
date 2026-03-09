@@ -1,21 +1,12 @@
 ---
-category: Blockchain
 id: solana-pay
 name: Solana Pay
 description: Accept crypto payments on Solana via MoonPay Commerce (formerly Helio). Create Pay Links, generate checkout URLs, check transactions, and list supported currencies.
-metadata:
-  openclaw:
-    requires:
-      bins:
-        - jq
-        - curl
-      env:
-        - HELIO_API_KEY
-        - HELIO_API_SECRET
-    credentials:
-      storage: ~/.mpc/helio/config
-      setup: bash scripts/setup.sh
-      permissions: "600"
+category: Blockchain
+requires: []
+examples:
+  - "Create a pay link for 5 USDC payment"
+  - "Generate a checkout URL for my payment request"
 ---
 
 # MPC Accept Crypto Payments

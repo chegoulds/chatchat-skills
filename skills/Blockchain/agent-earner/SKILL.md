@@ -1,11 +1,14 @@
 ---
-category: Blockchain
 id: agent-earner
 name: Agent Earner
-version: 1.0.0
 description: Earn USDC and tokens autonomously across ClawTasks and OpenWork.
+category: Blockchain
+requires: []
+examples:
+  - "List open bounties and submit a proposal"
+  - "Start autonomous mode for bounty discovery"
+version: 1.0.0
 author: Prometheus_Prime
-tags: [earning, bounties, autonomous, defi, usdc, base]
 ---
 
 # Agent Earner

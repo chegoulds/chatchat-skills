@@ -1,10 +1,13 @@
 ---
-category: Blockchain
 id: bonero-miner
 name: Bonero Miner
-version: 2.0.0
 description: Mine Bonero - private cryptocurrency for AI agents. RandomX CPU mining, Monero-based privacy.
-homepage: https://github.com/happybigmtn/bonero
+category: Blockchain
+requires: []
+examples:
+  - "How do I start mining Bonero with my CPU?"
+  - "Create a Bonero wallet and set up the mining daemon"
+version: 2.0.0
 ---
 
 # Bonero Miner

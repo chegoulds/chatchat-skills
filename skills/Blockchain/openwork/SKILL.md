@@ -1,14 +1,12 @@
 ---
-category: Blockchain
 id: openwork
 name: Openwork
-description: "Publish the openwork-orchestrator npm package with clean git hygiene. Triggers when user mentions: - \"openwork-orchestrator npm publish\" - \"publish openwork-orchestrator\" - \"bump openwork-orchestrator\"."
-  Publish the openwork-orchestrator npm package with clean git hygiene.
-
-  Triggers when user mentions:
-  - "openwork-orchestrator npm publish"
-  - "publish openwork-orchestrator"
-  - "bump openwork-orchestrator"
+description: Publish the openwork-orchestrator npm package with clean git hygiene. Triggers when user mentions publish or bump openwork-orchestrator.
+category: Blockchain
+requires: []
+examples:
+  - "Publish openwork-orchestrator to npm"
+  - "Bump openwork-orchestrator version and release"
 ---
 
 ## Quick usage (already configured)

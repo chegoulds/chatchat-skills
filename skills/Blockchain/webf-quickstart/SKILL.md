@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: webf-quickstart
 name: WebF Quickstart
 description: Get started with WebF development - setup WebF Go, create a React/Vue/Svelte project with Vite, and load your first app.
+category: Blockchain
+requires: []
+examples:
+  - "Set up WebF Go and create my first React app"
+  - "Create a Vue project with Vite for WebF"
 ---
 
 # WebF Quickstart

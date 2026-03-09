@@ -1,14 +1,14 @@
 ---
-category: Blockchain
 id: cabin-sol
 name: Cabin Sol
 description: Solana development tutor and builder. Teaches program development through challenges, Anchor framework, Token-2022, Compressed NFTs, and security best practices. "Return to primitive computing.".
-license: MIT
-metadata:
-  author: Ted
-  version: "1.0.0"
-  clawdbot:
-    emoji: "🌲"
+category: Blockchain
+requires: []
+examples:
+  - "Help me build a Solana program with Anchor"
+  - "Teach me Token-2022 on Solana"
+author: Ted
+version: "1.0.0"
 ---
 
 # Cabin Sol 🌲

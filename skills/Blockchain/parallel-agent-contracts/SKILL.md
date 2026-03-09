@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: parallel-agent-contracts
 name: Parallel Agent Contracts
-description: Parallel Agent Type Contracts.
-user-invocable: false
+description: Parallel Agent Type Contracts. Prevent type duplication when launching parallel agents for code implementation.
+category: Blockchain
+requires: []
+examples:
+  - "Find canonical type definitions before creating new types"
+  - "Verify no type errors before marking agent task complete"
 ---
 
 # Parallel Agent Type Contracts

@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: dex-multichain-aggregator-teneo
 name: DEX Multichain Aggregator Teneo
-description: Advanced multichain DEX aggregator. Finds the best token swap routes across 50+ decentralized exchanges on 9+ blockchain networks (Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, Gnosis,.
+description: Advanced multichain DEX aggregator. Finds the best token swap routes across 50+ DEXes on 9+ chains (Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, Gnosis, Fantom).
+category: Blockchain
+requires: []
+examples:
+  - "Get best swap quote for USDC to WETH on Polygon"
+  - "Find optimal route for 1000 USDC swap on Ethereum"
 ---
 
 # DEX Multichain Aggregator - powered by Teneo Protocol

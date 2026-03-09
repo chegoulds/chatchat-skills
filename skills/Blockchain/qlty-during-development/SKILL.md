@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: qlty-during-development
 name: QLTY During Development
-description: Guidance and answers for qlty during development.
-user-invocable: false
+description: Guidance and answers for qlty during development. Run QLTY checks during code writing to catch issues early.
+category: Blockchain
+requires: []
+examples:
+  - "Run qlty check on my changed files"
+  - "Format code with qlty fmt"
 ---
 
 # QLTY During Development

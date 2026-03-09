@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: defi-protocol-templates
 name: DeFi Protocol Templates
 description: Implement DeFi protocols with production-ready templates for staking, AMMs, governance, and lending systems.
+category: Blockchain
+requires: []
+examples:
+  - "Implement a staking contract with reward distribution"
+  - "Create an AMM pool with Uniswap V2 patterns"
 ---
 
 # DeFi Protocol Templates

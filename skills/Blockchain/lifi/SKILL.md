@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: lifi
 name: LI.FI
 description: Cross-chain bridging and swapping via LI.FI — the leading bridge aggregator that routes across 30+ bridges and DEXs for optimal rates.
+category: Blockchain
+requires: []
+examples:
+  - "Get a quote to bridge ETH from Ethereum to Polygon"
+  - "Execute a cross-chain swap via LI.FI"
 ---
 
 # LI.FI Orchestrator

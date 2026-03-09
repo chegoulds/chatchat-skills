@@ -1,12 +1,12 @@
 ---
-category: Blockchain
 id: jb-revloans
 name: JB RevLoans
-description: Query REVLoans data via Bendystraw GraphQL.
-  Query REVLoans data via Bendystraw GraphQL. Use when: (1) displaying a user's loans
-  across all revnets, (2) showing all loans for a specific revnet/project, (3) checking
-  borrow permissions, (4) building loan management UIs. Covers LoansByAccount query,
-  permission checking, and multi-chain loan aggregation.
+description: Query REVLoans data via Bendystraw GraphQL. Use when displaying a user's loans across revnets, showing loans for a project, checking borrow permissions, or building loan management UIs.
+category: Blockchain
+requires: []
+examples:
+  - "Get all loans for my wallet address across revnets"
+  - "Check if I have permission to borrow from this revnet"
 ---
 
 # Querying REVLoans via Bendystraw

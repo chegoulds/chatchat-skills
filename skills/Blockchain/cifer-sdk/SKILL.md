@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: cifer-sdk
 name: Cifer SDK
 description: Implement quantum-resistant encryption using the CIFER SDK (cifer-sdk npm package). Covers SDK initialization, wallet setup, secret creation, text encryption/decryption, and file encryption/decryption on any supported chain (Ethereum, Sepolia, Ternoa).
+category: Blockchain
+requires: []
+examples:
+  - "Initialize CIFER SDK and create quantum-resistant secrets"
+  - "Encrypt and decrypt text with CIFER on Ethereum"
 ---
 
 # CIFER SDK — Complete Integration Guide

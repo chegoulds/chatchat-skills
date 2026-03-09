@@ -1,11 +1,13 @@
 ---
-category: Blockchain
 id: trustra-escrow
 name: Trustra Escrow
-version: 1.0.0
 description: Escrow as a Service for AI agents. Create trustless USDC escrow transactions on Solana.
-homepage: https://trustra.xyz
-metadata: {"emoji":"🔐","category":"payments","api_base":"https://api.trustra.xyz/api/v2"}
+category: Blockchain
+requires: []
+examples:
+  - "Create a USDC escrow with the seller's wallet for payment"
+  - "Check the status of my escrow and mark it as delivered"
+version: 1.0.0
 ---
 
 # Trustra Escrow 🔐

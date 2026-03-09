@@ -1,28 +1,12 @@
 ---
-category: Blockchain
 id: coinbase-automation
 name: Coinbase Automation
 description: Universal browser wallet automation for AI agents. Supports 10 wallets including MetaMask, Rabby, Phantom, Trust Wallet, OKX, Coinbase, and more. EVM + Solana. Configurable guardrails with spend limits, chain allowlists, and approval thresholds.
-tags:
-  - crypto
-  - wallet
-  - ethereum
-  - solana
-  - defi
-  - web3
-  - blockchain
-  - automation
-  - browser
-  - metamask
-  - rabby
-  - coinbase
-  - rainbow
-  - phantom
-  - trust-wallet
-  - zerion
-  - exodus
-  - okx
-  - backpack
+category: Blockchain
+requires: []
+examples:
+  - "Configure MetaMask for agent wallet automation"
+  - "Set up spend limits and chain allowlist for my agent wallet"
 ---
 
 # WalletPilot

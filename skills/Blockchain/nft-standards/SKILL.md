@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: nft-standards
 name: Nft Standards
 description: Implement NFT standards (ERC-721, ERC-1155) with proper metadata handling, minting strategies, and marketplace integration.
+category: Blockchain
+requires: []
+examples:
+  - "Implement an ERC-721 collection with royalty support"
+  - "Create an ERC-1155 multi-token with on-chain metadata"
 ---
 
 # NFT Standards

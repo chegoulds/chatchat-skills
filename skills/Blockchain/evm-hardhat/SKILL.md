@@ -1,12 +1,14 @@
 ---
-category: Blockchain
 id: evm-hardhat
 name: EVM Hardhat
 description: Hardhat development for EVM chains including Celo.
-license: Apache-2.0
-metadata:
-  author: celo-org
-  version: "1.0.0"
+category: Blockchain
+requires: []
+examples:
+  - "Set up a new Hardhat project for Celo"
+  - "Deploy a contract to Celo mainnet"
+author: celo-org
+version: "1.0.0"
 ---
 
 # Hardhat Development for EVM Chains

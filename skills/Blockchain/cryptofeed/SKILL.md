@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: cryptofeed
 name: Cryptofeed
 description: Cryptofeed - Real-time cryptocurrency market data feeds from 40+ exchanges. WebSocket streaming, normalized data, order books, trades, tickers. Python library for algorithmic trading and market data analysis.
+category: Blockchain
+requires: []
+examples:
+  - "Set up real-time ticker feed from Coinbase and Kraken"
+  - "Stream order book data for BTC-USD from multiple exchanges"
 ---
 
 # Cryptofeed Skill

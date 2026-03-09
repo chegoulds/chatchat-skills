@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: smart-accounts-kit
 name: Smart Accounts Kit
 description: Web3 development using MetaMask Smart Accounts Kit.
-metadata: {"openclaw":{"emoji":"🦊","homepage":"https://docs.metamask.io/smart-accounts-kit"}}
+category: Blockchain
+requires: []
+examples:
+  - "Set up MetaMask Smart Accounts for my dApp"
+  - "Implement account abstraction with Smart Accounts Kit"
 ---
 
 # Smart Accounts Kit

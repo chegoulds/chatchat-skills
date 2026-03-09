@@ -1,19 +1,12 @@
 ---
-category: Blockchain
 id: sequence-builder
 name: Sequence Builder
 description: Manage Sequence smart wallets, projects, API keys, ERC20 transfers, and query blockchain data using the Sequence Builder CLI.
-homepage: https://github.com/0xsequence/builder-cli
-metadata:
-  clawdbot:
-    emoji: "⛓️"
-    os:
-      - darwin
-      - linux
-    requires:
-      bins:
-        - node
-        - npx
+category: Blockchain
+requires: []
+examples:
+  - "Create a Sequence wallet and send an ERC20 transfer"
+  - "Set up a new Sequence Builder project and get access keys"
 ---
 
 # Sequence Builder CLI

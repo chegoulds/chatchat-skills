@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: catalyst-foundational-metadata
 name: Catalyst Foundational Metadata
 description: Set up new chain foundational metadata (evms_info, prices, base sources, evms_blockchains_list).
-disable-model-invocation: true
+category: Blockchain
+requires: []
+examples:
+  - "Add xlayer chain foundational metadata"
+  - "Set up evms_info and prices for new chain"
 ---
 
 # catalyst foundational metadata

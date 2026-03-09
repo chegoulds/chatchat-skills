@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: wagmi-development
 name: Wagmi Development
 description: Creates Wagmi features across all layers - core actions, query options, framework bindings.
+category: Blockchain
+requires: []
+examples:
+  - "Add a new core action to Wagmi wrapping a Viem function"
+  - "Create query options and React hooks for my Wagmi feature"
 ---
 
 # Wagmi Development

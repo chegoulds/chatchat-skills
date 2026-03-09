@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: erigon-build
 name: Erigon Build
 description: Build the Erigon binary using make. Use this when you need to compile erigon before running any erigon commands.
-allowed-tools: Bash
+category: Blockchain
+requires: []
+examples:
+  - "How do I build the Erigon binary?"
+  - "Compile erigon from source"
 ---
 
 # Build Erigon Binary

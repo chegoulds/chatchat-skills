@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: zapper-api
 name: Zapper API
 description: Query DeFi portfolio data across 50+ chains via Zapper's GraphQL API.
-metadata: {"clawdbot":{"emoji":"⚡","homepage":"https://zapper.xyz","requires":{"bins":["curl","jq","python3"]}}}
+category: Blockchain
+requires: []
+examples:
+  - "Get my DeFi portfolio summary across all chains"
+  - "Show my unclaimed rewards and claimables"
 ---
 
 # Zapper Skill

@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: webf-native-plugins
 name: WebF Native Plugins
 description: Install WebF native plugins to access platform capabilities like sharing, payment, camera, geolocation, and more.
+category: Blockchain
+requires: []
+examples:
+  - "How do I install the WebF Share plugin for native sharing in my app?"
+  - "Set up the camera plugin for WebF to access the device camera"
 ---
 
 # WebF Native Plugins

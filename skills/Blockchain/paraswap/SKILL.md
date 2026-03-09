@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: paraswap
 name: ParaSwap
 description: DEX aggregator for best swap routes across major chains.
+category: Blockchain
+requires: []
+examples:
+  - "Get best swap route for USDC to ETH"
+  - "Find optimal DEX route for my token swap"
 ---
 
 # ParaSwap

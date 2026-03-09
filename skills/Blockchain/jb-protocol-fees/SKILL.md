@@ -1,13 +1,12 @@
 ---
-category: Blockchain
 id: jb-protocol-fees
 name: JB Protocol Fees
-description: Juicebox V5 and Revnet protocol fee structures and UI integration patterns.
-  Juicebox V5 and Revnet protocol fee structures and UI integration patterns.
-  Use when: (1) implementing payout limits with fee calculations, (2) building cash out/redeem UIs,
-  (3) building loan interfaces for revnets, (4) displaying fee breakdowns to users,
-  (5) calculating net amounts after fees, (6) adding custom UI fees on top of protocol fees.
-  Covers the 2.5% NANA fee, 2.5% Revnet cash out fee, 1% REV loan fee, and variable loan fees.
+description: Juicebox V5 and Revnet protocol fee structures and UI integration. Covers NANA 2.5%, Revnet cash out 2.5%, REV loan 1%, and variable loan fees.
+category: Blockchain
+requires: []
+examples:
+  - "Calculate net payout amount after Juicebox V5 fees"
+  - "Build a cash out UI with fee breakdown display"
 ---
 
 # Juicebox V5 & Revnet Protocol Fees

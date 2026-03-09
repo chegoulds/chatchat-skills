@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: polymarket-trading
 name: Polymarket Trading
 description: Comprehensive Polymarket skill covering prediction markets, API, trading, market data, and real-time WebSocket data streaming. Build applications with Polymarket services, monitor live trades, and integrate market predictions.
+category: Blockchain
+requires: []
+examples:
+  - "Connect to Polymarket WebSocket for live market data"
+  - "Build a trading strategy using Polymarket API"
 ---
 
 # Polymarket Comprehensive Skill

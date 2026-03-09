@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: sage-walletconnect
 name: Sage Walletconnect
 description: Telegram Web App for Chia wallet verification via WalletConnect and Sage. Enables cryptographic proof of wallet ownership through signature verification using MintGarden API.
-metadata: {"clawdbot":{"requires":{"bins":["node"]},"install":[]}}
+category: Blockchain
+requires: []
+examples:
+  - "Verify Chia wallet ownership via Telegram and WalletConnect"
+  - "Set up NFT-gated Telegram group with Chia verification"
 ---
 
 # Chia WalletConnect Skill

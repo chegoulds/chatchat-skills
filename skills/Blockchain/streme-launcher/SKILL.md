@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: streme-launcher
 name: Streme Launcher
 description: Launch tokens on Streme (streme.fun) - the streaming token platform on Base.
+category: Blockchain
+requires: []
+examples:
+  - "Deploy a SuperToken on Base via Streme V2"
+  - "Create a token with Uniswap V3 liquidity and Superfluid streaming"
 ---
 
 # Streme Token Launcher

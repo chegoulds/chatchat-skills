@@ -1,10 +1,12 @@
 ---
-category: Blockchain
 id: erigon-network-ports
 name: Erigon Network Ports
-user-invocable: false
 description: Reference for all Erigon network ports. Use this when running multiple Erigon instances to avoid port conflicts. Lists every CLI flag that binds a port, its default value, and the protocol used.
-allowed-tools: Bash
+category: Blockchain
+requires: []
+examples:
+  - "What ports does Erigon use?"
+  - "Avoid port conflicts for multiple Erigon instances"
 ---
 
 # Erigon Port Reference

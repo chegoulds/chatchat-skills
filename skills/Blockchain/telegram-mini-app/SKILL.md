@@ -1,9 +1,12 @@
 ---
-category: Blockchain
 id: telegram-mini-app
 name: Telegram Mini App
 description: Expert in building Telegram Mini Apps (TWA) - web apps that run inside Telegram with native-like experience. Covers the TON ecosystem, Telegram Web App API, payments, user authentication, and building viral mini apps that monetize.
-source: vibeship-spawner-skills (Apache 2.0)
+category: Blockchain
+requires: []
+examples:
+  - "Build a Telegram Mini App with TON Connect"
+  - "Set up in-app payments for my Telegram Mini App"
 ---
 
 # Telegram Mini App

@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: hardhat-deploy-migration
 name: Hardhat Deploy Migration
 description: Comprehensive guide for migrating projects from hardhat-deploy v1 to v2, including dependency updates, configuration restructuring, deploy script conversion, test updates, and troubleshooting.
+category: Blockchain
+requires: []
+examples:
+  - "Migrate my project from hardhat-deploy v1 to v2"
+  - "Convert deploy scripts for hardhat-deploy v2"
 ---
 
 # Hardhat Deploy Migration

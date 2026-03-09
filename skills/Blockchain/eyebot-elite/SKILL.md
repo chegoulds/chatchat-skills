@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: eyebot-elite
 name: Eyebot Elite
 description: All 15 Elite AI Agents for complete crypto automation.
+category: Blockchain
+requires: []
+examples:
+  - "Set up full-suite crypto automation with Eyebot Elite"
+  - "Configure multiple agent workflows for trading"
 ---
 
 # Eyebot Elite

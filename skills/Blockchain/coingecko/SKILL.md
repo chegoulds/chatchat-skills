@@ -1,8 +1,12 @@
 ---
-category: Blockchain
 id: coingecko
 name: Coingecko
 description: CoinGecko API documentation - cryptocurrency market data API, price feeds, market cap, volume, historical data.
+category: Blockchain
+requires: []
+examples:
+  - "Get current price and market cap for a token"
+  - "Fetch historical price data from CoinGecko API"
 ---
 
 # Coingecko Skill

@@ -1,7 +1,7 @@
 ---
 id: erigon-seg-retire
 name: Erigon Seg Retire
-description: Run the Erigon segment retire command to build, merge, and clean snapshot files. Use this for snapshot publication readiness preparation.
+description: Guidance playbook for Erigon Seg Retire: plan and execute manually without requiring direct backend/API execution.
 category: Blockchain
 requires: []
 examples:
@@ -9,61 +9,38 @@ examples:
   - "Prepare Erigon snapshots for publication"
 ---
 
-# Erigon Segment Retire Command
+# Erigon Seg Retire
 
-The `erigon seg retire` command prepares snapshot files for publication by performing build, merge, and cleanup operations on segment files.
+Provide guidance-only support for Erigon Seg Retire. Focus on decision quality and practical next actions the user can perform in their own environment.
 
-## Prerequisites
+## Scope
 
-1. **Erigon must be stopped** - The command requires exclusive access to the datadir
-2. **Binary must be built** - Run `/erigon-build` first if the binary doesn't exist
-3. **Datadir must exist** - A synced Erigon datadir with blockchain data
+- Core focus: node operations and reliability.
+- Skill context keywords: erigon, seg, retire.
+- Use this skill when the user wants recommendations, architecture choices, and manual execution steps.
 
-## Command
+## Guidance Workflow
 
-```bash
-./build/bin/erigon seg retire --datadir=<path>
-```
+1. Clarify the target outcome, constraints, and timeline for node operations and reliability.
+2. Break the work into phases and suggest 2-3 feasible approaches.
+3. Recommend a low-risk path first, then an optimized path if needed.
+4. Provide a manual checklist with checkpoints and rollback notes.
+5. Call out common failure modes and how to diagnose them quickly.
 
-Replace `<path>` with the actual path to your Erigon data directory.
+## Quality Checks
 
-## What the Command Does
+- No assumption of direct access to APIs, nodes, wallets, databases, or MCP tools.
+- Recommendations include at least one conservative fallback option.
+- Any security-sensitive step includes explicit risk and mitigation notes.
 
-The retire command performs these operations in sequence:
+## Deliverables
 
-1. **Build Missing Indices** - Creates any missing indices for block and Caplin snapshots
-2. **Retire Blocks** - Freezes blocks from the database into snapshot files
-3. **Remove Overlaps** - Cleans up overlapping snapshot files
-4. **Prune Ancient Blocks** - Removes block data from the database that has been successfully snapshotted
-5. **Build State History** - Creates missing accessors and builds state history snapshot files
-6. **Prune State History** - Removes state history that has been snapshotted
-7. **Merge and Cleanup** - Merges smaller snapshot files into larger ones and removes overlaps
+- Goal summary and assumptions
+- Recommended approach with trade-offs
+- Manual execution checklist
+- Risk notes and verification steps
 
-## Usage in Snapshot Release Workflow
+## Example Prompts
 
-This command is part of the "Publishable v2" snapshot release flow:
-
-1. Shutdown Erigon
-2. **Run `seg retire`** (this command)
-3. Optionally run `seg clearIndexing`
-4. Run `seg index`
-5. Create torrent files
-6. Run integrity check
-7. Run `publishable` command
-
-## Example
-
-```bash
-# Build the binary first (if needed)
-make erigon
-
-# Ensure Erigon is stopped, then run seg retire
-./build/bin/erigon seg retire --datadir=/data/erigon
-```
-
-## Important Notes
-
-- **File Lock**: If Erigon is running, the command will fail due to file lock
-- **Long running**: This command can take significant time on mainnet
-- **Disk I/O intensive**: Performs extensive read/write operations
-- **Resource intensive**: Designed to maximize resource utilization
+- "How do I run erigon seg retire?"
+- "Prepare Erigon snapshots for publication"

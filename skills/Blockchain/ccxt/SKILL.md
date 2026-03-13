@@ -1,7 +1,7 @@
 ---
 id: ccxt
 name: CCXT
-description: CCXT cryptocurrency exchange library for Python, TypeScript, PHP, Go, and C#. Covers REST API (standard) and WebSocket API (real-time). Install, connect to 100+ exchanges, fetch market data, place orders, stream tickers/orderbooks, handle authentication, and manage errors.
+description: Guidance playbook for CCXT: plan and execute manually without requiring direct backend/API execution.
 category: Blockchain
 requires: []
 examples:
@@ -14,29 +14,37 @@ examples:
 
 # CCXT
 
-CCXT is a cryptocurrency exchange trading library that supports **Python**, **TypeScript/JavaScript**, **PHP**, **Go**, and **C#/.NET**. Unified API for REST and WebSocket across 100+ exchanges. Install, connect, fetch market data, place orders, stream live tickers/orderbooks, handle authentication, and manage errors.
+Support CCXT as a planning and implementation guide. Prioritize concrete recommendations, trade-offs, and manual runbooks.
 
-## Supported Languages
+## Objective
 
-| Language | Package | Install |
-|----------|---------|---------|
-| Python | `ccxt` | `pip install ccxt` |
-| TypeScript/Node.js | `ccxt` | `npm install ccxt` |
-| PHP | `ccxt/ccxt` | `composer require ccxt/ccxt` |
-| Go | `github.com/ccxt/ccxt/go` | `go get github.com/ccxt/ccxt/go` |
-| C#/.NET | `ccxt` | `dotnet add package ccxt` |
+- Core focus: market integration and execution strategy.
+- Skill context keywords: ccxt.
+- Use this skill when the user wants recommendations, architecture choices, and manual execution steps.
 
-## When to Use
+## Action Plan
 
-- You need help with CCXT in any supported language
-- Connecting to exchanges (Binance, Coinbase, Kraken, etc.)
-- Fetching market data, order books, tickers
-- Placing orders (market, limit)
-- WebSocket streaming
-- Authentication and error handling
+1. Restate the user objective for market integration and execution strategy in one sentence.
+2. Identify prerequisites and dependency constraints up front.
+3. Propose a phased plan (baseline, improve, harden).
+4. Translate each phase into hands-on actions the user can execute.
+5. Include acceptance checks and post-change monitoring guidance.
 
-## Output
+## Review Checklist
 
-- Summary of goals and plan
-- Language-specific code and setup
-- Key tips and precautions
+- No claims of having executed commands, queries, transactions, or deployments.
+- Plan includes rollback or recovery guidance for mistakes.
+- Final answer is concise, ordered, and easy to hand off to implementation.
+
+## Response Format
+
+- Context recap
+- Implementation plan by phase
+- Acceptance tests and success metrics
+- Known pitfalls and mitigations
+
+## Example Prompts
+
+- "Help me connect to Binance with CCXT in Python"
+- "Fetch ticker data using CCXT in TypeScript"
+- "Place an order with ccxt-php"

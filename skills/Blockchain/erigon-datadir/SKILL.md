@@ -1,7 +1,7 @@
 ---
 id: erigon-datadir
 name: Erigon Datadir
-description: Use the 'erigon seg step-rebase' command to change the step size of an existing datadir.
+description: Guidance playbook for Erigon Datadir: plan and execute manually without requiring direct backend/API execution.
 category: Blockchain
 requires: []
 examples:
@@ -9,108 +9,38 @@ examples:
   - "Change step size of Erigon datadir"
 ---
 
-# Erigon Segment Step Rebase
+# Erigon Datadir
 
-## Overview
-The `erigon seg step-rebase` command changes the step size of an existing Erigon datadir. This is used to modify the granularity of snapshot segments.
+Support Erigon Datadir as a planning and implementation guide. Prioritize concrete recommendations, trade-offs, and manual runbooks.
 
-## Command Syntax
+## Objective
 
-```bash
-./build/bin/erigon seg step-rebase --datadir=<path> --new-step-size=<size> [other-flags]
-```
+- Core focus: node operations and reliability.
+- Skill context keywords: erigon, datadir.
+- Use this skill when the user wants recommendations, architecture choices, and manual execution steps.
 
-## Required Flags
+## Action Plan
 
-- `--datadir`: Path to the Erigon datadir (required)
-- `--new-step-size`: New step size to rebase to (default: 1562500)
+1. Restate the user objective for node operations and reliability in one sentence.
+2. Identify prerequisites and dependency constraints up front.
+3. Propose a phased plan (baseline, improve, harden).
+4. Translate each phase into hands-on actions the user can execute.
+5. Include acceptance checks and post-change monitoring guidance.
 
-## Common Step Sizes
+## Review Checklist
 
-- `1562500`: Default/full stepsize
-- `781250`: stepsize/2 (half step)
-- `390625`: stepsize/4 (quarter step)
+- No claims of having executed commands, queries, transactions, or deployments.
+- Plan includes rollback or recovery guidance for mistakes.
+- Final answer is concise, ordered, and easy to hand off to implementation.
 
-## Usage Patterns
+## Response Format
 
-### Rebase to Half Step
-```bash
-./build/bin/erigon seg step-rebase --datadir=/path/to/datadir --new-step-size=781250
-```
+- Context recap
+- Implementation plan by phase
+- Acceptance tests and success metrics
+- Known pitfalls and mitigations
 
-### Rebase to Quarter Step
-```bash
-./build/bin/erigon seg step-rebase --datadir=/path/to/datadir --new-step-size=390625
-```
+## Example Prompts
 
-## Important Considerations
-
-### Before Running
-1. **Backup datadir**: Consider backing up the datadir before rebasing
-2. **Stop Erigon**: Ensure Erigon is not running on the target datadir
-3. **Verify current step**: Check what the current step size is
-4. **Ensure Erigon binary is built**: run `make erigon` to build it
-
-### After Running
-1. Verify the rebase completed successfully
-2. Check segment files in the datadir
-3. Restart Erigon if needed
-
-## Step Sizes
-
-Common step sizes used in Erigon:
-- `1562500`: Full/default stepsize
-- `781250`: Half step (stepsize/2)
-- `390625`: Quarter step (stepsize/4)
-
-The step size affects:
-- Snapshot segment granularity
-- File size and organization
-- Query and sync performance
-
-## Workflow
-
-When the user wants to rebase step size:
-
-1. **Confirm parameters**
-   - Ask for target datadir path
-   - Ask for desired step size
-   - Confirm if they want to rebase a specific range
-
-2. **Safety checks**
-   - Verify datadir exists
-   - Check if Erigon is running (should not be)
-
-3. **Execute rebase**
-   ```bash
-   ./build/bin/erigon seg step-rebase --datadir=/path/to/datadir --new-step-size=<size>
-   ```
-
-4. **Verify results**
-   - Check command output for errors
-   - List segment files to verify changes
-
-## Error Handling
-
-Common issues:
-- **"datadir not found"**: Verify the path is correct
-- **"database locked"**: Stop Erigon process first
-- **Invalid step size**: Use valid step sizes (1562500, 781250, or 390625)
-
-## Examples
-
-### Example 1: Rebase datadir to half step
-```bash
-./build/bin/erigon seg step-rebase --datadir=./chaindata --new-step-size=781250
-```
-
-### Example 2: Rebase to quarter step
-```bash
-./build/bin/erigon seg step-rebase --datadir=/mnt/erigon/datadir --new-step-size=390625
-```
-
-## Tips
-
-- The operation can be time-consuming for large datadirs
-- Smaller step sizes (like 390625) create more granular segments
-- If building from source, use `make erigon` to build the binary at `build/bin/erigon`
+- "How do I run erigon seg step-rebase?"
+- "Change step size of Erigon datadir"

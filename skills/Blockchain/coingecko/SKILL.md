@@ -1,7 +1,7 @@
 ---
 id: coingecko
 name: Coingecko
-description: CoinGecko API documentation - cryptocurrency market data API, price feeds, market cap, volume, historical data.
+description: Guidance playbook for Coingecko: plan and execute manually without requiring direct backend/API execution.
 category: Blockchain
 requires: []
 examples:
@@ -9,78 +9,38 @@ examples:
   - "Fetch historical price data from CoinGecko API"
 ---
 
-# Coingecko Skill
+# Coingecko
 
-Comprehensive assistance with coingecko development, generated from official documentation.
+Support Coingecko as a planning and implementation guide. Prioritize concrete recommendations, trade-offs, and manual runbooks.
 
-## When to Use This Skill
+## Objective
 
-This skill should be triggered when:
-- Working with coingecko
-- Asking about coingecko features or APIs
-- Implementing coingecko solutions
-- Debugging coingecko code
-- Learning coingecko best practices
+- Core focus: market integration and execution strategy.
+- Skill context keywords: coingecko.
+- Use this skill when the user wants recommendations, architecture choices, and manual execution steps.
 
-## Quick Reference
+## Action Plan
 
-### Common Patterns
+1. Confirm scope boundaries for market integration and execution strategy and define success criteria.
+2. Map required inputs, assumptions, and missing information.
+3. Compare implementation options with trade-offs in complexity and risk.
+4. Draft ordered steps the user can run manually in their stack.
+5. End with verification steps and a short troubleshooting branch.
 
-*Quick reference patterns will be added as you use the skill.*
+## Review Checklist
 
-## Reference Files
+- Guidance remains tool-agnostic and executable by a human operator.
+- Trade-offs are stated before recommending a final approach.
+- Validation criteria are measurable (pass/fail), not vague.
 
-This skill includes comprehensive documentation in `references/`:
+## Response Format
 
-- **authentication.md** - Authentication documentation
-- **coins.md** - Coins documentation
-- **contract.md** - Contract documentation
-- **exchanges.md** - Exchanges documentation
-- **introduction.md** - Introduction documentation
-- **market_data.md** - Market Data documentation
-- **nfts.md** - Nfts documentation
-- **other.md** - Other documentation
-- **pricing.md** - Pricing documentation
-- **reference.md** - Reference documentation
-- **trending.md** - Trending documentation
+- Objective and scope boundaries
+- Option analysis and chosen path
+- Stepwise runbook for manual execution
+- Troubleshooting and next-iteration ideas
 
-Use `view` to read specific reference files when detailed information is needed.
+## Example Prompts
 
-## Working with This Skill
-
-### For Beginners
-Start with the getting_started or tutorials reference files for foundational concepts.
-
-### For Specific Features
-Use the appropriate category reference file (api, guides, etc.) for detailed information.
-
-### For Code Examples
-The quick reference section above contains common patterns extracted from the official docs.
-
-## Resources
-
-### references/
-Organized documentation extracted from official sources. These files contain:
-- Detailed explanations
-- Code examples with language annotations
-- Links to original documentation
-- Table of contents for quick navigation
-
-### scripts/
-Add helper scripts here for common automation tasks.
-
-### assets/
-Add templates, boilerplate, or example projects here.
-
-## Notes
-
-- This skill was automatically generated from official documentation
-- Reference files preserve the structure and examples from source docs
-- Code examples include language detection for better syntax highlighting
-- Quick reference patterns are extracted from common usage examples in the docs
-
-## Updating
-
-To refresh this skill with updated documentation:
-1. Re-run the scraper with the same configuration
-2. The skill will be rebuilt with the latest information
+- "Get current price and market cap for a token"
+- "Fetch historical price data from CoinGecko API"

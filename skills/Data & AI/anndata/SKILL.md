@@ -3,7 +3,7 @@ id: anndata
 name: AnnData
 description: Practical guidance for using AnnData in scalable single-cell workflows.
 category: Data & AI
-requires: []
+requires: [".h5ad"]
 examples:
   - "Show me best practices for organizing AnnData objects."
   - "How do I optimize AnnData workflows for large single-cell datasets?"

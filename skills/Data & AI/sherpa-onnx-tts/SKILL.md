@@ -3,10 +3,10 @@ id: sherpa-onnx-tts
 name: Sherpa ONNX TTS
 description: Build, package, and troubleshoot Sherpa ONNX text-to-speech pipelines across local and CI environments. Use when integrating model assets, validating runtime output quality, or fixing deployment/runtime failures.
 category: Data & AI
-requires: []
+requires: [".onnx"]
 examples:
-  - Package Sherpa ONNX TTS model files and app runtime into a reproducible container image.
-  - Debug missing model artifacts or runtime crashes in a TTS deployment pipeline.
+  - "Package Sherpa ONNX TTS model files and app runtime into a reproducible container image."
+  - "Debug missing model artifacts or runtime crashes in a TTS deployment pipeline."
 ---
 
 # Sherpa ONNX TTS

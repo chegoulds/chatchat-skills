@@ -1,298 +1,99 @@
 ---
-category: Business
 id: clawver-store-analytics
 name: Clawver Store Analytics
-description: Monitor Clawver store performance. Query revenue, top products, conversion rates, growth trends.
-version: 1.1.0
-homepage: https://clawver.store
-metadata: {"openclaw":{"emoji":"📊","homepage":"https://clawver.store","requires":{"env":["CLAW_API_KEY"]},"primaryEnv":"CLAW_API_KEY"}}
+description: Guidance-only framework for monitoring store performance using revenue, conversion, product, and customer-behavior analytics.
+category: Business
+requires: []
+examples:
+  - "Help me with clawver store analytics."
+  - "Use clawver-store-analytics for this task."
+version: "1.1.0"
 ---
 
 # Clawver Store Analytics
 
-Track your Clawver store performance with analytics on revenue, products, and customer behavior.
+This is a guidance-only skill for evaluating store performance and turning metrics into business actions. It does not execute API calls.
 
-## Prerequisites
+## When to use
 
-- `CLAW_API_KEY` environment variable
-- Active store with at least one product
-- Store must have completed Stripe verification to appear in public listings
+- You need a recurring performance review process for an online store.
+- You want to diagnose conversion, pricing, and retention issues.
+- You need decision-ready reporting for weekly or monthly planning.
 
-For platform-specific good and bad API patterns from `claw-social`, use `references/api-examples.md`.
+## Core metric framework
 
-## Store Overview
+Track these groups together to avoid misleading conclusions:
 
-### Get Store Analytics
+### Revenue and efficiency
 
-```bash
-curl https://api.clawver.store/v1/stores/me/analytics \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
+- `totalRevenue`: gross revenue after refunds, before platform fees.
+- `netRevenue`: revenue after platform fees.
+- `averageOrderValue`: average transaction size.
+- `platformFees`: cost of distribution platform.
 
-**Response:**
-```json
-{
-  "success": true,
-  "data": {
-    "analytics": {
-      "summary": {
-        "totalRevenue": 125000,
-        "totalOrders": 47,
-        "averageOrderValue": 2659,
-        "netRevenue": 122500,
-        "platformFees": 2500,
-        "storeViews": 1500,
-        "productViews": 3200,
-        "conversionRate": 3.13
-      },
-      "topProducts": [
-        {
-          "productId": "prod_abc",
-          "productName": "AI Art Pack Vol. 1",
-          "revenue": 46953,
-          "units": 47,
-          "views": 850,
-          "conversionRate": 5.53,
-          "averageRating": 4.8,
-          "reviewsCount": 12
-        }
-      ],
-      "recentOrdersCount": 47
-    }
-  }
-}
-```
+### Demand and conversion
 
-### Query by Period
+- `storeViews`: top-of-funnel demand signal.
+- `productViews`: listing-level demand signal.
+- `conversionRate`: orders divided by relevant views.
+- `totalOrders`: conversion output volume.
 
-Use the `period` query parameter to filter analytics by time range:
+### Product quality signals
 
-```bash
-# Last 7 days
-curl "https://api.clawver.store/v1/stores/me/analytics?period=7d" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
+- `units`: sales velocity by SKU/product.
+- `averageRating`: quality perception.
+- `reviewsCount`: confidence level of rating data.
 
-# Last 30 days (default)
-curl "https://api.clawver.store/v1/stores/me/analytics?period=30d" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
+## Time-window analysis
 
-# Last 90 days
-curl "https://api.clawver.store/v1/stores/me/analytics?period=90d" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
+Use a fixed cadence:
 
-# All time
-curl "https://api.clawver.store/v1/stores/me/analytics?period=all" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
+- Weekly review for operational tuning.
+- Monthly review for strategy shifts.
+- Quarterly review for assortment and pricing policy.
 
-**Allowed values:** `7d`, `30d`, `90d`, `all`
+Compare shorter windows to baseline windows and flag gaps, not just raw totals.
 
-## Product Analytics
+## Diagnostic playbooks
 
-### Get Per-Product Stats
+### Low conversion
 
-```bash
-curl "https://api.clawver.store/v1/stores/me/products/{productId}/analytics?period=30d" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
+If conversion is low, inspect in this order:
 
-**Response:**
-```json
-{
-  "success": true,
-  "data": {
-    "analytics": {
-      "productId": "prod_abc123",
-      "productName": "AI Art Pack Vol. 1",
-      "revenue": 46953,
-      "units": 47,
-      "views": 1250,
-      "conversionRate": 3.76,
-      "averageRating": 4.8,
-      "reviewsCount": 12
-    }
-  }
-}
-```
+1. Listing clarity (title, imagery, description)
+2. Pricing and shipping competitiveness
+3. Social proof (ratings/reviews)
+4. Checkout friction and trust signals
 
-## Key Metrics
+### High traffic, low sales
 
-### Summary Fields
+- Revisit value proposition on top-viewed listings.
+- Test price bands and offer structures.
+- Improve first three images and primary product copy.
+- Add stronger proof content (reviews, usage examples, guarantees).
 
-| Field | Description |
-|-------|-------------|
-| `totalRevenue` | Revenue in cents after refunds, before platform fees |
-| `totalOrders` | Number of paid orders |
-| `averageOrderValue` | Average order size in cents |
-| `netRevenue` | Revenue minus platform fees |
-| `platformFees` | Total platform fees (2% of subtotal) |
-| `storeViews` | Lifetime store page views |
-| `productViews` | Lifetime product page views (aggregate) |
-| `conversionRate` | Orders / store views × 100 (capped at 100%) |
+### Revenue decline
 
-### Top Products Fields
+- Separate volume decline from margin decline.
+- Check whether top products are underperforming or traffic quality changed.
+- Quantify refund impact and repeat return reasons.
+- Trigger a recovery plan with owner and due date.
 
-| Field | Description |
-|-------|-------------|
-| `productId` | Product identifier |
-| `productName` | Product name |
-| `revenue` | Revenue in cents after refunds, before platform fees |
-| `units` | Units sold |
-| `views` | Lifetime product page views |
-| `conversionRate` | Orders / product views × 100 |
-| `averageRating` | Mean star rating (1-5) |
-| `reviewsCount` | Number of reviews |
+## Reporting template
 
-## Order Analysis
+Use this structure for stakeholder updates:
 
-### Orders by Status
+1. Executive summary (3-5 bullets)
+2. Metric snapshot (revenue, orders, conversion, AOV, net margin)
+3. Top/worst product movers
+4. Root-cause hypotheses
+5. Action plan for next cycle
+6. Risks and escalation items
 
-```bash
-# Confirmed (paid) orders
-curl "https://api.clawver.store/v1/orders?status=confirmed" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
+## Output format
 
-# Completed orders
-curl "https://api.clawver.store/v1/orders?status=delivered" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
+When asked for help, provide:
 
-### Calculate Refund Impact
-
-Refund amounts are subtracted from revenue in analytics. Check individual orders for refund details:
-
-```python
-response = api.get("/v1/orders")
-orders = response["data"]["orders"]
-
-total_refunded = sum(
-    sum(r["amountInCents"] for r in order.get("refunds", []))
-    for order in orders
-)
-print(f"Total refunded: ${total_refunded/100:.2f}")
-```
-
-## Review Analysis
-
-### Get All Reviews
-
-```bash
-curl https://api.clawver.store/v1/stores/me/reviews \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
-
-**Response:**
-```json
-{
-  "success": true,
-  "data": {
-    "reviews": [
-      {
-        "id": "review_123",
-        "orderId": "order_456",
-        "productId": "prod_789",
-        "rating": 5,
-        "body": "Amazing quality, exactly as described!",
-        "createdAt": "2024-01-15T10:30:00Z"
-      }
-    ]
-  }
-}
-```
-
-### Rating Distribution
-
-Calculate star distribution from reviews:
-
-```python
-response = api.get("/v1/stores/me/reviews")
-reviews = response["data"]["reviews"]
-
-distribution = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
-for review in reviews:
-    distribution[review["rating"]] += 1
-
-total = len(reviews)
-for rating, count in distribution.items():
-    pct = (count / total * 100) if total > 0 else 0
-    print(f"{rating} stars: {count} ({pct:.1f}%)")
-```
-
-## Reporting Patterns
-
-### Revenue Summary
-
-```python
-response = api.get("/v1/stores/me/analytics?period=30d")
-analytics = response["data"]["analytics"]
-summary = analytics["summary"]
-
-print(f"Revenue (30d): ${summary['totalRevenue']/100:.2f}")
-print(f"Platform fees: ${summary['platformFees']/100:.2f}")
-print(f"Net revenue: ${summary['netRevenue']/100:.2f}")
-print(f"Orders: {summary['totalOrders']}")
-print(f"Avg order: ${summary['averageOrderValue']/100:.2f}")
-print(f"Conversion rate: {summary['conversionRate']:.2f}%")
-```
-
-### Weekly Performance Report
-
-```python
-# Get analytics for different periods
-week = api.get("/v1/stores/me/analytics?period=7d")
-month = api.get("/v1/stores/me/analytics?period=30d")
-
-week_revenue = week["data"]["analytics"]["summary"]["totalRevenue"]
-month_revenue = month["data"]["analytics"]["summary"]["totalRevenue"]
-
-# Week's share of month
-week_share = (week_revenue / month_revenue * 100) if month_revenue > 0 else 0
-print(f"This week: ${week_revenue/100:.2f} ({week_share:.1f}% of month)")
-```
-
-### Top Product Analysis
-
-```python
-response = api.get("/v1/stores/me/analytics?period=30d")
-top_products = response["data"]["analytics"]["topProducts"]
-
-for i, product in enumerate(top_products, 1):
-    print(f"{i}. {product['productName']}")
-    print(f"   Revenue: ${product['revenue']/100:.2f}")
-    print(f"   Units: {product['units']}")
-    print(f"   Views: {product['views']}")
-    print(f"   Conversion: {product['conversionRate']:.2f}%")
-    if product.get("averageRating"):
-        print(f"   Rating: {product['averageRating']:.1f} ({product['reviewsCount']} reviews)")
-```
-
-## Actionable Insights
-
-### Low Conversion Products
-
-If `conversionRate < 2`:
-- Improve product images
-- Rewrite description
-- Adjust pricing
-- Check competitor offerings
-
-### High Views, Low Sales
-
-If `views > 100` and `units < 5`:
-- Price may be too high
-- Description unclear
-- Missing social proof (reviews)
-
-### Declining Revenue
-
-Compare periods:
-```python
-week = api.get("/v1/stores/me/analytics?period=7d")["data"]["analytics"]["summary"]
-month = api.get("/v1/stores/me/analytics?period=30d")["data"]["analytics"]["summary"]
-
-expected_week_share = 7 / 30  # ~23%
-actual_week_share = week["totalRevenue"] / month["totalRevenue"] if month["totalRevenue"] > 0 else 0
-
-if actual_week_share < expected_week_share * 0.8:
-    print("Warning: This week's revenue is below average")
-```
+- A period-over-period analysis summary.
+- 3 prioritized actions with expected business impact.
+- A compact KPI dashboard spec the team can track weekly.

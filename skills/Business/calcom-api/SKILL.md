@@ -1,24 +1,17 @@
 ---
-category: Business
 id: calcom-api
 name: Calcom API
-description: Interact with the Cal.com API v2 to manage scheduling, bookings, event types, availability, and calendars. Use this skill when building integrations that need to create or manage bookings, check availability, configure event types, or sync calendars with Cal.com's scheduling infrastructure.
-env:
-  CAL_API_KEY:
-    description: "Cal.com API key (prefixed with cal_live_ or cal_test_). Required for all API requests."
-    required: true
-  CAL_CLIENT_ID:
-    description: "OAuth client ID for platform integrations managing users on behalf of others. Sent as x-cal-client-id header."
-    required: false
-  CAL_SECRET_KEY:
-    description: "OAuth client secret for platform integrations. Sent as x-cal-secret-key header."
-    required: false
-  CAL_WEBHOOK_SECRET:
-    description: "Secret used to verify webhook payload signatures via X-Cal-Signature-256 header."
-    required: false
+description: Guidance-only reference for planning Cal.com API v2 scheduling integrations, including bookings, event types, availability, calendars, and webhook design.
+category: Business
+requires: []
+examples:
+  - "Help me with calcom api."
+  - "Use calcom-api for this task."
 ---
 
 # Cal.com API v2
+
+This is a guidance-only skill. Use it to design and review integration logic; do not execute API calls directly from this skill.
 
 This skill provides guidance for AI agents to interact with the Cal.com API v2, enabling scheduling automation, booking management, and calendar integrations.
 

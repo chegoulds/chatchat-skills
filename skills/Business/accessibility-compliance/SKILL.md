@@ -1,8 +1,12 @@
 ---
-category: Business
 id: accessibility-compliance
 name: Accessibility Compliance
 description: Implement WCAG 2.2 compliant interfaces with mobile accessibility, inclusive design patterns, and assistive technology support.
+category: Development
+requires: []
+examples:
+  - "Help me with accessibility compliance."
+  - "Use accessibility-compliance for this task."
 ---
 
 # Accessibility Compliance

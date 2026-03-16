@@ -1,28 +1,12 @@
 ---
-category: Business
 id: things-mac
 name: Things Mac
 description: Manage Things 3 via the `things` CLI on macOS (add/update projects+todos via URL scheme; read/search/list from the local Things database).
-homepage: https://github.com/ossianhempel/things3-cli
-metadata:
-  {
-    "openclaw":
-      {
-        "emoji": "✅",
-        "os": ["darwin"],
-        "requires": { "bins": ["things"] },
-        "install":
-          [
-            {
-              "id": "go",
-              "kind": "go",
-              "module": "github.com/ossianhempel/things3-cli/cmd/things@latest",
-              "bins": ["things"],
-              "label": "Install things3-cli (go)",
-            },
-          ],
-      },
-  }
+category: Lifestyle
+requires: []
+examples:
+  - "Help me with things mac."
+  - "Use things-mac for this task."
 ---
 
 # Things 3 CLI

@@ -1,17 +1,12 @@
 ---
-category: Business
 id: ceo-advisor
 name: Ceo Advisor
 description: Executive leadership guidance for strategic decision-making, organizational development, and stakeholder management. Includes strategy analyzer, financial scenario modeling, board governance frameworks, and investor relations playbooks.
-license: MIT
-metadata:
-  version: 1.0.0
-  author: Alireza Rezvani
-  category: c-level
-  domain: ceo-leadership
-  updated: 2025-10-20
-  python-tools: strategy_analyzer.py, financial_scenario_analyzer.py
-  frameworks: executive-decision-framework, board-governance, investor-relations
+category: Business
+requires: []
+examples:
+  - "Help me with ceo advisor."
+  - "Use ceo-advisor for this task."
 ---
 
 # CEO Advisor
@@ -24,16 +19,10 @@ CEO, chief executive officer, executive leadership, strategic planning, board go
 ## Quick Start
 
 ### For Strategic Planning
-```bash
-python scripts/strategy_analyzer.py
-```
-Analyzes strategic position and generates actionable recommendations.
+Use the strategic planning checklists in this skill to analyze position and generate recommendations.
 
 ### For Financial Scenarios
-```bash
-python scripts/financial_scenario_analyzer.py
-```
-Models different business scenarios with risk-adjusted projections.
+Use the financial scenario framework in this skill to model business cases with risk-adjusted assumptions.
 
 ### For Decision Making
 Review `references/executive_decision_framework.md` for structured decision processes.
@@ -84,17 +73,12 @@ Q4: Communication & Launch
 ### 2. Capital & Resource Management
 
 #### Capital Allocation Framework
-```python
-# Run financial scenario analysis
-python scripts/financial_scenario_analyzer.py
-
-# Allocation priorities:
+Allocation priorities:
 1. Core Operations (40-50%)
 2. Growth Investments (25-35%)
 3. Innovation/R&D (10-15%)
 4. Strategic Reserve (10-15%)
 5. Shareholder Returns (varies)
-```
 
 #### Fundraising Strategy
 - **Seed/Series A**: Product-market fit focus

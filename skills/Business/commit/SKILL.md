@@ -1,8 +1,12 @@
 ---
-category: Business
 id: commit
 name: Commit
 description: Run verification steps and prepare a clean commit.
+category: Development
+requires: []
+examples:
+  - "Help me with commit."
+  - "Use commit for this task."
 ---
 
 # Verification
@@ -16,7 +20,7 @@ Arguments:
 
 Run these first in sequence:
 1. Run `yarn prettier` - format code (stop if fails)
-2. Run `yarn linc` - lint changed files (stop if fails)
+2. Run `yarn lint` - lint changed files (stop if fails)
 
 Then run these with subagents in parallel:
 1. Use `/flow` to type check (stop if fails)

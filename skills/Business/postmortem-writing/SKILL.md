@@ -1,8 +1,12 @@
 ---
-category: Business
 id: postmortem-writing
 name: Postmortem Writing
 description: Step-by-step guidance for postmortem.
+category: Business
+requires: []
+examples:
+  - "Help me with postmortem writing."
+  - "Use postmortem-writing for this task."
 ---
 
 # Postmortem Writing

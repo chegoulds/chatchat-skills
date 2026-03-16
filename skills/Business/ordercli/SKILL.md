@@ -1,10 +1,12 @@
 ---
-category: Business
 id: ordercli
 name: Ordercli
-description: "Reorder Foodora orders + track ETA/status with ordercli. Never confirm without explicit user approval. Triggers: order food, reorder, track ETA."
-homepage: https://ordercli.sh
-metadata: {"openclaw":{"emoji":"🥡","requires":{"bins":["ordercli"]},"install":[{"id":"go","kind":"go","module":"github.com/steipete/ordercli/cmd/ordercli@latest","bins":["ordercli"],"label":"Install ordercli (go)"}]}}
+description: Reorder Foodora orders + track ETA/status with ordercli. Never confirm without explicit user approval. Triggers: order food, reorder, track ETA.
+category: Development
+requires: []
+examples:
+  - "Help me with ordercli."
+  - "Use ordercli for this task."
 ---
 
 # Food order (Foodora via ordercli)

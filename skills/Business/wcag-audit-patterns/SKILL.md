@@ -1,8 +1,12 @@
 ---
-category: Business
 id: wcag-audit-patterns
 name: Wcag Audit Patterns
 description: Conduct WCAG 2.2 accessibility audits with automated testing, manual verification, and remediation guidance.
+category: Development
+requires: []
+examples:
+  - "Help me with wcag audit patterns."
+  - "Use wcag-audit-patterns for this task."
 ---
 
 # WCAG Audit Patterns

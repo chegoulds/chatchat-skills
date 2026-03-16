@@ -1,228 +1,71 @@
 ---
-category: Business
 id: data-engineering-data-driven-feature
 name: Data Engineering Data Driven Feature
-description: World-class data science skill for statistical modeling, experimentation, causal inference, and advanced analytics. Expertise in Python (NumPy, Pandas, Scikit-learn), R, SQL, statistical methods, A/B testing, time series, and business intelligence. Includes experiment design, feature engineering, model evaluation, and stakeholder communication.
+description: Guidance-only playbook for designing data-driven features with experiment design, feature engineering, model evaluation, and production reliability practices.
+category: Development
+requires: []
+examples:
+  - "Help me design a data-driven feature pipeline."
+  - "Use data-engineering-data-driven-feature for this task."
 ---
 
 # Senior Data Scientist
 
-World-class senior data scientist skill for production-grade AI/ML/Data systems.
+Guidance-only skill for production-grade AI/ML and data systems. Use it to plan architecture, quality controls, and rollout strategy; do not execute scripts or deployment commands from this skill.
 
-## Quick Start
+## Core expertise
 
-### Main Capabilities
+- Statistical modeling and experimentation strategy
+- Feature engineering patterns for training and inference parity
+- Model evaluation frameworks and decision thresholds
+- Data quality, observability, and drift monitoring
+- MLOps and DataOps operating practices
+- Cross-functional communication of analytical findings
 
-```bash
-# Core Tool 1
-python scripts/experiment_designer.py --input data/ --output results/
+## Planning workflow
 
-# Core Tool 2  
-python scripts/feature_engineering_pipeline.py --target project/ --analyze
+1. Define business objective and measurable success criteria.
+2. Specify data contracts, ownership, freshness, and quality rules.
+3. Design feature pipeline and offline/online consistency strategy.
+4. Choose evaluation metrics and acceptance thresholds.
+5. Plan rollout with guardrails, monitoring, and rollback conditions.
 
-# Core Tool 3
-python scripts/model_evaluation_suite.py --config config.yaml --deploy
-```
+## Production patterns
 
-## Core Expertise
+### Scalable data processing
 
-This skill covers world-class capabilities in:
+- Design for horizontal scaling and idempotent jobs.
+- Separate batch and real-time paths when latency requirements differ.
+- Add schema checks and quality gates before downstream consumption.
 
-- Advanced production patterns and architectures
-- Scalable system design and implementation
-- Performance optimization at scale
-- MLOps and DataOps best practices
-- Real-time processing and inference
-- Distributed computing frameworks
-- Model deployment and monitoring
-- Security and compliance
-- Cost optimization
-- Team leadership and mentoring
+### Model deployment reliability
 
-## Tech Stack
+- Use staged rollouts with clear pass/fail gates.
+- Track latency, error rate, drift, and business KPIs together.
+- Define retraining triggers and model retirement criteria.
 
-**Languages:** Python, SQL, R, Scala, Go
-**ML Frameworks:** PyTorch, TensorFlow, Scikit-learn, XGBoost
-**Data Tools:** Spark, Airflow, dbt, Kafka, Databricks
-**LLM Frameworks:** LangChain, LlamaIndex, DSPy
-**Deployment:** Docker, Kubernetes, AWS/GCP/Azure
-**Monitoring:** MLflow, Weights & Biases, Prometheus
-**Databases:** PostgreSQL, BigQuery, Snowflake, Pinecone
+### Real-time inference
 
-## Reference Documentation
+- Use caching and batching where latency budgets allow.
+- Maintain feature consistency between training and serving.
+- Set SLOs for p50/p95/p99 latency and monitor continuously.
 
-### 1. Statistical Methods Advanced
+## Governance and compliance
 
-Comprehensive guide available in `references/statistical_methods_advanced.md` covering:
+- Protect PII with minimization, masking, and access controls.
+- Document assumptions, limitations, and known failure modes.
+- Align experiment and data use with applicable policy/regulation.
 
-- Advanced patterns and best practices
-- Production implementation strategies
-- Performance optimization techniques
-- Scalability considerations
-- Security and compliance
-- Real-world case studies
+## Team execution standards
 
-### 2. Experiment Design Frameworks
+- Keep experiment docs reproducible and versioned.
+- Use clear handoffs between data science, engineering, and product.
+- Prioritize interpretable reporting for non-technical stakeholders.
 
-Complete workflow documentation in `references/experiment_design_frameworks.md` including:
+## Output format
 
-- Step-by-step processes
-- Architecture design patterns
-- Tool integration guides
-- Performance tuning strategies
-- Troubleshooting procedures
+When asked for help, provide:
 
-### 3. Feature Engineering Patterns
-
-Technical reference guide in `references/feature_engineering_patterns.md` with:
-
-- System design principles
-- Implementation examples
-- Configuration best practices
-- Deployment strategies
-- Monitoring and observability
-
-## Production Patterns
-
-### Pattern 1: Scalable Data Processing
-
-Enterprise-scale data processing with distributed computing:
-
-- Horizontal scaling architecture
-- Fault-tolerant design
-- Real-time and batch processing
-- Data quality validation
-- Performance monitoring
-
-### Pattern 2: ML Model Deployment
-
-Production ML system with high availability:
-
-- Model serving with low latency
-- A/B testing infrastructure
-- Feature store integration
-- Model monitoring and drift detection
-- Automated retraining pipelines
-
-### Pattern 3: Real-Time Inference
-
-High-throughput inference system:
-
-- Batching and caching strategies
-- Load balancing
-- Auto-scaling
-- Latency optimization
-- Cost optimization
-
-## Best Practices
-
-### Development
-
-- Test-driven development
-- Code reviews and pair programming
-- Documentation as code
-- Version control everything
-- Continuous integration
-
-### Production
-
-- Monitor everything critical
-- Automate deployments
-- Feature flags for releases
-- Canary deployments
-- Comprehensive logging
-
-### Team Leadership
-
-- Mentor junior engineers
-- Drive technical decisions
-- Establish coding standards
-- Foster learning culture
-- Cross-functional collaboration
-
-## Performance Targets
-
-**Latency:**
-- P50: < 50ms
-- P95: < 100ms
-- P99: < 200ms
-
-**Throughput:**
-- Requests/second: > 1000
-- Concurrent users: > 10,000
-
-**Availability:**
-- Uptime: 99.9%
-- Error rate: < 0.1%
-
-## Security & Compliance
-
-- Authentication & authorization
-- Data encryption (at rest & in transit)
-- PII handling and anonymization
-- GDPR/CCPA compliance
-- Regular security audits
-- Vulnerability management
-
-## Common Commands
-
-```bash
-# Development
-python -m pytest tests/ -v --cov
-python -m black src/
-python -m pylint src/
-
-# Training
-python scripts/train.py --config prod.yaml
-python scripts/evaluate.py --model best.pth
-
-# Deployment
-docker build -t service:v1 .
-kubectl apply -f k8s/
-helm upgrade service ./charts/
-
-# Monitoring
-kubectl logs -f deployment/service
-python scripts/health_check.py
-```
-
-## Resources
-
-- Advanced Patterns: `references/statistical_methods_advanced.md`
-- Implementation Guide: `references/experiment_design_frameworks.md`
-- Technical Reference: `references/feature_engineering_patterns.md`
-- Automation Scripts: `scripts/` directory
-
-## Senior-Level Responsibilities
-
-As a world-class senior professional:
-
-1. **Technical Leadership**
-   - Drive architectural decisions
-   - Mentor team members
-   - Establish best practices
-   - Ensure code quality
-
-2. **Strategic Thinking**
-   - Align with business goals
-   - Evaluate trade-offs
-   - Plan for scale
-   - Manage technical debt
-
-3. **Collaboration**
-   - Work across teams
-   - Communicate effectively
-   - Build consensus
-   - Share knowledge
-
-4. **Innovation**
-   - Stay current with research
-   - Experiment with new approaches
-   - Contribute to community
-   - Drive continuous improvement
-
-5. **Production Excellence**
-   - Ensure high availability
-   - Monitor proactively
-   - Optimize performance
-   - Respond to incidents
+- A feature delivery plan (data, model, serving, monitoring).
+- A validation checklist (quality, offline/online metrics, risk tests).
+- A rollout plan with fallback and incident response triggers.

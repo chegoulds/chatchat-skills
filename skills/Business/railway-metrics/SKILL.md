@@ -1,14 +1,14 @@
 ---
-category: Business
 id: railway-metrics
 name: Railway Metrics
 description: Query resource usage metrics for Railway services.
-version: 1.0.0
-author: Railway
-license: MIT
-tags: [Railway, Metrics, Monitoring, Performance, CPU, Memory, Resources, Analytics]
-dependencies: [railway-cli]
-allowed-tools: Bash(railway:*)
+category: DevOps
+requires: []
+examples:
+  - "Help me with railway metrics."
+  - "Use railway-metrics for this task."
+author: "Railway"
+version: "1.0.0"
 ---
 
 # Railway Service Metrics

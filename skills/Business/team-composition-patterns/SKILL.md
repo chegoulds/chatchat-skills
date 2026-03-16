@@ -1,9 +1,13 @@
 ---
-category: Business
 id: team-composition-patterns
 name: Team Composition Patterns
 description: Guidance and answers for team composition patterns.
-version: 1.0.2
+category: Development
+requires: []
+examples:
+  - "Help me with team composition patterns."
+  - "Use team-composition-patterns for this task."
+version: "1.0.2"
 ---
 
 # Team Composition Patterns

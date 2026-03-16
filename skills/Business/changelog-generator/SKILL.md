@@ -1,8 +1,12 @@
 ---
-category: Business
 id: changelog-generator
 name: Changelog Generator
 description: Step-by-step guidance for changelog.
+category: Business
+requires: []
+examples:
+  - "Help me with changelog generator."
+  - "Use changelog-generator for this task."
 ---
 
 # Changelog Generator

@@ -1,15 +1,17 @@
 ---
-category: Business
 id: chart-visualization
 name: Chart Visualization
-description: This skill should be used when the user wants to visualize data. It intelligently selects the most suitable chart type from 26 available options, extracts parameters based on detailed specifications, and generates a chart image using a JavaScript script.
-dependency:
-  nodejs: ">=18.0.0"
+description: Guidance-only framework for selecting chart types, structuring chart parameters, and preparing clear data-visualization specs.
+category: Business
+requires: []
+examples:
+  - "Help me with chart visualization."
+  - "Use chart-visualization for this task."
 ---
 
 # Chart Visualization Skill
 
-This skill provides a comprehensive workflow for transforming data into visual charts. It handles chart selection, parameter extraction, and image generation.
+This is a guidance-only skill for transforming data into visual chart specifications. It handles chart selection and parameter extraction without running scripts.
 
 ## Workflow
 
@@ -39,10 +41,10 @@ Analyze the user's data features to determine the most appropriate chart type. U
 Once a chart type is selected, read the corresponding file in the `references/` directory (e.g., `references/generate_line_chart.md`) to identify the required and optional fields.
 Extract the data from the user's input and map it to the expected `args` format.
 
-### 3. Chart Generation
-Invoke the `scripts/generate.js` script with a JSON payload.
+### 3. Chart Specification
+Prepare a JSON chart specification payload.
 
-**Payload Format:**
+**Payload format:**
 ```json
 {
   "tool": "generate_chart_type_name",
@@ -55,16 +57,11 @@ Invoke the `scripts/generate.js` script with a JSON payload.
 }
 ```
 
-**Execution Command:**
-```bash
-node ./scripts/generate.js '<payload_json>'
-```
-
 ### 4. Result Return
-The script will output the URL of the generated chart image.
 Return the following to the user:
-- The image URL.
-- The complete `args` (specification) used for generation.
+- Recommended chart type and why it fits the data.
+- The complete `args` specification payload.
+- Any assumptions or missing fields needed before rendering.
 
 ## Reference Material
 Detailed specifications for each chart type are located in the `references/` directory. Consult these files to ensure the `args` passed to the script match the expected schema.

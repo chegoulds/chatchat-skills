@@ -1,17 +1,14 @@
 ---
-category: Business
 id: juicebox-prod-checklist
 name: Juicebox Prod Checklist
-description: Execute Juicebox production deployment checklist.
-  Execute Juicebox production deployment checklist.
-  Use when preparing for production launch, validating deployment readiness,
-  or performing pre-launch reviews.
-  Trigger with phrases like "juicebox production", "deploy juicebox prod",
-  "juicebox launch checklist", "juicebox go-live".
-allowed-tools: Read, Grep, Bash(curl:*)
-version: 1.0.0
-license: MIT
-author: Jeremy Longshore <jeremy@intentsolutions.io>
+description: Execute Juicebox production deployment checklist. Use when preparing for production launch, validating deployment readiness, or performing pre-launch reviews. Trigger with phrases like \"juicebox production\", \"deploy juicebox prod\", \"juicebox launch checklist\", \"juicebox go-live\".
+category: DevOps
+requires: []
+examples:
+  - "Help me with juicebox prod checklist."
+  - "Use juicebox-prod-checklist for this task."
+author: "Jeremy Longshore <jeremy@intentsolutions.io>"
+version: "1.0.0"
 ---
 
 # Juicebox Production Checklist

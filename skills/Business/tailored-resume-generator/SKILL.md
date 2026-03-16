@@ -1,8 +1,12 @@
 ---
-category: Business
 id: tailored-resume-generator
 name: Tailored Resume Generator
 description: Analyzes job descriptions and generates tailored resumes that highlight relevant experience, skills, and achievements to maximize interview chances.
+category: Business
+requires: []
+examples:
+  - "Help me with tailored resume generator."
+  - "Use tailored-resume-generator for this task."
 ---
 
 # Tailored Resume Generator

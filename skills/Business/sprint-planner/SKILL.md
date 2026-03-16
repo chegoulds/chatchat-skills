@@ -1,15 +1,12 @@
 ---
-category: Business
 id: sprint-planner
 name: Sprint Planner
-description: Agile sprint planning with story estimation, capacity planning, and sprint goal setting.
-  Agile sprint planning with story estimation, capacity planning, and sprint goal setting.
-  Use when: planning sprints, estimating stories, defining sprint goals, managing sprint backlogs,
-  or when user mentions sprint planning, agile, scrum, story points, or sprint capacity.
-license: MIT
-metadata:
-  author: awesome-llm-apps
-  version: "1.0.0"
+description: Agile sprint planning with story estimation, capacity planning, and sprint goal setting. Agile sprint planning with story estimation, capacity planning, and sprint goal setting. Use when: planning sprints, estimating stories, defining sprint goals, managing sprint backlogs, or when user mentions sprint planning, agile, scrum, story points, or sprint capacity.
+category: Business
+requires: []
+examples:
+  - "Help me with sprint planner."
+  - "Use sprint-planner for this task."
 ---
 
 # Sprint Planner

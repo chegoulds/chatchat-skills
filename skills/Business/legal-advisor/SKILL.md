@@ -1,13 +1,12 @@
 ---
-category: Business
 id: legal-advisor
 name: Legal Advisor
-description: Draft privacy policies, terms of service, disclaimers, and legal notices. Creates GDPR-compliant texts, cookie policies, and data processing agreements. Use PROACTIVELY for legal documentation, compliance texts, or regulatory requirements.
-  notices. Creates GDPR-compliant texts, cookie policies, and data processing
-  agreements. Use PROACTIVELY for legal documentation, compliance texts, or
-  regulatory requirements.
-metadata:
-  model: sonnet
+description: Draft privacy policies, terms of service, disclaimers, and legal notices. Creates GDPR-compliant texts, cookie policies, and data processing agreements. Use PROACTIVELY for legal documentation, compliance texts, or regulatory requirements. notices. Creates GDPR-compliant texts, cookie policies, and data processing agreements. Use PROACTIVELY for legal documentation, compliance texts, or regulatory requirements.
+category: Business
+requires: []
+examples:
+  - "Help me with legal advisor."
+  - "Use legal-advisor for this task."
 ---
 
 ## Use this skill when

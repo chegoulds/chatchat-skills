@@ -1,8 +1,12 @@
 ---
-category: Business
 id: nda-triage
 name: Nda Triage
 description: Screen incoming NDAs and classify them as GREEN (standard), YELLOW (needs review), or RED (significant issues).
+category: Business
+requires: []
+examples:
+  - "Help me with nda triage."
+  - "Use nda-triage for this task."
 ---
 
 # NDA Triage Skill

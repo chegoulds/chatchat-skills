@@ -1,8 +1,12 @@
 ---
-category: Business
 id: planning-with-files
 name: Planning With Files
 description: Guidance and answers for planning with files.
+category: Development
+requires: []
+examples:
+  - "Help me with planning with files."
+  - "Use planning-with-files for this task."
 ---
 
 # Planning with Files

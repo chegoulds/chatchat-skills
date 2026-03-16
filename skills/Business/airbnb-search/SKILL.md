@@ -1,69 +1,93 @@
 ---
-category: Business
 id: airbnb-search
 name: Airbnb Search
 description: Search Airbnb listings with prices, ratings, and direct links. No API key required.
-license: MIT
-metadata:
-  author: Olafs-World
-  version: "0.1.3"
+category: Business
+requires: []
+examples:
+  - "Help me shortlist Airbnb stays in Bangalore for a 5-day work trip."
+  - "Compare these Airbnb options and recommend the best one for a family trip."
 ---
 
 # Airbnb Search
 
-Search Airbnb listings from the command line. Returns prices, ratings, and direct booking links.
+Use this skill as a guidance-only framework to evaluate short-term stay options and produce a clear recommendation.
 
-## Requirements
+## Use this skill when
 
-- Python 3.8+
-- `requests` library (auto-installed via `uv run --with`)
+- The user needs help comparing Airbnb-style accommodation options.
+- The user has multiple listing options and wants a recommendation.
+- The user wants a structured travel-stay decision summary.
 
-## Quick Start
+## Do not use this skill when
 
-```bash
-# Run directly (no install needed)
-uv run --with requests scripts/airbnb-search.py "Steamboat Springs, CO" --checkin 2025-03-01 --checkout 2025-03-03
+- The user expects this skill to fetch live listings directly.
+- The request is unrelated to travel accommodation planning.
 
-# JSON output
-uv run --with requests scripts/airbnb-search.py "Denver, CO" --checkin 2025-06-01 --checkout 2025-06-05 --json
+## Guardrails
+
+- Treat this as decision-support guidance only; do not claim live API/search execution.
+- Ask for missing constraints (budget, dates, location, guest count, priorities).
+- Avoid assumptions about availability and pricing unless explicitly provided.
+
+## Evaluation workflow
+
+1. **Collect trip constraints**
+   - Destination, dates, guest count
+   - Budget range (nightly or total)
+   - Must-have amenities (wifi, kitchen, workspace, parking)
+   - Preferred area and transport access
+
+2. **Define ranking criteria**
+   - Price fit
+   - Location fit
+   - Amenities fit
+   - Rating/review confidence
+   - Policy flexibility (cancellation, check-in rules)
+
+3. **Score candidate stays**
+   - Use a simple weighted score (for example: price 30%, location 30%, amenities 25%, reviews 15%).
+   - Highlight trade-offs instead of forcing a single “perfect” choice.
+
+4. **Create shortlist**
+   - Provide top 3 options with rationale.
+   - Flag risks (noise, commute distance, hidden fees, low review count).
+
+5. **Recommend final choice**
+   - Best overall option
+   - Best value option
+   - Lowest-risk option
+   - Include what information is still needed before booking
+
+## Output format
+
+```markdown
+## Trip Constraints
+- Destination:
+- Dates:
+- Guests:
+- Budget:
+- Must-have amenities:
+
+## Comparison Table
+| Option | Price Fit | Location Fit | Amenities Fit | Review Confidence | Risk Notes |
+|--------|-----------|--------------|---------------|-------------------|-----------|
+| A | | | | | |
+| B | | | | | |
+| C | | | | | |
+
+## Top Recommendations
+1. **Best Overall**: [Option]
+   - Why:
+   - Trade-off:
+2. **Best Value**: [Option]
+   - Why:
+   - Trade-off:
+3. **Lowest Risk**: [Option]
+   - Why:
+   - Trade-off:
+
+## Final Decision Guidance
+- Recommended booking choice:
+- Open questions to confirm before booking:
 ```
-
-## Options
-
-```
-query                Search location (e.g., "Steamboat Springs, CO")
---checkin, -i DATE   Check-in date (YYYY-MM-DD)
---checkout, -o DATE  Check-out date (YYYY-MM-DD)
---min-price N        Minimum price filter
---max-price N        Maximum price filter
---min-bedrooms N     Minimum bedrooms filter
---limit N            Max results (default: 50)
---json               Output as JSON
---format FORMAT      table or json (default: table)
-```
-
-## Example Output
-
-```
-📍 Steamboat Springs, CO
-📊 Found 300+ total listings
-
-==========================================================================================
-Cozy Mountain Cabin 🏆
-  2BR/1BA | ⭐4.92 | 127 reviews
-  💰 $407 total
-  🔗 https://airbnb.com/rooms/12345678
-```
-
-## Notes
-
-- Dates are required for accurate pricing
-- Prices include cleaning fees in the total
-- No user API key needed — uses Airbnb's public frontend API key (hardcoded, same key used by airbnb.com in the browser)
-- May break if Airbnb changes their internal GraphQL API
-- Be respectful of rate limits
-
-## Links
-
-- [PyPI](https://pypi.org/project/airbnb-search/)
-- [GitHub](https://github.com/Olafs-World/airbnb-search)

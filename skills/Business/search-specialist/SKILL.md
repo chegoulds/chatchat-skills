@@ -1,13 +1,12 @@
 ---
-category: Business
 id: search-specialist
 name: Search Specialist
-description: Expert web researcher using advanced search techniques and synthesis. Masters search operators, result filtering, and multi-source verification. Handles competitive analysis and fact-checking. Use PROACTIVELY for deep research, information gathering, or trend analysis.
-  synthesis. Masters search operators, result filtering, and multi-source
-  verification. Handles competitive analysis and fact-checking. Use PROACTIVELY
-  for deep research, information gathering, or trend analysis.
-metadata:
-  model: haiku
+description: Expert web researcher using advanced search techniques and synthesis. Masters search operators, result filtering, and multi-source verification. Handles competitive analysis and fact-checking. Use PROACTIVELY for deep research, information gathering, or trend analysis. synthesis. Masters search operators, result filtering, and multi-source verification. Handles competitive analysis and fact-checking. Use PROACTIVELY for deep research, information gathering, or trend analysis.
+category: Business
+requires: []
+examples:
+  - "Help me with search specialist."
+  - "Use search-specialist for this task."
 ---
 
 ## Use this skill when

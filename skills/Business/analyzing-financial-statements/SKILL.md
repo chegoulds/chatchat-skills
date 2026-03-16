@@ -1,71 +1,107 @@
 ---
-category: Business
 id: analyzing-financial-statements
 name: Analyzing Financial Statements
-description: This skill calculates key financial ratios and metrics from financial statement data for investment analysis.
+description: Analyze company financial statements using ratio frameworks, trend review, and risk interpretation. Use when users need profitability, liquidity, leverage, efficiency, or valuation analysis.
+category: Business
+requires: []
+examples:
+  - "Analyze this company's financial statements and highlight key risks."
+  - "Compare these two companies using ratio-based financial analysis."
 ---
 
-# Financial Ratio Calculator Skill
+# Analyzing Financial Statements
 
-This skill provides comprehensive financial ratio analysis for evaluating company performance, profitability, liquidity, and valuation.
+Use this skill as a guidance-only framework for financial statement analysis and interpretation.
 
-## Capabilities
+## Use this skill when
 
-Calculate and interpret:
-- **Profitability Ratios**: ROE, ROA, Gross Margin, Operating Margin, Net Margin
-- **Liquidity Ratios**: Current Ratio, Quick Ratio, Cash Ratio
-- **Leverage Ratios**: Debt-to-Equity, Interest Coverage, Debt Service Coverage
-- **Efficiency Ratios**: Asset Turnover, Inventory Turnover, Receivables Turnover
-- **Valuation Ratios**: P/E, P/B, P/S, EV/EBITDA, PEG
-- **Per-Share Metrics**: EPS, Book Value per Share, Dividend per Share
+- The user wants ratio-based financial analysis for a company.
+- The user needs period-over-period or peer comparison.
+- The user needs a structured interpretation of financial strengths, weaknesses, and risks.
 
-## How to Use
+## Do not use this skill when
 
-1. **Input Data**: Provide financial statement data (income statement, balance sheet, cash flow)
-2. **Select Ratios**: Specify which ratios to calculate or use "all" for comprehensive analysis
-3. **Interpretation**: The skill will calculate ratios and provide industry-standard interpretations
+- The request is unrelated to financial performance analysis.
+- The user expects direct data scraping, live market feeds, or script execution from this skill.
 
-## Input Format
+## Guardrails
 
-Financial data can be provided as:
-- CSV with financial line items
-- JSON with structured financial statements
-- Text description of key financial figures
-- Excel files with financial statements
+- Treat this as analytical guidance; do not claim automated spreadsheet/script execution.
+- State assumptions clearly when data is incomplete.
+- Avoid definitive investment advice; provide risk-aware interpretation.
 
-## Output Format
+## Analysis workflow
 
-Results include:
-- Calculated ratios with values
-- Industry benchmark comparisons (when available)
-- Trend analysis (if multiple periods provided)
-- Interpretation and insights
-- Excel report with formatted results
+1. **Define scope**
+   - Confirm entity, period, and purpose (credit risk, investment screening, performance review).
+   - Confirm whether the user wants single-company analysis or comparison.
 
-## Example Usage
+2. **Check data completeness**
+   - Income statement: revenue, gross profit, operating profit, net income.
+   - Balance sheet: current assets/liabilities, debt, equity, cash.
+   - Cash flow: operating cash flow, capex, financing context.
+   - Flag missing data before drawing conclusions.
 
-"Calculate key financial ratios for this company based on the attached financial statements"
+3. **Calculate core ratio groups**
+   - **Profitability**: ROE, ROA, gross/operating/net margins
+   - **Liquidity**: current ratio, quick ratio, cash ratio
+   - **Leverage**: debt-to-equity, interest coverage
+   - **Efficiency**: asset turnover, inventory turnover, receivables turnover
+   - **Valuation** (if market data provided): P/E, P/B, EV/EBITDA
 
-"What's the P/E ratio if the stock price is $50 and annual earnings are $2.50 per share?"
+4. **Interpret in context**
+   - Compare against prior periods and (if available) peers.
+   - Distinguish one-time effects from recurring trends.
+   - Note where industry structure changes ratio interpretation.
 
-"Analyze the liquidity position using the balance sheet data"
+5. **Summarize risk and next actions**
+   - Highlight top financial risks and their likely implications.
+   - Recommend follow-up questions and further analysis.
 
-## Scripts
+## Output format
 
-- `calculate_ratios.py`: Main calculation engine for all financial ratios
-- `interpret_ratios.py`: Provides interpretation and benchmarking
+```markdown
+## Analysis Scope
+- Company:
+- Period:
+- Objective:
+- Data completeness notes:
 
-## Best Practices
+## Key Ratios
+### Profitability
+- ROE:
+- ROA:
+- Gross/Operating/Net Margin:
 
-1. Always validate data completeness before calculations
-2. Handle missing values appropriately (use industry averages or exclude)
-3. Consider industry context when interpreting ratios
-4. Include period comparisons for trend analysis
-5. Flag unusual or concerning ratios
+### Liquidity
+- Current Ratio:
+- Quick Ratio:
+- Cash Ratio:
 
-## Limitations
+### Leverage
+- Debt-to-Equity:
+- Interest Coverage:
 
-- Requires accurate financial data
-- Industry benchmarks are general guidelines
-- Some ratios may not apply to all industries
-- Historical data doesn't guarantee future performance
+### Efficiency
+- Asset Turnover:
+- Inventory/Receivables Turnover:
+
+### Valuation (if market data provided)
+- P/E:
+- P/B:
+- EV/EBITDA:
+
+## Interpretation
+- Strengths:
+- Weaknesses:
+- Trend notes:
+- Peer/benchmark notes:
+
+## Risk Summary
+- Risk 1:
+- Risk 2:
+
+## Recommended Next Steps
+1.
+2.
+```

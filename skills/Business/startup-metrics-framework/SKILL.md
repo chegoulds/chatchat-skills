@@ -1,9 +1,13 @@
 ---
-category: Business
 id: startup-metrics-framework
 name: Startup Metrics Framework
 description: Step-by-step guidance for startup metrics framework.
-version: 1.0.0
+category: Business
+requires: []
+examples:
+  - "Help me with startup metrics framework."
+  - "Use startup-metrics-framework for this task."
+version: "1.0.0"
 ---
 
 # Startup Metrics Framework

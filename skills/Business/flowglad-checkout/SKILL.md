@@ -1,12 +1,12 @@
 ---
-category: Business
 id: flowglad-checkout
 name: Flowglad Checkout
 description: Implement checkout sessions for purchasing subscriptions and products with Flowglad. Use this skill when creating upgrade buttons, purchase flows, or redirecting users to hosted checkout pages.
-license: MIT
-metadata:
-  author: flowglad
-  version: "1.0.0"
+category: Development
+requires: []
+examples:
+  - "Help me with flowglad checkout."
+  - "Use flowglad-checkout for this task."
 ---
 
 <!--

@@ -1,8 +1,12 @@
 ---
-category: Business
 id: mcp-scripts
 name: Mcp Scripts
 description: Guidance and answers for mcp scripts.
+category: Development
+requires: []
+examples:
+  - "Help me with mcp scripts."
+  - "Use mcp-scripts for this task."
 ---
 
 # Unity-MCP Operator Guide

@@ -1,8 +1,12 @@
 ---
-category: Business
 id: contract-review
 name: Contract Review
 description: Review contracts against your organization's negotiation playbook, flagging deviations and generating redline suggestions.
+category: Business
+requires: []
+examples:
+  - "Help me with contract review."
+  - "Use contract-review for this task."
 ---
 
 # Contract Review Skill

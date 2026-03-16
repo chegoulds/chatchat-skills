@@ -1,13 +1,12 @@
 ---
-category: Business
 id: quant-analyst
 name: Quant Analyst
-description: Build financial models, backtest trading strategies, and analyze market data. Implements risk metrics, portfolio optimization, and statistical arbitrage. Use PROACTIVELY for quantitative finance, trading algorithms, or risk analysis.
-  market data. Implements risk metrics, portfolio optimization, and statistical
-  arbitrage. Use PROACTIVELY for quantitative finance, trading algorithms, or
-  risk analysis.
-metadata:
-  model: inherit
+description: Build financial models, backtest trading strategies, and analyze market data. Implements risk metrics, portfolio optimization, and statistical arbitrage. Use PROACTIVELY for quantitative finance, trading algorithms, or risk analysis. market data. Implements risk metrics, portfolio optimization, and statistical arbitrage. Use PROACTIVELY for quantitative finance, trading algorithms, or risk analysis.
+category: Business
+requires: []
+examples:
+  - "Help me with quant analyst."
+  - "Use quant-analyst for this task."
 ---
 
 ## Use this skill when

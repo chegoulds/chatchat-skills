@@ -1,17 +1,14 @@
 ---
-category: Business
 id: lindy-prod-checklist
 name: Lindy Prod Checklist
-description: Production readiness checklist for Lindy AI deployments.
-  Production readiness checklist for Lindy AI deployments.
-  Use when preparing for production, reviewing deployment,
-  or auditing production setup.
-  Trigger with phrases like "lindy production", "lindy prod ready",
-  "lindy go live", "lindy deployment checklist".
-allowed-tools: Read, Write, Edit
-version: 1.0.0
-license: MIT
-author: Jeremy Longshore <jeremy@intentsolutions.io>
+description: Production readiness checklist for Lindy AI deployments. Use when preparing for production, reviewing deployment, or auditing production setup. Trigger with phrases like \"lindy production\", \"lindy prod ready\", \"lindy go live\", \"lindy deployment checklist\".
+category: DevOps
+requires: []
+examples:
+  - "Help me with lindy prod checklist."
+  - "Use lindy-prod-checklist for this task."
+author: "Jeremy Longshore <jeremy@intentsolutions.io>"
+version: "1.0.0"
 ---
 
 # Lindy Prod Checklist

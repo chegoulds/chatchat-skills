@@ -1,8 +1,12 @@
 ---
-category: Business
 id: cost-optimization
 name: Cost Optimization
 description: Step-by-step guidance for cost optimization.
+category: DevOps
+requires: []
+examples:
+  - "Help me with cost optimization."
+  - "Use cost-optimization for this task."
 ---
 
 # Cloud Cost Optimization

@@ -1,17 +1,14 @@
 ---
-category: Business
 id: clerk-prod-checklist
 name: Clerk Prod Checklist
-description: Production readiness checklist for Clerk deployment.
-  Production readiness checklist for Clerk deployment.
-  Use when preparing to deploy, reviewing production configuration,
-  or auditing Clerk implementation before launch.
-  Trigger with phrases like "clerk production", "clerk deploy checklist",
-  "clerk go-live", "clerk launch ready".
-allowed-tools: Read, Write, Edit, Grep, Bash(npm:*)
-version: 1.0.0
-license: MIT
-author: Jeremy Longshore <jeremy@intentsolutions.io>
+description: Production readiness checklist for Clerk deployment. Production readiness checklist for Clerk deployment. Use when preparing to deploy, reviewing production configuration, or auditing Clerk implementation before launch. Trigger with phrases like \"clerk production\", \"clerk deploy checklist\", \"clerk go-live\", \"clerk launch ready\".
+category: DevOps
+requires: []
+examples:
+  - "Help me with clerk prod checklist."
+  - "Use clerk-prod-checklist for this task."
+author: "Jeremy Longshore <jeremy@intentsolutions.io>"
+version: "1.0.0"
 ---
 
 # Clerk Production Checklist

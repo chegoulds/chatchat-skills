@@ -1,18 +1,12 @@
 ---
-category: Business
 id: cto-advisor
 name: Cto Advisor
 description: Technical leadership guidance for engineering teams, architecture decisions, and technology strategy. Includes tech debt analyzer, team scaling calculator, engineering metrics frameworks, technology evaluation tools, and ADR templates.
-license: MIT
-metadata:
-  version: 1.0.0
-  author: Alireza Rezvani
-  category: c-level
-  domain: cto-leadership
-  updated: 2025-10-20
-  python-tools: tech_debt_analyzer.py, team_scaling_calculator.py
-  frameworks: DORA-metrics, architecture-decision-records, engineering-metrics
-  tech-stack: engineering-management, team-organization
+category: Business
+requires: []
+examples:
+  - "Help me with cto advisor."
+  - "Use cto-advisor for this task."
 ---
 
 # CTO Advisor
@@ -25,16 +19,10 @@ CTO, chief technology officer, technical leadership, tech debt, technical debt, 
 ## Quick Start
 
 ### For Technical Debt Assessment
-```bash
-python scripts/tech_debt_analyzer.py
-```
-Analyzes system architecture and provides prioritized debt reduction plan.
+Use the technical debt framework in this skill to assess architecture and prioritize remediation.
 
 ### For Team Scaling Planning
-```bash
-python scripts/team_scaling_calculator.py
-```
-Calculates optimal hiring plan and team structure for growth.
+Use the team scaling framework in this skill to estimate hiring needs and org structure.
 
 ### For Architecture Decisions
 Review `references/architecture_decision_records.md` for ADR templates and examples.
@@ -62,30 +50,20 @@ Implement KPIs from `references/engineering_metrics.md` for team performance tra
 - Build proof of concepts
 
 #### Technical Debt Strategy
-```bash
-# Assess current debt
-python scripts/tech_debt_analyzer.py
-
-# Allocate capacity
+Assess current debt, then allocate capacity:
 - Critical debt: 40% capacity
-- High debt: 25% capacity  
+- High debt: 25% capacity
 - Medium debt: 15% capacity
 - Low debt: Ongoing maintenance
-```
 
 ### 2. Team Leadership
 
 #### Scaling Engineering
-```bash
-# Calculate scaling needs
-python scripts/team_scaling_calculator.py
-
-# Key ratios to maintain:
+Use key ratios as planning guardrails:
 - Manager:Engineer = 1:8
 - Senior:Mid:Junior = 3:4:2
 - Product:Engineering = 1:10
 - QA:Engineering = 1.5:10
-```
 
 #### Performance Management
 - Set clear OKRs quarterly

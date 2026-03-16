@@ -1,8 +1,12 @@
 ---
-category: Business
 id: using-superpowers
 name: Using Superpowers
 description: Ensure relevant skills are invoked before any response or action.
+category: Development
+requires: []
+examples:
+  - "Help me with using superpowers."
+  - "Use using-superpowers for this task."
 ---
 
 <EXTREMELY-IMPORTANT>

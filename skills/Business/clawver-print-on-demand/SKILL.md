@@ -1,292 +1,97 @@
 ---
-category: Business
 id: clawver-print-on-demand
 name: Clawver Print On Demand
-description: Sell print-on-demand merchandise on Clawver. Browse Printful catalog, create product variants, track fulfillment and shipping.
-version: 1.3.0
-homepage: https://clawver.store
-metadata: {"openclaw":{"emoji":"👕","homepage":"https://clawver.store","requires":{"env":["CLAW_API_KEY"]},"primaryEnv":"CLAW_API_KEY"}}
+description: Guidance-only playbook for planning and operating print-on-demand merchandise workflows, including variants, pricing, fulfillment, and shipping operations.
+category: Business
+requires: []
+examples:
+  - "Help me with clawver print on demand."
+  - "Use clawver-print-on-demand for this task."
+version: "1.3.0"
 ---
 
 # Clawver Print-on-Demand
 
-Sell physical merchandise on Clawver using Printful integration. No inventory required—products are printed and shipped on demand when customers order.
+This is a guidance-only skill for planning and operating print-on-demand merchandise workflows. It does not execute API calls.
 
-## Prerequisites
+## When to use
 
-- `CLAW_API_KEY` environment variable
-- Stripe onboarding completed
-- High-resolution design files as HTTPS URLs or base64 data (the platform stores them — no external hosting required; optional but highly recommended)
-
-For platform-specific good and bad API patterns from `claw-social`, use `references/api-examples.md`.
-
-## How Print-on-Demand Works
-
-1. You create a product with Printful product/variant IDs
-2. Customer purchases on your store
-3. Printful prints and ships directly to customer
-4. You keep the profit margin (your price - Printful base cost - 2% platform fee)
-
-## Key Concepts (Read This First)
-
-### Printful IDs Are Strings
-
-`printOnDemand.printfulProductId` and `printOnDemand.printfulVariantId` must be strings (e.g. `"1"`, `"4013"`), even though the Printful catalog returns numeric IDs.
-
-### Variants Are Required For Activation
-
-When publishing a `print_on_demand` product (`PATCH /v1/products/{id} {"status":"active"}`), your product must have a non-empty `printOnDemand.variants` array configured.
-
-### Uploading Designs Is Optional (But Highly Recommended)
-
-You can sell POD products without uploading design files (legacy / external sync workflows), but uploading designs is **highly recommended** because it enables:
-- Attaching design files to orders (when configured)
-- Mockup generation for storefront images
-- Better operational reliability and fewer fulfillment surprises
-
-If you want the platform to enforce design uploads before activation and at fulfillment time, set `metadata.podDesignMode` to `"local_upload"`.
-
-### Variant Strategy for Size Selection
-
-When you sell multiple sizes, define one entry per size in `printOnDemand.variants`.
-
-- Each variant maps to a buyer-facing size option in the storefront.
-- Use explicit `priceInCents` per variant when size-based pricing differs.
-- Include optional fields when available: `size`, `inStock`, `availabilityStatus`.
-- Prefer buyer-friendly `name` values such as `"Bella + Canvas 3001 / XL"`.
-
-### Pricing Behavior
-
-- Storefront, cart, and checkout use the selected variant's `priceInCents` when provided.
-- Legacy products with only `printOnDemand.printfulVariantId` fall back to product-level `priceInCents`.
-
-### Stock Visibility
-
-- Out-of-stock variants are disabled in the storefront size selector.
-- Out-of-stock variants (`inStock: false`) are **rejected at checkout** (HTTP 400).
-- Keep variant stock metadata updated (`inStock`, `availabilityStatus`) so buyer-facing availability remains accurate.
-
-## Browse the Printful Catalog
-
-1. List catalog products:
-```bash
-curl "https://api.clawver.store/v1/products/printful/catalog?q=poster&limit=10" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
-
-2. Get variants for a Printful product:
-```bash
-curl "https://api.clawver.store/v1/products/printful/catalog/1?inStock=true&limit=10" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
-
-## Create a POD Product
-
-### Step 1: Create the Product (Draft)
-
-```bash
-curl -X POST https://api.clawver.store/v1/products \
-  -H "Authorization: Bearer $CLAW_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "AI Studio Tee",
-    "description": "Soft premium tee with AI-designed front print.",
-    "type": "print_on_demand",
-    "priceInCents": 2499,
-    "images": ["https://your-storage.com/tee-preview.jpg"],
-    "printOnDemand": {
-      "printfulProductId": "71",
-      "printfulVariantId": "4012",
-      "variants": [
-        {
-          "id": "tee-s",
-          "name": "Bella + Canvas 3001 / S",
-          "priceInCents": 2499,
-          "printfulVariantId": "4012",
-          "size": "S",
-          "inStock": true
-        },
-        {
-          "id": "tee-m",
-          "name": "Bella + Canvas 3001 / M",
-          "priceInCents": 2499,
-          "printfulVariantId": "4013",
-          "size": "M",
-          "inStock": true
-        },
-        {
-          "id": "tee-xl",
-          "name": "Bella + Canvas 3001 / XL",
-          "priceInCents": 2899,
-          "printfulVariantId": "4014",
-          "size": "XL",
-          "inStock": false,
-          "availabilityStatus": "out_of_stock"
-        }
-      ]
-    },
-    "metadata": {
-      "podDesignMode": "local_upload"
-    }
-  }'
-```
-
-Required for POD creation/publishing:
-- `printOnDemand.printfulProductId` (string)
-- `printOnDemand.printfulVariantId` (string)
-- `printOnDemand.variants` (must be non-empty to publish)
-
-Optional but recommended:
-- `metadata.podDesignMode: "local_upload"` to enforce design uploads before activation and at fulfillment time
-
-Before publishing, validate:
-- `printOnDemand.variants` is non-empty
-- each variant has a unique `printfulVariantId`
-- variant `priceInCents` aligns with your margin strategy
-- optional `size` is normalized (`S`, `M`, `L`, `XL`, etc.) when available
-- `inStock` is accurate per variant—out-of-stock variants are rejected at checkout
-
-### Step 2 (Optional, Highly Recommended): Upload POD Design File
-
-Upload one or more design files to the product. These can be used for previews and for fulfillment (depending on `podDesignMode`).
-
-**Option A: Upload from URL**
-```bash
-curl -X POST https://api.clawver.store/v1/products/{productId}/pod-designs \
-  -H "Authorization: Bearer $CLAW_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "fileUrl": "https://your-storage.com/design.png",
-    "fileType": "png",
-    "placement": "default",
-    "variantIds": ["4012", "4013", "4014"]
-  }'
-```
-
-**Option B: Upload base64 data**
-```bash
-curl -X POST https://api.clawver.store/v1/products/{productId}/pod-designs \
-  -H "Authorization: Bearer $CLAW_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "fileData": "iVBORw0KGgoAAAANSUhEUgAA...",
-    "fileType": "png",
-    "placement": "default"
-  }'
-```
-
-**Notes:**
-- `placement` is typically `"default"` unless you know the Printful placement name (e.g. `front`, `back` for apparel).
-- Use `variantIds` to map a design to specific variants (strings). If omitted, the platform will fall back to the first eligible design for fulfillment and previews.
-
-### Step 3 (Optional, Recommended): Generate a Mockup and Cache It
-
-Generate a Printful mockup, cache it in storage, and set the product's `printOnDemand.primaryMockup` on first success (it will not overwrite an existing primary mockup).
-
-```bash
-curl -X POST https://api.clawver.store/v1/products/{productId}/pod-designs/{designId}/mockup \
-  -H "Authorization: Bearer $CLAW_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "placement": "default",
-    "variantId": "4012"
-  }'
-```
-
-If the mockup task is still processing, you may receive `202` with a `taskId`. Retry after the returned `retryAfterMs`.
-
-### Step 4: Publish
-
-Publishing requires a non-empty `printOnDemand.variants` array. If `metadata.podDesignMode` is `"local_upload"`, you must upload at least one design before activating.
-
-```bash
-curl -X PATCH https://api.clawver.store/v1/products/{productId} \
-  -H "Authorization: Bearer $CLAW_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"status": "active"}'
-```
-
-**Note:** POD products must have `printOnDemand.variants` configured before activation.
-
-## Manage POD Designs
-
-### List Designs
-
-```bash
-curl https://api.clawver.store/v1/products/{productId}/pod-designs \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
-
-### Get a Signed Preview URL (Owner)
-
-```bash
-curl https://api.clawver.store/v1/products/{productId}/pod-designs/{designId}/preview \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
-
-### Public Preview (Active Products)
-
-If the product is active, you can request a public preview (no API key). This will attempt to generate a Printful mockup and fall back to returning a signed source image URL if mockup generation fails.
-
-```bash
-curl https://api.clawver.store/v1/products/{productId}/pod-designs/{designId}/public-preview
-```
-
-### Update Design Metadata
-
-```bash
-curl -X PATCH https://api.clawver.store/v1/products/{productId}/pod-designs/{designId} \
-  -H "Authorization: Bearer $CLAW_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Front artwork v2",
-    "placement": "default",
-    "variantIds": ["4012", "4013", "4014"]
-  }'
-```
-
-### Archive a Design
-
-```bash
-curl -X DELETE https://api.clawver.store/v1/products/{productId}/pod-designs/{designId} \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
-
-## Track Fulfillment
-
-### Monitor Order Status
-
-```bash
-curl "https://api.clawver.store/v1/orders?status=processing" \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
-
-POD order statuses:
-- `confirmed` - Payment confirmed (order status)
-- `processing` - Sent to Printful for production
-- `shipped` - In transit with tracking
-- `delivered` - Delivered to customer
-
-`paymentStatus` is tracked separately (`paid`, `partially_refunded`, etc.).
-
-### Get Tracking Information
-
-```bash
-curl https://api.clawver.store/v1/orders/{orderId} \
-  -H "Authorization: Bearer $CLAW_API_KEY"
-```
-
-Response includes `trackingUrl` and `trackingNumber` when available.
-
-### Webhook for Shipping Updates
-
-```bash
-curl -X POST https://api.clawver.store/v1/webhooks \
-  -H "Authorization: Bearer $CLAW_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "url": "https://your-server.com/webhook",
-    "events": ["order.shipped"],
-    "secret": "your-secret-min-16-chars"
-  }'
-```
+- You are launching merch without holding inventory.
+- You need variant strategy for size/color-based products.
+- You want a repeatable fulfillment and shipping operations checklist.
+
+## How print-on-demand works
+
+1. Create product definitions mapped to supplier catalog variants.
+2. Publish product listings with clear media and pricing.
+3. Customer orders trigger supplier fulfillment.
+4. You track status until delivery and manage support issues.
+
+## Core planning rules
+
+### Product and variant modeling
+
+- Treat supplier product and variant IDs consistently and avoid mixed formats.
+- Define one storefront variant per buyer-visible option (size/color bundle).
+- Use buyer-friendly variant names and normalized size labels.
+- Ensure each variant has a unique supplier variant mapping.
+
+### Activation readiness
+
+Before activating a product, verify:
+
+- Variant list is complete and non-empty.
+- Prices and margins are validated by variant.
+- Listing images/mockups represent the actual print area.
+- Stock/availability metadata is current for each variant.
+
+### Design asset governance
+
+- Keep source artwork and production exports versioned.
+- Track placement intent (front/back/default) in metadata.
+- Document which design files map to which variants.
+- Keep fallback imagery so listings remain stable if mockups fail.
+
+### Pricing and margin controls
+
+- Compute margin per variant, not just at product level.
+- Include platform fee, production base cost, and expected refund rate.
+- Apply tiered pricing where larger sizes have higher costs.
+- Recheck margins after supplier price changes.
+
+## Fulfillment operations
+
+### Status model
+
+Track order and payment state separately:
+
+- Order: confirmed, processing, shipped, delivered
+- Payment: paid, partially refunded, refunded
+
+### Monitoring checklist
+
+- Confirm every paid order enters production.
+- Flag orders stuck in processing beyond SLA.
+- Capture and surface tracking URL and tracking number.
+- Escalate exceptions (misprint, lost shipment, delayed delivery).
+
+### Customer support playbook
+
+- Send proactive shipping updates for delayed orders.
+- Offer clear replacement/refund policy for quality issues.
+- Capture root cause to reduce repeated failures.
+
+## Risk controls
+
+- Avoid publishing products with incomplete variant coverage.
+- Do not allow checkout on out-of-stock variants.
+- Verify mockup accuracy before campaigns.
+- Audit webhook/event handling logic in the implementation layer.
+
+## Output format
+
+When asked for help, provide:
+
+- A launch checklist (catalog, variants, pricing, media, activation).
+- A fulfillment monitoring checklist (status, SLAs, escalation triggers).
+- A support SOP snippet for delays, defects, and refunds.

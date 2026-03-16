@@ -1,13 +1,12 @@
 ---
-category: Business
 id: cochesnet-cli
 name: Cochesnet Cli
 description: Use the cochesnet CLI to search coches.net listings and fetch listing details. Apply when a user asks for coches.net marketplace data or when you need the exact CLI commands and flags for cochesnet-cli.
-compatibility: Requires cochesnet-cli installed (Node.js 18+), network access to apps.gw.coches.net.
-license: MIT
-metadata:
-  author: pjtf93
-  version: "0.1.0"
+category: Lifestyle
+requires: []
+examples:
+  - "Help me with cochesnet cli."
+  - "Use cochesnet-cli for this task."
 ---
 
 ## Purpose

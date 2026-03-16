@@ -1,13 +1,12 @@
 ---
-category: Business
 id: ui-ux-designer
 name: UI/UX Designer
-description: Step-by-step guidance for UI/UX designer.
-  user research, accessibility standards, and modern design tools. Specializes
-  in design tokens, component libraries, and inclusive design. Use PROACTIVELY
-  for design systems, user flows, or interface optimization.
-metadata:
-  model: sonnet
+description: Step-by-step guidance for UI/UX designer. user research, accessibility standards, and modern design tools. Specializes in design tokens, component libraries, and inclusive design. Use PROACTIVELY for design systems, user flows, or interface optimization.
+category: Development
+requires: []
+examples:
+  - "Help me with ui/ux designer."
+  - "Use ui-ux-designer for this task."
 ---
 
 ## Use this skill when

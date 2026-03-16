@@ -1,8 +1,12 @@
 ---
-category: Business
 id: creating-financial-models
 name: Creating Financial Models
 description: This skill provides an advanced financial modeling suite with DCF analysis, sensitivity testing, Monte Carlo simulations, and scenario planning for investment decisions.
+category: Business
+requires: []
+examples:
+  - "Help me with creating financial models."
+  - "Use creating-financial-models for this task."
 ---
 
 # Financial Modeling Suite

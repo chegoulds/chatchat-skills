@@ -1,102 +1,99 @@
 ---
-category: Business
 id: anylist
 name: Anylist
-description: Manage grocery and shopping lists via AnyList.
-homepage: https://www.anylist.com
-metadata:
-  clawdbot:
-    emoji: "🛒"
-    requires:
-      bins: ["anylist"]
+description: Plan and organize grocery or shopping lists with clear categories, quantities, and checklist-ready output. Use when users need shopping preparation, meal-prep list building, or household list cleanup.
+category: Lifestyle
+requires: []
+examples:
+  - "Create a grocery list for a week of high-protein meals."
+  - "Organize this messy shopping list by category and priority."
 ---
 
-# AnyList CLI
+# AnyList
 
-Manage grocery and shopping lists via AnyList.
+Use this skill as a guidance-only framework for building and organizing shopping lists.
 
-## Installation
+## Use this skill when
 
-```bash
-npm install -g anylist-cli
+- The user needs a grocery or shopping list from goals, recipes, or preferences.
+- The user wants list cleanup, deduplication, or category grouping.
+- The user needs a checklist-ready output for shopping.
+
+## Do not use this skill when
+
+- The request is unrelated to personal shopping or household list planning.
+- The user expects direct CLI/app execution from this skill.
+
+## Guardrails
+
+- Treat this as planning guidance only; do not claim to run AnyList commands.
+- Ask for missing constraints (budget, servings, dietary restrictions, store type).
+- Keep list items concrete and measurable where possible (quantity + unit).
+
+## List-building workflow
+
+1. **Clarify intent**
+   - Trip type: weekly grocery, party, household restock, recipe prep
+   - Number of people and duration
+   - Budget and dietary constraints
+
+2. **Draft raw item pool**
+   - Convert user goals/recipes into ingredients and staples
+   - Include household essentials if requested
+
+3. **Normalize and deduplicate**
+   - Merge duplicates (e.g., "milk" + "whole milk")
+   - Standardize quantities and units
+   - Flag uncertain quantities for confirmation
+
+4. **Group by category**
+   - Produce, meat/seafood, dairy, pantry, frozen, bakery, beverages, household, personal care, other
+
+5. **Prioritize and finalize**
+   - Mark must-buy vs optional items
+   - Add quick substitutions for unavailable items
+
+## Suggested categories
+
+- Produce
+- Meat/Seafood
+- Dairy
+- Pantry
+- Frozen
+- Bakery
+- Beverages
+- Household
+- Personal Care
+- Other
+
+## Output format
+
+```markdown
+## Shopping Plan
+- Context:
+- People/Duration:
+- Budget:
+- Dietary constraints:
+
+## Must-Buy Items
+- Item - quantity - category
+- Item - quantity - category
+
+## Optional Items
+- Item - quantity - category
+- Item - quantity - category
+
+## Grouped Checklist
+### Produce
+- [ ] Item
+
+### Pantry
+- [ ] Item
+
+### Dairy
+- [ ] Item
+
+## Substitutions / Notes
+- If unavailable, replace X with Y.
+- Priority notes:
 ```
-
-## Setup
-
-```bash
-# Authenticate interactively
-anylist auth
-
-# Or set environment variables for non-interactive use
-export ANYLIST_EMAIL="your@email.com"
-export ANYLIST_PASSWORD="your-password"
-```
-
-## Commands
-
-### Lists
-
-```bash
-anylist lists              # Show all lists
-anylist lists --json       # Output as JSON
-```
-
-### Items
-
-```bash
-anylist items "Grocery"              # Show items in a list
-anylist items "Grocery" --unchecked  # Only unchecked items
-anylist items "Grocery" --json       # Output as JSON
-```
-
-### Add Items
-
-```bash
-anylist add "Grocery" "Milk"
-anylist add "Grocery" "Milk" --category dairy
-anylist add "Grocery" "Chicken" --category meat --quantity "2 lbs"
-```
-
-**Categories:** produce, meat, seafood, dairy, bakery, bread, frozen, canned, condiments, beverages, snacks, pasta, rice, cereal, breakfast, baking, spices, seasonings, household, personal care, other
-
-### Manage Items
-
-```bash
-anylist check "Grocery" "Milk"      # Mark as checked
-anylist uncheck "Grocery" "Milk"    # Mark as unchecked
-anylist remove "Grocery" "Milk"     # Remove from list
-anylist clear "Grocery"             # Clear all checked items
-```
-
-## Usage Examples
-
-**User: "What's on the grocery list?"**
-```bash
-anylist items "Grocery" --unchecked
-```
-
-**User: "Add milk and eggs to groceries"**
-```bash
-anylist add "Grocery" "Milk" --category dairy
-anylist add "Grocery" "Eggs" --category dairy
-```
-
-**User: "Check off the bread"**
-```bash
-anylist check "Grocery" "Bread"
-```
-
-**User: "Add ingredients for tacos"**
-```bash
-anylist add "Grocery" "Ground beef" --category meat
-anylist add "Grocery" "Taco shells" --category other
-anylist add "Grocery" "Lettuce" --category produce
-anylist add "Grocery" "Tomatoes" --category produce
-anylist add "Grocery" "Cheese" --category dairy
-```
-
-## Notes
-
-- List and item names are case-insensitive
-- If an item already exists, adding it again will uncheck it (useful for recipes)
-- Use `--json` for scripting and programmatic access

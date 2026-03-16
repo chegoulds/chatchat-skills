@@ -1,9 +1,12 @@
 ---
-category: Business
 id: skill-creator
 name: Skill Creator
 description: Step-by-step guidance for creator.
-license: Complete terms in LICENSE.txt
+category: Development
+requires: []
+examples:
+  - "Help me with skill creator."
+  - "Use skill-creator for this task."
 ---
 
 # Skill Creator

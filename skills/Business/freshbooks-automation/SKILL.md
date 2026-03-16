@@ -1,143 +1,67 @@
 ---
 id: freshbooks-automation
 name: Freshbooks Automation
-description: "FreshBooks Automation: manage businesses, projects, time tracking, and billing in FreshBooks cloud accounting."
+description: Guidance-only playbook for FreshBooks operations, including business setup, project tracking, time logging, and billing workflows.
 category: Business
-source: composio
-tags: [api, cli, mcp, automation, ai]
-url: https://github.com/ComposioHQ/awesome-claude-skills/tree/master/freshbooks-automation
+requires: []
+examples:
+  - "Help me design a FreshBooks project and billing workflow."
+  - "Use freshbooks-automation to audit time tracking and invoicing operations."
 ---
 
-# FreshBooks Automation
+# FreshBooks Operations
 
-Automate FreshBooks operations including listing businesses, managing projects, tracking time, and monitoring budgets for small and medium-sized business accounting.
+Use this guidance-only skill to design and improve accounting operations in FreshBooks. It does not execute integrations or API calls directly.
 
-**Toolkit docs:** [composio.dev/toolkits/freshbooks](https://composio.dev/toolkits/freshbooks)
+## When to use
 
----
+- You need a repeatable process for project-based billing.
+- You want stronger time-tracking discipline before invoicing.
+- You need operational checks for active projects and budgets.
 
-## Setup
+## Core workflows
 
-This skill requires the **Rube MCP server** connected at `https://rube.app/mcp`.
+### 1) Business and project setup
 
-Before executing any tools, ensure an active connection exists for the `freshbooks` toolkit. If no connection is active, initiate one via `RUBE_MANAGE_CONNECTIONS`.
+- Confirm business entity setup and billing ownership.
+- Define project lifecycle states (active, paused, completed, archived).
+- Standardize project naming and client mapping conventions.
 
----
+### 2) Time tracking governance
 
-## Core Workflows
+- Define required fields for every time entry (owner, task, duration, client/project).
+- Enforce same-day logging for billable work.
+- Review outliers weekly (missing logs, unusually long entries, miscoded tasks).
 
-### 1. List Businesses
+### 3) Budget and utilization checks
 
-Retrieve all businesses associated with the authenticated user. The `business_id` from this response is required for most other FreshBooks API calls.
+- Compare logged time against budgeted effort by project.
+- Flag projects over budget or with low utilization.
+- Escalate projects with repeated estimate drift.
 
-**Tool:** `FRESHBOOKS_LIST_BUSINESSES`
+### 4) Billing and invoicing readiness
 
-**Parameters:** None required.
+- Validate billable entries before invoice generation.
+- Confirm tax/currency settings and client billing terms.
+- Keep a pre-send invoice checklist (scope, rates, dates, adjustments).
 
-**Example:**
-```
-Tool: FRESHBOOKS_LIST_BUSINESSES
-Arguments: {}
-```
+## Reporting cadence
 
-**Output:** Returns business membership information including all businesses the user has access to, along with their role in each business.
+- **Daily:** Missing time entries and overdue tasks.
+- **Weekly:** Active project burn, budget variance, invoice pipeline.
+- **Monthly:** Revenue by client/project and margin trends.
 
-> **Important:** Always call this first to obtain a valid `business_id` before performing project-specific operations.
+## Common pitfalls
 
----
+- Incomplete business/project mapping causing billing errors.
+- Time logs entered too late, reducing accuracy.
+- Invoices sent without budget variance review.
+- Weak handoff between delivery and finance owners.
 
-### 2. List and Filter Projects
+## Output format
 
-Retrieve all projects for a business with comprehensive filtering and sorting options.
+When asked for help, provide:
 
-**Tool:** `FRESHBOOKS_LIST_PROJECTS`
-
-**Key Parameters:**
-- `business_id` (required) -- Business ID obtained from `FRESHBOOKS_LIST_BUSINESSES`
-- `active` -- Filter by active status: `true` (active only), `false` (inactive only), omit for all
-- `complete` -- Filter by completion: `true` (completed), `false` (incomplete), omit for all
-- `sort_by` -- Sort order: `"created_at"`, `"due_date"`, or `"title"`
-- `updated_since` -- UTC datetime in RFC3339 format, e.g., `"2026-01-01T00:00:00Z"`
-- `include_logged_duration` -- `true` to include total logged time (in seconds) per project
-- `skip_group` -- `true` to omit team member/invitation data (reduces response size)
-
-**Example:**
-```
-Tool: FRESHBOOKS_LIST_PROJECTS
-Arguments:
-  business_id: 123456
-  active: true
-  complete: false
-  sort_by: "due_date"
-  include_logged_duration: true
-```
-
-**Use Cases:**
-- Get all projects for time tracking or invoicing
-- Find projects by client, status, or date range
-- Monitor project completion and budget tracking
-- Retrieve team assignments and project groups
-
----
-
-### 3. Monitor Active Projects
-
-Track project progress and budgets by filtering for active, incomplete projects.
-
-**Steps:**
-1. Call `FRESHBOOKS_LIST_BUSINESSES` to get `business_id`
-2. Call `FRESHBOOKS_LIST_PROJECTS` with `active: true`, `complete: false`, `include_logged_duration: true`
-3. Analyze logged duration vs. budget for each project
-
----
-
-### 4. Review Recently Updated Projects
-
-Check for recent project activity using the `updated_since` filter.
-
-**Steps:**
-1. Call `FRESHBOOKS_LIST_BUSINESSES` to get `business_id`
-2. Call `FRESHBOOKS_LIST_PROJECTS` with `updated_since` set to your cutoff datetime
-3. Review returned projects for recent changes
-
-**Example:**
-```
-Tool: FRESHBOOKS_LIST_PROJECTS
-Arguments:
-  business_id: 123456
-  updated_since: "2026-02-01T00:00:00Z"
-  sort_by: "created_at"
-```
-
----
-
-## Recommended Execution Plan
-
-1. **Get the business ID** by calling `FRESHBOOKS_LIST_BUSINESSES`
-2. **List projects** using `FRESHBOOKS_LIST_PROJECTS` with the obtained `business_id`
-3. **Filter as needed** using `active`, `complete`, `updated_since`, and `sort_by` parameters
-
----
-
-## Known Pitfalls
-
-| Pitfall | Detail |
-|---------|--------|
-| **business_id required** | Most FreshBooks operations require a `business_id`. Always call `FRESHBOOKS_LIST_BUSINESSES` first to obtain it. |
-| **Date format** | The `updated_since` parameter must be in RFC3339 format: `"2026-01-01T00:00:00Z"`. Other formats will fail. |
-| **Paginated results** | Project list responses are paginated. Check for additional pages in the response. |
-| **Empty results** | Returns an empty list if no projects exist or match the applied filters. This is not an error. |
-| **Logged duration units** | When `include_logged_duration` is true, the duration is returned in seconds. Convert to hours (divide by 3600) for display. |
-
----
-
-## Quick Reference
-
-| Tool Slug | Description |
-|-----------|-------------|
-| `FRESHBOOKS_LIST_BUSINESSES` | List all businesses for the authenticated user |
-| `FRESHBOOKS_LIST_PROJECTS` | List projects with filtering and sorting for a business |
-
----
-
-*Powered by [Composio](https://composio.dev)*
+- A step-by-step operations workflow for the user’s business model.
+- A checklist for project tracking and invoice readiness.
+- A short reporting template with key metrics and alert thresholds.

@@ -1,9 +1,12 @@
 ---
-category: Business
 id: rfc-check
 name: Rfc Check
 description: Determine if proposed changes require an RFC.
-allowed-tools: Read, Grep, Glob
+category: Development
+requires: []
+examples:
+  - "Help me with rfc check."
+  - "Use rfc-check for this task."
 ---
 
 # RFC Check

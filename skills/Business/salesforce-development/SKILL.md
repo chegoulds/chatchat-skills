@@ -1,9 +1,12 @@
 ---
-category: Business
 id: salesforce-development
 name: Salesforce Development
 description: Expert patterns for Salesforce platform development including Lightning Web Components (LWC), Apex triggers and classes, REST/Bulk APIs, Connected Apps, and Salesforce DX with scratch orgs and 2nd generation packages (2GP).
-source: vibeship-spawner-skills (Apache 2.0)
+category: Development
+requires: []
+examples:
+  - "Help me with salesforce development."
+  - "Use salesforce-development for this task."
 ---
 
 # Salesforce Development

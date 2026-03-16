@@ -1,9 +1,12 @@
 ---
-category: Business
 id: segment-cdp
 name: Segment CDP
 description: Step-by-step guidance for segment cdp.
-source: vibeship-spawner-skills (Apache 2.0)
+category: Development
+requires: []
+examples:
+  - "Help me with segment cdp."
+  - "Use segment-cdp for this task."
 ---
 
 # Segment CDP

@@ -1,8 +1,12 @@
 ---
-category: Business
 id: ux-researcher-designer
 name: UX Researcher Designer
 description: Step-by-step guidance for UX researcher designer.
+category: Research
+requires: []
+examples:
+  - "Help me with ux researcher designer."
+  - "Use ux-researcher-designer for this task."
 ---
 
 # UX Researcher & Designer

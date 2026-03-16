@@ -1,121 +1,51 @@
 ---
-category: Business
 id: feishu-perm
 name: Feishu Perm
-description: Feishu permission management for documents and files. Activate when user mentions sharing, permissions, collaborators.
-  Feishu permission management for documents and files. Activate when user mentions sharing, permissions, collaborators.
+description: Guidance-only playbook for planning and reviewing Feishu document and folder permission management.
+category: Business
+requires: []
+examples:
+  - "Help me design Feishu sharing permissions for our team docs."
+  - "Use feishu-perm to review access levels before sharing."
 ---
 
-# Feishu Permission Tool
+# Feishu Permission Management
 
-Single tool `feishu_perm` for managing file/document permissions.
+Use this guidance-only skill to design safe, least-privilege sharing for Feishu documents, folders, and collaborative workspaces.
 
-## Actions
+## When to use
 
-### List Collaborators
+- You need a permission model before sharing internal docs.
+- You want to audit existing collaborator access.
+- You need a repeatable access review checklist for teams.
 
-```json
-{ "action": "list", "token": "ABC123", "type": "docx" }
-```
+## Core principles
 
-Returns: members with member_type, member_id, perm, name.
+- Apply least privilege (`view` by default; elevate only when needed).
+- Prefer group/role-based sharing over many individual grants.
+- Time-box elevated access for external collaborators.
+- Require explicit owner approval for `full_access` grants.
 
-### Add Collaborator
+## Permission planning workflow
 
-```json
-{
-  "action": "add",
-  "token": "ABC123",
-  "type": "docx",
-  "member_type": "email",
-  "member_id": "user@example.com",
-  "perm": "edit"
-}
-```
+1. Classify document sensitivity (public/internal/restricted).
+2. Identify user groups (owners, editors, reviewers, viewers).
+3. Assign minimum required permission per group.
+4. Define expiration/review cadence for non-owner access.
+5. Document audit trail: who got access, why, and when.
 
-### Remove Collaborator
+## Access review checklist
 
-```json
-{
-  "action": "remove",
-  "token": "ABC123",
-  "type": "docx",
-  "member_type": "email",
-  "member_id": "user@example.com"
-}
-```
+- Is every collaborator still active and relevant?
+- Do any users have `full_access` without business justification?
+- Are external shares still required?
+- Are inherited folder permissions too broad?
+- Is there a scheduled review date?
 
-## Token Types
+## Output format
 
-| Type       | Description             |
-| ---------- | ----------------------- |
-| `doc`      | Old format document     |
-| `docx`     | New format document     |
-| `sheet`    | Spreadsheet             |
-| `bitable`  | Multi-dimensional table |
-| `folder`   | Folder                  |
-| `file`     | Uploaded file           |
-| `wiki`     | Wiki node               |
-| `mindnote` | Mind map                |
+When asked for help, provide:
 
-## Member Types
-
-| Type               | Description        |
-| ------------------ | ------------------ |
-| `email`            | Email address      |
-| `openid`           | User open_id       |
-| `userid`           | User user_id       |
-| `unionid`          | User union_id      |
-| `openchat`         | Group chat open_id |
-| `opendepartmentid` | Department open_id |
-
-## Permission Levels
-
-| Perm          | Description                          |
-| ------------- | ------------------------------------ |
-| `view`        | View only                            |
-| `edit`        | Can edit                             |
-| `full_access` | Full access (can manage permissions) |
-
-## Examples
-
-Share document with email:
-
-```json
-{
-  "action": "add",
-  "token": "doxcnXXX",
-  "type": "docx",
-  "member_type": "email",
-  "member_id": "alice@company.com",
-  "perm": "edit"
-}
-```
-
-Share folder with group:
-
-```json
-{
-  "action": "add",
-  "token": "fldcnXXX",
-  "type": "folder",
-  "member_type": "openchat",
-  "member_id": "oc_xxx",
-  "perm": "view"
-}
-```
-
-## Configuration
-
-```yaml
-channels:
-  feishu:
-    tools:
-      perm: true # default: false (disabled)
-```
-
-**Note:** This tool is disabled by default because permission management is a sensitive operation. Enable explicitly if needed.
-
-## Permissions
-
-Required: `drive:permission`
+- A recommended permission matrix by role.
+- High-risk findings in current access design.
+- A short remediation plan (immediate fixes + periodic review cadence).

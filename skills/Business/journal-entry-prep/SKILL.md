@@ -1,8 +1,12 @@
 ---
-category: Business
 id: journal-entry-prep
 name: Journal Entry Prep
 description: Prepare journal entries with proper debits, credits, and supporting documentation for month-end close.
+category: Business
+requires: []
+examples:
+  - "Help me with journal entry prep."
+  - "Use journal-entry-prep for this task."
 ---
 
 # Journal Entry Preparation

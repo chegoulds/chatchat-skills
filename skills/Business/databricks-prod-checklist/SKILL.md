@@ -1,17 +1,14 @@
 ---
-category: Business
 id: databricks-prod-checklist
 name: Databricks Prod Checklist
-description: Execute Databricks production deployment checklist and rollback procedures.
-  Execute Databricks production deployment checklist and rollback procedures.
-  Use when deploying Databricks jobs to production, preparing for launch,
-  or implementing go-live procedures.
-  Trigger with phrases like "databricks production", "deploy databricks",
-  "databricks go-live", "databricks launch checklist".
-allowed-tools: Read, Bash(databricks:*), Grep
-version: 1.0.0
-license: MIT
-author: Jeremy Longshore <jeremy@intentsolutions.io>
+description: Execute Databricks production deployment checklist and rollback procedures. Use when deploying Databricks jobs to production, preparing for launch, or implementing go-live procedures.
+category: DevOps
+requires: []
+examples:
+  - "Help me with databricks prod checklist."
+  - "Use databricks-prod-checklist for this task."
+author: "Jeremy Longshore <jeremy@intentsolutions.io>"
+version: "1.0.0"
 ---
 
 # Databricks Production Checklist

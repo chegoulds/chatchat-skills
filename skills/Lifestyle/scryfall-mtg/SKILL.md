@@ -2,7 +2,7 @@
 category: Lifestyle
 id: scryfall-mtg
 name: Scryfall Mtg
-description: "Search and retrieve Magic: The Gathering card data using the Scryfall API. Use this skill when the user asks about MTG cards, wants to search for cards by name, type, color, mana cost, oracle text, set, or any other card attribute. Also use for getting card images, prices, rulings, legality information, or random cards. Triggers include mentions of MTG, Magic, Magic: The Gathering, card names, deck building questions, or requests for card information."
+description: Search and retrieve Magic: The Gathering card data using the Scryfall API. Use this skill when the user asks about MTG cards, wants to search for cards by name, type, color, mana cost, oracle text, set, or any other card attribute. Also use for getting card images, prices, rulings, legality information, or random cards. Triggers include mentions of MTG, Magic, Magic: The Gathering, card names, deck building questions, or requests for card information.
 ---
 
 # Scryfall MTG Card Search

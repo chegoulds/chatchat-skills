@@ -2,7 +2,7 @@
 category: Research
 id: wandb-experiment-logger
 name: WandB Experiment Logger
-description: "Execute wandb experiment logger operations. Auto-activating skill for ML Training. Triggers on: wandb experiment logger, wandb experiment logger Part of the ML Training skill category."
+description: Execute wandb experiment logger operations. Auto-activating skill for ML Training. Triggers on: wandb experiment logger, wandb experiment logger Part of the ML Training skill category.
   Execute wandb experiment logger operations. Auto-activating skill for ML Training.
   Triggers on: wandb experiment logger, wandb experiment logger
   Part of the ML Training skill category. Use when working with wandb experiment logger functionality. Trigger with phrases like "wandb experiment logger", "wandb logger", "wandb".

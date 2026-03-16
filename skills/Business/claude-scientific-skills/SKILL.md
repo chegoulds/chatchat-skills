@@ -1,10 +1,12 @@
 ---
-category: Business
 id: claude-scientific-skills
 name: Claude Scientific Skills
 description: Scientific research and analysis skills.
-source: "https://github.com/K-Dense-AI/claude-scientific-skills"
-risk: safe
+category: Research
+requires: []
+examples:
+  - "Help me with claude scientific skills."
+  - "Use claude-scientific-skills for this task."
 ---
 
 # Claude Scientific Skills

@@ -1,155 +1,60 @@
 ---
-category: Business
 id: powerbi-modeling
 name: Power BI Modeling
-description: Step-by-step guidance for power bi modeling.
+description: Guidance-only playbook for Power BI semantic modeling, including data model design, DAX governance, and reporting quality controls.
+category: Business
+requires: []
+examples:
+  - "Help me design a robust Power BI semantic model."
+  - "Use powerbi-modeling to improve DAX quality and dashboard reliability."
 ---
 
-# Power BI Semantic Modeling
+# Power BI Modeling
 
-Guide users in building optimized, well-documented Power BI semantic models following Microsoft best practices.
+Use this guidance-only skill to design and audit Power BI modeling practices. It does not execute scripts or external tools.
 
-## When to Use This Skill
+## When to use
 
-Use this skill when users ask about:
-- Creating or optimizing Power BI semantic models
-- Designing star schemas (dimension/fact tables)
-- Writing DAX measures or calculated columns
-- Configuring table relationships (cardinality, cross-filter)
-- Implementing row-level security (RLS)
-- Naming conventions for tables, columns, measures
-- Adding descriptions and documentation to models
-- Performance tuning and optimization
-- Calculation groups and field parameters
-- Model validation and best practice checks
+- You need a scalable semantic model for decision-making.
+- You want cleaner measures and consistent KPI definitions.
+- You need model quality checks before dashboard rollout.
 
-**Trigger phrases:** "create a measure", "add relationship", "star schema", "optimize model", "DAX formula", "RLS", "naming convention", "model documentation", "cardinality", "cross-filter"
+## Core workflows
 
-## Prerequisites
+### 1) Model architecture
 
-### Required Tools
-- **Power BI Modeling MCP Server**: Required for connecting to and modifying semantic models
-  - Enables: connection_operations, table_operations, measure_operations, relationship_operations, etc.
-  - Must be configured and running to interact with models
+- Use star schema patterns with clear fact and dimension boundaries.
+- Standardize grain definitions and surrogate key usage.
+- Minimize many-to-many joins unless there is a documented exception.
 
-### Optional Dependencies
-- **Microsoft Learn MCP Server**: Recommended for researching latest best practices
-  - Enables: microsoft_docs_search, microsoft_docs_fetch
-  - Use for complex scenarios, new features, and official documentation
+### 2) DAX and KPI governance
 
-## Workflow
+- Separate base measures from presentation measures.
+- Keep KPI definitions versioned and approved by business owners.
+- Enforce naming conventions and consistent time-intelligence logic.
 
-### 1. Connect and Analyze First
+### 3) Performance and maintainability
 
-Before providing any modeling guidance, always examine the current model state:
+- Reduce high-cardinality dimensions where possible.
+- Audit relationship directions and inactive relationships regularly.
+- Track report load and query latency after major model changes.
 
-```
-1. List connections: connection_operations(operation: "ListConnections")
-2. If no connection, check for local instances: connection_operations(operation: "ListLocalInstances")
-3. Connect to the model (Desktop or Fabric)
-4. Get model overview: model_operations(operation: "Get")
-5. List tables: table_operations(operation: "List")
-6. List relationships: relationship_operations(operation: "List")
-7. List measures: measure_operations(operation: "List")
-```
+### 4) Documentation and ownership
 
-### 2. Evaluate Model Health
+- Assign owners per table, measure set, and dashboard domain.
+- Maintain a short data dictionary for key fields and KPIs.
+- Review stale or duplicate measures on a fixed cadence.
 
-After connecting, assess the model against best practices:
+## Risk controls
 
-- **Star Schema**: Are tables properly classified as dimension or fact?
-- **Relationships**: Correct cardinality? Minimal bidirectional filters?
-- **Naming**: Human-readable, consistent naming conventions?
-- **Documentation**: Do tables, columns, measures have descriptions?
-- **Measures**: Explicit measures for key calculations?
-- **Hidden Fields**: Are technical columns hidden from report view?
+- Avoid KPI drift by preventing ad-hoc measure rewrites.
+- Prevent hidden data quality issues with source-to-report reconciliations.
+- Keep report security and access policies auditable.
 
-### 3. Provide Targeted Guidance
+## Output format
 
-Based on analysis, guide improvements using references:
-- Star schema design: See [STAR-SCHEMA.md](references/STAR-SCHEMA.md)
-- Relationship configuration: See [RELATIONSHIPS.md](references/RELATIONSHIPS.md)
-- DAX measures and naming: See [MEASURES-DAX.md](references/MEASURES-DAX.md)
-- Performance optimization: See [PERFORMANCE.md](references/PERFORMANCE.md)
-- Row-level security: See [RLS.md](references/RLS.md)
+When asked for help, provide:
 
-## Quick Reference: Model Quality Checklist
-
-| Area | Best Practice |
-|------|--------------|
-| Tables | Clear dimension vs fact classification |
-| Naming | Human-readable: `Customer Name` not `CUST_NM` |
-| Descriptions | All tables, columns, measures documented |
-| Measures | Explicit DAX measures for business metrics |
-| Relationships | One-to-many from dimension to fact |
-| Cross-filter | Single direction unless specifically needed |
-| Hidden fields | Hide technical keys, IDs from report view |
-| Date table | Dedicated marked date table |
-
-## MCP Tools Reference
-
-Use these Power BI Modeling MCP operations:
-
-| Operation Category | Key Operations |
-|-------------------|----------------|
-| `connection_operations` | Connect, ListConnections, ListLocalInstances, ConnectFabric |
-| `model_operations` | Get, GetStats, ExportTMDL |
-| `table_operations` | List, Get, Create, Update, GetSchema |
-| `column_operations` | List, Get, Create, Update (descriptions, hidden, format) |
-| `measure_operations` | List, Get, Create, Update, Move |
-| `relationship_operations` | List, Get, Create, Update, Activate, Deactivate |
-| `dax_query_operations` | Execute, Validate |
-| `calculation_group_operations` | List, Create, Update |
-| `security_role_operations` | List, Create, Update, GetEffectivePermissions |
-
-## Common Tasks
-
-### Add Measure with Description
-```
-measure_operations(
-  operation: "Create",
-  definitions: [{
-    name: "Total Sales",
-    tableName: "Sales",
-    expression: "SUM(Sales[Amount])",
-    formatString: "$#,##0",
-    description: "Sum of all sales amounts"
-  }]
-)
-```
-
-### Update Column Description
-```
-column_operations(
-  operation: "Update",
-  definitions: [{
-    tableName: "Customer",
-    name: "CustomerKey",
-    description: "Unique identifier for customer dimension",
-    isHidden: true
-  }]
-)
-```
-
-### Create Relationship
-```
-relationship_operations(
-  operation: "Create",
-  definitions: [{
-    fromTable: "Sales",
-    fromColumn: "CustomerKey",
-    toTable: "Customer",
-    toColumn: "CustomerKey",
-    crossFilteringBehavior: "OneDirection"
-  }]
-)
-```
-
-## When to Use Microsoft Learn MCP
-
-Research current best practices using `microsoft_docs_search` for:
-- Latest DAX function documentation
-- New Power BI features and capabilities
-- Complex modeling scenarios (SCD Type 2, many-to-many)
-- Performance optimization techniques
-- Security implementation patterns
+- A semantic model review checklist.
+- A KPI definition and DAX governance template.
+- A performance and quality audit plan.

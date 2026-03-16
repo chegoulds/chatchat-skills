@@ -1,8 +1,12 @@
 ---
-category: Business
 id: stakeholder-docs
 name: Stakeholder Docs
 description: Execute a sprint per agile principles. Invoke with a sprint plan folder path (e.g. docs/project/sprints/Sprint-01). Uses delivery-orchestrator to enforce agent order, governance, TDD, and mandatory Sprint Package. Delivers UAT checklist for stakeholder manual testing, Sprint Review, Audit, and release per release-playbook.
+category: Development
+requires: []
+examples:
+  - "Help me with stakeholder docs."
+  - "Use stakeholder-docs for this task."
 ---
 
 # Sprint Execution

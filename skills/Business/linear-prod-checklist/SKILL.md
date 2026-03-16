@@ -1,17 +1,14 @@
 ---
-category: Business
 id: linear-prod-checklist
 name: Linear Prod Checklist
-description: Production readiness checklist for Linear integrations.
-  Production readiness checklist for Linear integrations.
-  Use when preparing to deploy a Linear integration to production,
-  reviewing production requirements, or auditing existing deployments.
-  Trigger with phrases like "linear production checklist", "deploy linear",
-  "linear production ready", "linear go live", "linear launch checklist".
-allowed-tools: Read, Write, Edit, Grep
-version: 1.0.0
-license: MIT
-author: Jeremy Longshore <jeremy@intentsolutions.io>
+description: Production readiness checklist for Linear integrations. Use when preparing to deploy a Linear integration to production, reviewing production requirements, or auditing existing deployments. Trigger with phrases like \"linear production checklist\", \"deploy linear\", \"linear production ready\", \"linear go live\", \"linear launch checklist\".
+category: DevOps
+requires: []
+examples:
+  - "Help me with linear prod checklist."
+  - "Use linear-prod-checklist for this task."
+author: "Jeremy Longshore <jeremy@intentsolutions.io>"
+version: "1.0.0"
 ---
 
 # Linear Production Checklist

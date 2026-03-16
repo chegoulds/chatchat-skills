@@ -1,135 +1,60 @@
 ---
 id: productboard-automation
 name: Productboard Automation
-description: Guidance and answers for productboard automation.
+description: Guidance-only playbook for Productboard operations, including feedback intake, prioritization governance, and roadmap communication.
 category: Business
-source: composio
-tags: [mcp, automation, ai, claude]
-url: https://github.com/ComposioHQ/awesome-claude-skills/tree/master/productboard-automation
+requires: []
+examples:
+  - "Help me improve Productboard feedback-to-roadmap workflow."
+  - "Use productboard-automation to standardize prioritization and stakeholder updates."
 ---
 
-# Productboard Automation
+# Productboard Operations
 
-Automate your Productboard product management operations directly from Claude Code. Create notes from customer feedback, browse features and objectives, link entities, and track releases -- all without leaving your terminal.
+Use this guidance-only skill to improve Productboard workflows and governance. It does not execute MCP or API commands.
 
-**Toolkit docs:** [composio.dev/toolkits/productboard](https://composio.dev/toolkits/productboard)
+## When to use
 
----
+- You need consistent feedback triage and feature linking.
+- You want reliable prioritization criteria across product teams.
+- You need clear roadmap communication for stakeholders.
 
-## Setup
+## Core workflows
 
-1. Add the Rube MCP server to your Claude Code config with URL: `https://rube.app/mcp`
-2. When prompted, authenticate your Productboard account through the connection link provided
-3. Start automating your product management workflows with natural language
+### 1) Feedback intake and taxonomy
 
----
+- Standardize feedback tags, source labels, and customer segments.
+- Define triage SLAs for new notes and feature mapping.
+- Ensure each high-volume signal has an explicit product owner.
 
-## Core Workflows
+### 2) Prioritization governance
 
-### 1. Manage Customer Notes
+- Use a fixed scoring model (impact, confidence, effort, strategic fit).
+- Run weekly prioritization reviews with decision logs.
+- Distinguish committed roadmap work from discovery items.
 
-Create notes from customer feedback and organize them with tags, links, and followers.
+### 3) Roadmap hygiene
 
-**Tools:** `PRODUCTBOARD_CREATE_NOTE`, `PRODUCTBOARD_LIST_NOTES`, `PRODUCTBOARD_ADD_NOTE_TAG`, `PRODUCTBOARD_ADD_NOTE_FOLLOWERS`, `PRODUCTBOARD_CREATE_NOTE_LINK`
+- Keep feature statuses and dependencies current.
+- Mark blocked items with reason, owner, and review date.
+- Track roadmap change history and communicate rationale.
 
-```
-Create a note titled "Mobile app crash report" with content from customer feedback, tagged "bug" and linked to feature abc-123
-```
+### 4) Stakeholder communication
 
-Key parameters for `PRODUCTBOARD_CREATE_NOTE`:
-- `title` (required) and `content` (required) -- note title and body
-- `customer_email` or `user.email` -- attribute to a customer/user
-- `tags` -- array of tag strings for categorization
-- `display_url` -- URL linked from the note title
-- `source` -- origin system with `origin` and `record_id`
-- `company` -- associate with a company
+- Publish concise weekly summaries of notable shifts.
+- Align customer-facing messaging with delivery confidence.
+- Maintain a backlog of unresolved strategic questions.
 
-Key parameters for `PRODUCTBOARD_LIST_NOTES`:
-- `createdFrom` / `createdTo` -- ISO 8601 date range
-- `last` -- relative time window (e.g., `"6m"`, `"10d"`, `"24h"`)
-- `term` -- full-text search by title or content
-- `allTags` / `anyTag` -- filter by tags (cannot combine both)
-- `featureId`, `companyId`, `ownerEmail`, `source` -- entity filters
-- `pageLimit` (max 100) / `pageCursor` -- pagination
+## Risk controls
 
-### 2. Browse and Retrieve Features
+- Avoid over-indexing on loud feedback sources.
+- Prevent duplicate or conflicting feature records.
+- Escalate stale decision items before planning cycles.
 
-List all features/subfeatures and retrieve detailed information.
+## Output format
 
-**Tools:** `PRODUCTBOARD_LIST_FEATURES`, `PRODUCTBOARD_RETRIEVE_FEATURE`
+When asked for help, provide:
 
-```
-List the first 50 features in Productboard, then get details on feature abc-def-123
-```
-
-- `PRODUCTBOARD_LIST_FEATURES` supports `pageLimit` (default 100) and `pageOffset` for pagination
-- `PRODUCTBOARD_RETRIEVE_FEATURE` requires feature `id` (UUID) to get complete details
-
-### 3. Objectives and Key Results (OKRs)
-
-List objectives, view feature-objective links, and browse key results.
-
-**Tools:** `PRODUCTBOARD_LIST_OBJECTIVES`, `PRODUCTBOARD_LIST_FEATURE_OBJECTIVES`, `PRODUCTBOARD_LIST_KEY_RESULTS`
-
-```
-Show me all in-progress objectives owned by alice@example.com
-```
-
-Key parameters for `PRODUCTBOARD_LIST_OBJECTIVES`:
-- `status.name` -- filter by status (e.g., `"In Progress"`)
-- `owner.email` -- filter by owner email
-- `parent.id` -- filter by parent objective
-- `archived` -- filter by archived state
-
-`PRODUCTBOARD_LIST_FEATURE_OBJECTIVES`:
-- Requires `id` (UUID) of a **top-level feature** (not subfeatures)
-- Supports `pageCursor` for pagination
-
-### 4. Component Management
-
-List product components for organizing features and the product hierarchy.
-
-**Tool:** `PRODUCTBOARD_LIST_COMPONENTS`
-
-```
-List all components in our Productboard workspace
-```
-
-- Supports `page_limit` and `page_offset` for pagination
-- Follow `links.next` for additional pages
-
-### 5. Release Tracking
-
-View feature-release assignments with state and date filters.
-
-**Tool:** `PRODUCTBOARD_LIST_FEATURE_RELEASE_ASSIGNMENTS`
-
-```
-Show all active release assignments for feature abc-123
-```
-
-- Filter by `feature.id`, `release.id`, `release.state` (planned, active, closed)
-- Date range filters: `release.timeframe.endDate.from` and `release.timeframe.endDate.to` (YYYY-MM-DD)
-
-### 6. Link Notes to Features
-
-Connect customer feedback notes to product features for insight aggregation.
-
-**Tool:** `PRODUCTBOARD_CREATE_NOTE_LINK`
-
-```
-Link note 3fa85f64-5717 to feature 1b6c8c76-8f5d for tracking
-```
-
-- Requires `noteId` (UUID) and `entityId` (UUID of feature, component, or product)
-- Use after creating notes to ensure feedback is connected to the right product areas
-
----
-
-## Known Pitfalls
-
-- **Top-level features only for objectives:** `PRODUCTBOARD_LIST_FEATURE_OBJECTIVES` only works with top-level feature IDs, not subfeature IDs. Use `PRODUCTBOARD_LIST_FEATURES` to identify which features are top-level.
-- **Tag filter exclusivity:** `allTags` and `anyTag` cannot be combined in `PRODUCTBOARD_LIST_NOTES`. Choose one filter strategy per query.
-- **Relative vs. absolute dates:** The `last` parameter (e.g., `"24h"`) cannot be combined with `createdFrom`/`createdTo` in `PRODUCTBOARD_LIST_NOTES`. Use one approach, not both.
-- **Cursor-based pagination:** Follow `links.next` or use `pageCursor` from responses for multi-page results. Offset-based and cursor-based pagination are used on different endpoints -- check each tool.
-- **Note attribution:** Either `user.email` or `customer_email` must be provided in `PRODUCTBOARD_CREATE_NOTE` to attribute feedback. Without
+- A feedback triage and tagging policy.
+- A prioritization rubric with scoring examples.
+- A roadmap communication template.

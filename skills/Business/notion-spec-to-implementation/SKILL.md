@@ -1,10 +1,12 @@
 ---
-category: Business
 id: notion-spec-to-implementation
 name: Notion Spec To Implementation
 description: Turn Notion specs into implementation plans, tasks, and progress tracking;.
-metadata:
-  short-description: Turn Notion specs into implementation plans, tasks, and progress tracking
+category: Development
+requires: []
+examples:
+  - "Help me with notion spec to implementation."
+  - "Use notion-spec-to-implementation for this task."
 ---
 
 # Spec to Implementation

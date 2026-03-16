@@ -1,97 +1,54 @@
 ---
-category: Business
 id: trello
 name: Trello
-description: Manage Trello boards, lists, and cards via the Trello REST API.
-homepage: https://developer.atlassian.com/cloud/trello/rest/
-metadata:
-  {
-    "openclaw":
-      { "emoji": "📋", "requires": { "bins": ["jq"], "env": ["TRELLO_API_KEY", "TRELLO_TOKEN"] } },
-  }
+description: Guidance-only playbook for Trello operations, including board design, workflow governance, and execution visibility.
+category: Business
+requires: []
+examples:
+  - "Help me organize Trello boards for cross-team project delivery."
+  - "Use trello to improve task flow and board hygiene."
 ---
 
-# Trello Skill
+# Trello Operations
 
-Manage Trello boards, lists, and cards directly from OpenClaw.
+Use this guidance-only skill to design and optimize Trello board workflows. It does not execute API calls or scripts.
 
-## Setup
+## When to use
 
-1. Get your API key: https://trello.com/app-key
-2. Generate a token (click "Token" link on that page)
-3. Set environment variables:
-   ```bash
-   export TRELLO_API_KEY="your-api-key"
-   export TRELLO_TOKEN="your-token"
-   ```
+- You need clearer board structure for projects and teams.
+- You want predictable movement of work through stages.
+- You need progress reporting and risk visibility from boards.
 
-## Usage
+## Core workflows
 
-All commands use curl to hit the Trello REST API.
+### 1) Board architecture
 
-### List boards
+- Define boards by team or initiative with explicit ownership.
+- Standardize list stages and card lifecycle expectations.
+- Use labels consistently for priority, risk, and work type.
 
-```bash
-curl -s "https://api.trello.com/1/members/me/boards?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN" | jq '.[] | {name, id}'
-```
+### 2) Card quality and flow
 
-### List lists in a board
+- Require clear card titles, acceptance criteria, and due dates.
+- Track blockers with explicit unblock owner and ETA.
+- Limit WIP per stage to reduce context switching.
 
-```bash
-curl -s "https://api.trello.com/1/boards/{boardId}/lists?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN" | jq '.[] | {name, id}'
-```
+### 3) Governance and reporting
 
-### List cards in a list
+- Run weekly board hygiene checks (stale, duplicate, unassigned cards).
+- Track flow metrics: lead time, blocked time, completion rate.
+- Publish concise risk and dependency summaries from board state.
 
-```bash
-curl -s "https://api.trello.com/1/lists/{listId}/cards?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN" | jq '.[] | {name, id, desc}'
-```
+## Risk controls
 
-### Create a card
+- Avoid board sprawl without purpose or ownership.
+- Prevent hidden dependencies by documenting linked cards.
+- Escalate long-lived blocked cards before milestone risk grows.
 
-```bash
-curl -s -X POST "https://api.trello.com/1/cards?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN" \
-  -d "idList={listId}" \
-  -d "name=Card Title" \
-  -d "desc=Card description"
-```
+## Output format
 
-### Move a card to another list
+When asked for help, provide:
 
-```bash
-curl -s -X PUT "https://api.trello.com/1/cards/{cardId}?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN" \
-  -d "idList={newListId}"
-```
-
-### Add a comment to a card
-
-```bash
-curl -s -X POST "https://api.trello.com/1/cards/{cardId}/actions/comments?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN" \
-  -d "text=Your comment here"
-```
-
-### Archive a card
-
-```bash
-curl -s -X PUT "https://api.trello.com/1/cards/{cardId}?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN" \
-  -d "closed=true"
-```
-
-## Notes
-
-- Board/List/Card IDs can be found in the Trello URL or via the list commands
-- The API key and token provide full access to your Trello account - keep them secret!
-- Rate limits: 300 requests per 10 seconds per API key; 100 requests per 10 seconds per token; `/1/members` endpoints are limited to 100 requests per 900 seconds
-
-## Examples
-
-```bash
-# Get all boards
-curl -s "https://api.trello.com/1/members/me/boards?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN&fields=name,id" | jq
-
-# Find a specific board by name
-curl -s "https://api.trello.com/1/members/me/boards?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN" | jq '.[] | select(.name | contains("Work"))'
-
-# Get all cards on a board
-curl -s "https://api.trello.com/1/boards/{boardId}/cards?key=$TRELLO_API_KEY&token=$TRELLO_TOKEN" | jq '.[] | {name, list: .idList}'
-```
+- A board and list structure template.
+- A card-quality checklist.
+- A weekly board review and reporting format.

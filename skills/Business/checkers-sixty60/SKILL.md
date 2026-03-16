@@ -1,8 +1,12 @@
 ---
-category: Business
 id: checkers-sixty60
 name: Checkers Sixty60
 description: Shop on Checkers.co.za Sixty60 delivery service via browser automation.
+category: Lifestyle
+requires: []
+examples:
+  - "Help me with checkers sixty60."
+  - "Use checkers-sixty60 for this task."
 ---
 
 # Checkers Sixty60 Shopping

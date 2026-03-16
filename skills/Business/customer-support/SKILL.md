@@ -1,9 +1,12 @@
 ---
-category: Business
 id: customer-support
 name: Customer Support
 description: Guidelines for handling customer support interactions.
-license: MIT
+category: Business
+requires: []
+examples:
+  - "Help me with customer support."
+  - "Use customer-support for this task."
 ---
 
 # Customer Support Guidelines

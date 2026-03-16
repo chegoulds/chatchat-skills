@@ -2,7 +2,7 @@
 category: Blockchain
 id: container-security-auditor
 name: Container Security Auditor
-description: "Container Security Auditor - Auto-activating skill for Security Advanced. Triggers on: container security auditor, container security auditor Part of the Security Advanced skill category."
+description: Container Security Auditor - Auto-activating skill for Security Advanced. Triggers on: container security auditor, container security auditor Part of the Security Advanced skill category.
   Container Security Auditor - Auto-activating skill for Security Advanced.
   Triggers on: container security auditor, container security auditor
   Part of the Security Advanced skill category.

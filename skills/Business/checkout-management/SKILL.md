@@ -1,8 +1,12 @@
 ---
-category: Business
 id: checkout-management
 name: Checkout Management
 description: Integrate PayPal payment processing with support for express checkout, subscriptions, and refund management.
+category: Development
+requires: []
+examples:
+  - "Help me with checkout management."
+  - "Use checkout-management for this task."
 ---
 
 # PayPal Integration

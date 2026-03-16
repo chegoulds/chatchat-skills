@@ -1,8 +1,12 @@
 ---
-category: Business
 id: woocommerce
 name: Woocommerce
 description: Guidelines for git and GitHub operations in the WooCommerce repository.
+category: Development
+requires: []
+examples:
+  - "Help me with woocommerce."
+  - "Use woocommerce for this task."
 ---
 
 # WooCommerce Git Guidelines

@@ -1,11 +1,12 @@
 ---
-category: Business
 id: summarize-activity
 name: Summarize Activity
 description: Step-by-step guidance for summarize activity.
-disable-model-invocation: true
-allowed-tools: Bash, Read, Task
-argument-hint: "[timeframe: 24h (default), 48h, 7d, 1w]"
+category: Development
+requires: []
+examples:
+  - "Help me with summarize activity."
+  - "Use summarize-activity for this task."
 ---
 
 # /summarize-activity - GitHub activity digest

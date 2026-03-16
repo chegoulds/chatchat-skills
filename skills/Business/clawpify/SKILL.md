@@ -1,13 +1,17 @@
 ---
-category: Business
 id: clawpify
 name: Clawpify
-description: Query and manage Shopify stores via GraphQL Admin API. Use for products, orders, customers, inventory, discounts, and all Shopify data operations.
-dependencies:
-  - Tool: shopify_graphql (from MCP server or custom function)
+description: Guidance-only playbook for planning Shopify Admin GraphQL workflows across products, orders, customers, inventory, and discounts.
+category: Business
+requires: []
+examples:
+  - "Help me with clawpify."
+  - "Use clawpify for this task."
 ---
 
 # Shopify GraphQL Admin API
+
+This is a guidance-only skill. Use it to design queries, mutations, and operational workflows; do not execute API calls directly from this skill.
 
 A comprehensive skill for interacting with Shopify's GraphQL Admin API. This skill enables Claude to query and manage all aspects of Shopify store data.
 
@@ -36,8 +40,8 @@ Always show what will be changed and wait for user confirmation.
 
 ## How to Use
 
-1. Use the `shopify_graphql` tool to execute queries
-2. Check for `errors` (GraphQL issues) and `userErrors` (validation issues)
+1. Draft the query or mutation for the target operation
+2. Validate expected `errors` and `userErrors` handling paths
 3. Use pagination with `first`/`after` for large result sets
 4. Format all IDs as: `gid://shopify/Resource/123`
 

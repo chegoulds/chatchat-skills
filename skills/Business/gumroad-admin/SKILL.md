@@ -1,40 +1,56 @@
 ---
-category: Business
 id: gumroad-admin
 name: Gumroad Admin
-version: 1.0.0
-description: Gumroad Admin CLI. Check sales, products, and manage discounts.
-author: abakermi
-metadata:
-  openclaw:
-    emoji: "💸"
-    requires:
-      env: ["GUMROAD_ACCESS_TOKEN"]
+description: Guidance-only runbook for managing Gumroad products, sales monitoring, and discount operations.
+category: Business
+requires: []
+examples:
+  - "Help me create a Gumroad admin checklist."
+  - "Use gumroad-admin to review pricing and discount operations."
+author: "abakermi"
+version: "1.0.0"
 ---
 
-# Gumroad Admin
+# Gumroad Store Administration
 
-Manage your Gumroad store from OpenClaw.
+Use this guidance-only skill to operate Gumroad stores with clear controls and review cadence. It does not execute CLI commands directly.
 
-## Setup
+## When to use
 
-1. Get your Access Token from Gumroad (Settings > Advanced > Applications).
-2. Set it: `export GUMROAD_ACCESS_TOKEN="your_token"`
+- You need recurring store ops processes.
+- You want standardized discount and promotion governance.
+- You need sales monitoring and action triggers.
 
-## Commands
+## Core workflows
 
-### Sales
-```bash
-gumroad-admin sales --day today
-gumroad-admin sales --last 30
-```
+### 1) Product operations
 
-### Products
-```bash
-gumroad-admin products
-```
+- Audit product listings for title, description, media, and pricing clarity.
+- Keep SKU/product naming consistent for reporting.
+- Review churn/refund signals by product.
 
-### Discounts
-```bash
-gumroad-admin discounts create --product <id> --code "TWITTER20" --amount 20 --type percent
-```
+### 2) Sales monitoring
+
+- Track daily/weekly sales trends and conversion rates.
+- Flag abnormal drops/spikes and investigate causes.
+- Segment by product type and campaign source.
+
+### 3) Discount controls
+
+- Define discount policy (caps, duration, target audience, exclusions).
+- Require owner approval for high-impact discounts.
+- Track post-discount performance and margin impact.
+
+## Risk controls
+
+- Avoid overlapping discount campaigns without clear precedence.
+- Keep promotion copy aligned with actual redemption conditions.
+- Archive expired discounts and stale products on schedule.
+
+## Output format
+
+When asked for help, provide:
+
+- A weekly Gumroad admin checklist.
+- A discount governance matrix.
+- A sales review template with action thresholds.

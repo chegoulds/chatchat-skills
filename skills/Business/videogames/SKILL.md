@@ -1,13 +1,14 @@
 ---
-category: Business
 id: videogames
 name: Videogames
-slug: videogames
-display_name: Video Games
 description: A skill to lookup video game information and compare prices across multiple stores.
-author: ivanheral
-version: 1.0.1
-license: MIT
+category: Lifestyle
+requires: []
+examples:
+  - "Help me with videogames."
+  - "Use videogames for this task."
+author: "ivanheral"
+version: "1.0.1"
 ---
 
 # Video Game Skill 🎮

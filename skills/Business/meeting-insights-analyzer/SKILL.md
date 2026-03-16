@@ -1,8 +1,12 @@
 ---
-category: Business
 id: meeting-insights-analyzer
 name: Meeting Insights Analyzer
 description: Step-by-step guidance for meeting insights.
+category: Business
+requires: []
+examples:
+  - "Help me with meeting insights analyzer."
+  - "Use meeting-insights-analyzer for this task."
 ---
 
 # Meeting Insights Analyzer

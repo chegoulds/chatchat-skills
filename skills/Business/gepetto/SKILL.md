@@ -1,8 +1,12 @@
 ---
-category: Business
 id: gepetto
 name: Gepetto
 description: Creates detailed, sectionized implementation plans through research, stakeholder interviews, and multi-LLM review.
+category: Development
+requires: []
+examples:
+  - "Help me with gepetto."
+  - "Use gepetto for this task."
 ---
 
 # Gepetto

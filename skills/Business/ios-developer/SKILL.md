@@ -1,13 +1,12 @@
 ---
-category: Business
 id: ios-developer
 name: Ios Developer
-description: Develop native iOS applications with Swift/SwiftUI. Masters iOS 18, SwiftUI, UIKit integration, Core Data, networking, and App Store optimization. Use PROACTIVELY for iOS-specific features, App Store optimization, or native iOS development.
-  SwiftUI, UIKit integration, Core Data, networking, and App Store optimization.
-  Use PROACTIVELY for iOS-specific features, App Store optimization, or native
-  iOS development.
-metadata:
-  model: inherit
+description: Develop native iOS applications with Swift/SwiftUI. Masters iOS 18, SwiftUI, UIKit integration, Core Data, networking, and App Store optimization. Use PROACTIVELY for iOS-specific features, App Store optimization, or native iOS development. SwiftUI, UIKit integration, Core Data, networking, and App Store optimization. Use PROACTIVELY for iOS-specific features, App Store optimization, or native iOS development.
+category: Development
+requires: []
+examples:
+  - "Help me with ios developer."
+  - "Use ios-developer for this task."
 ---
 
 ## Use this skill when

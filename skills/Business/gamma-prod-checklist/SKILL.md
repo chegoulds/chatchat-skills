@@ -1,17 +1,14 @@
 ---
-category: Business
 id: gamma-prod-checklist
 name: Gamma Prod Checklist
-description: Production readiness checklist for Gamma integration.
-  Production readiness checklist for Gamma integration.
-  Use when preparing to deploy Gamma integration to production,
-  or auditing existing production setup.
-  Trigger with phrases like "gamma production", "gamma prod ready",
-  "gamma go live", "gamma deployment checklist", "gamma launch".
-allowed-tools: Read, Write, Edit, Grep
-version: 1.0.0
-license: MIT
-author: Jeremy Longshore <jeremy@intentsolutions.io>
+description: Production readiness checklist for Gamma integration. Use when preparing to deploy Gamma integration to production, or auditing existing production setup.
+category: DevOps
+requires: []
+examples:
+  - "Help me with gamma prod checklist."
+  - "Use gamma-prod-checklist for this task."
+author: "Jeremy Longshore <jeremy@intentsolutions.io>"
+version: "1.0.0"
 ---
 
 # Gamma Production Checklist

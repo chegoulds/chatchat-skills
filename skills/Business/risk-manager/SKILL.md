@@ -1,12 +1,12 @@
 ---
-category: Business
 id: risk-manager
 name: Risk Manager
-description: Monitor portfolio risk, R-multiples, and position limits. Creates hedging strategies, calculates expectancy, and implements stop-losses. Use PROACTIVELY for risk assessment, trade tracking, or portfolio protection.
-  hedging strategies, calculates expectancy, and implements stop-losses. Use
-  PROACTIVELY for risk assessment, trade tracking, or portfolio protection.
-metadata:
-  model: inherit
+description: Monitor portfolio risk, R-multiples, and position limits. Creates hedging strategies, calculates expectancy, and implements stop-losses. Use PROACTIVELY for risk assessment, trade tracking, or portfolio protection. hedging strategies, calculates expectancy, and implements stop-losses. Use PROACTIVELY for risk assessment, trade tracking, or portfolio protection.
+category: Business
+requires: []
+examples:
+  - "Help me with risk manager."
+  - "Use risk-manager for this task."
 ---
 
 ## Use this skill when

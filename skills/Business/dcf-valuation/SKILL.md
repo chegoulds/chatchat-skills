@@ -1,8 +1,12 @@
 ---
-category: Business
 id: dcf-valuation
 name: DCF Valuation
-description: Performs discounted cash flow (DCF) valuation analysis to estimate intrinsic value per share. Triggers when user asks for fair value, intrinsic value, DCF, valuation, "what is X worth", price target, undervalued/overvalued analysis, or wants to compare current price to fundamental value.
+description: Performs discounted cash flow (DCF) valuation analysis to estimate intrinsic value per share. Triggers when user asks for fair value, intrinsic value, DCF, valuation, \"what is X worth\", price target, undervalued/overvalued analysis, or wants to compare current price to fundamental value.
+category: Business
+requires: []
+examples:
+  - "Help me with dcf valuation."
+  - "Use dcf-valuation for this task."
 ---
 
 # DCF Valuation Skill
@@ -24,41 +28,35 @@ DCF Analysis Progress:
 
 ## Step 1: Gather Financial Data
 
-Call the `financial_search` tool with these queries:
+Collect financial data from trusted sources (company filings, reputable financial data providers, and analyst coverage).
 
 ### 1.1 Cash Flow History
-**Query:** `"[TICKER] annual cash flow statements for the last 5 years"`
 
 **Extract:** `free_cash_flow`, `net_cash_flow_from_operations`, `capital_expenditure`
 
 **Fallback:** If `free_cash_flow` missing, calculate: `net_cash_flow_from_operations - capital_expenditure`
 
 ### 1.2 Financial Metrics
-**Query:** `"[TICKER] financial metrics snapshot"`
 
 **Extract:** `market_cap`, `enterprise_value`, `free_cash_flow_growth`, `revenue_growth`, `return_on_invested_capital`, `debt_to_equity`, `free_cash_flow_per_share`
 
 ### 1.3 Balance Sheet
-**Query:** `"[TICKER] latest balance sheet"`
 
 **Extract:** `total_debt`, `cash_and_equivalents`, `current_investments`, `outstanding_shares`
 
 **Fallback:** If `current_investments` missing, use 0
 
 ### 1.4 Analyst Estimates
-**Query:** `"[TICKER] analyst estimates"`
 
 **Extract:** `earnings_per_share` (forward estimates by fiscal year)
 
 **Use:** Calculate implied EPS growth rate for cross-validation
 
 ### 1.5 Current Price
-**Query:** `"[TICKER] price snapshot"`
 
 **Extract:** `price`
 
 ### 1.6 Company Facts
-**Query:** `"[TICKER] company facts"`
 
 **Extract:** `sector`, `industry`, `market_cap`
 

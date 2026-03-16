@@ -1,14 +1,12 @@
 ---
-category: Business
 id: authoring-skills
 name: Authoring Skills
-description: How to create and maintain agent skills in .agents/skills/.
-  How to create and maintain agent skills in .agents/skills/. Use when
-  creating a new SKILL.md, writing skill descriptions, choosing frontmatter
-  fields, or deciding what content belongs in a skill vs AGENTS.md.
-  Covers the supported spec fields, description writing, naming conventions,
-  and the relationship between always-loaded AGENTS.md and on-demand skills.
-user-invocable: false
+description: How to create and maintain agent skills in .agents/skills/. How to create and maintain agent skills in .agents/skills/. Use when creating a new SKILL.md, writing skill descriptions, choosing frontmatter fields, or deciding what content belongs in a skill vs AGENTS.md. Covers the supported spec fields, description writing, naming conventions, and the relationship between always-loaded AGENTS.md and on-demand skills.
+category: Documentation
+requires: []
+examples:
+  - "Help me with authoring skills."
+  - "Use authoring-skills for this task."
 ---
 
 # Authoring Skills

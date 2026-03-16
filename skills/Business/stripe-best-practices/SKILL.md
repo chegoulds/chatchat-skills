@@ -1,8 +1,12 @@
 ---
-category: Business
 id: stripe-best-practices
 name: Stripe Best Practices
 description: Best practices for building Stripe integrations.
+category: Development
+requires: []
+examples:
+  - "Help me with stripe best practices."
+  - "Use stripe-best-practices for this task."
 ---
 
 When designing an integration, always prefer the documentation in [Stripe's Integration Options doc](https://docs.stripe.com/payments/payment-methods/integration-options.md)

@@ -1,8 +1,12 @@
 ---
-category: Business
 id: stripe
 name: Stripe
 description: Implement Stripe payment processing for robust, PCI-compliant payment flows including checkout, subscriptions, and webhooks.
+category: Development
+requires: []
+examples:
+  - "Help me with stripe."
+  - "Use stripe for this task."
 ---
 
 # Stripe Integration

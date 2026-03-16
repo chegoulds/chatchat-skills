@@ -1,9 +1,13 @@
 ---
-category: Business
 id: market-sizing-analysis
 name: Market Sizing Analysis
 description: Step-by-step guidance for market sizing.
-version: 1.0.0
+category: Business
+requires: []
+examples:
+  - "Help me with market sizing analysis."
+  - "Use market-sizing-analysis for this task."
+version: "1.0.0"
 ---
 
 # Market Sizing Analysis
